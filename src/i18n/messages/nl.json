@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "declarations": "Aangiften",
+    "settings": "Instellingen",
+    "help": "Help"
+  },
+  "hero": {
+    "title": "RSZ-aanwezigheidsconformiteit in minuten",
+    "subtitle": "Upload aanwezigheids-CSV/Excel, valideer Belgische ID\u0027s (INSZ/BIS/Limosa) en genereer conforme XML voor Checkinatwork & CIAO. Geen hardware nodig.",
+    "cta": "Upload uw bestand",
+    "trusted": "Checkinatwork \u2022 CIAO \u2022 RSZ XSD v1.13 \u2022 SIOD-conform"
+  },
+  "kpi": {
+    "totalScans": "Totaal scans",
+    "aiCorrections": "AI-correcties",
+    "apiFaults": "API-fouten"
+  },
+  "upload": {
+    "title": "Aanwezigheidszone",
+    "dropzone": "Sleep uw aanwezigheidsbestand hierheen",
+    "dropzoneAlt": "of klik om te bladeren",
+    "formats": "Ondersteund: .csv, .xlsx",
+    "processing": "Gegevens verwerken...",
+    "success": "Bestand succesvol verwerkt!",
+    "error": "Fout bij het verwerken"
+  },
+  "resolution": {
+    "title": "Resolutiematrix",
+    "subtitle": "Controleer AI-gecorrigeerde records v\u00f3\u00f3r indiening",
+    "original": "Origineel (ongeldig)",
+    "corrected": "AI-correctie",
+    "confidence": "Vertrouwen",
+    "approve": "Goedkeuren",
+    "approveAll": "Alles goedkeuren",
+    "reject": "Afwijzen",
+    "noIssues": "Geen problemen gevonden. Alle records succesvol gevalideerd.",
+    "field": "Veld",
+    "value": "Waarde",
+    "status": "Status",
+    "actions": "Acties"
+  },
+  "results": {
+    "title": "Geldige aangiften",
+    "niss": "INSZ/BIS",
+    "limosa": "Limosa L1",
+    "workplace": "Werkplaats-ID",
+    "date": "Datum",
+    "arrival": "Aankomst",
+    "departure": "Vertrek",
+    "type": "Type",
+    "transactions": "records",
+    "generateXml": "Genereer RSZ XML",
+    "exportCsv": "Exporteer CSV",
+    "noData": "Nog geen gegevens. Upload een aanwezigheidsbestand om te beginnen.",
+    "checkinatwork": "Checkinatwork",
+    "ciao": "CIAO"
+  },
+  "features": {
+    "title": "Waarom Checkin OK?",
+    "validation": "Cryptografische ID-validatie",
+    "validationDesc": "Modulo-97 checksumcontrole voor INSZ/BIS met pre/post-2000 detectie en BIS-maandnormalisatie",
+    "ai": "AI-gegevensreiniging",
+    "aiDesc": "Azure GPT-4o corrigeert typefouten, extraheert tijdstempels uit natuurlijke taal en scheidt samengevoegde velden",
+    "xml": "RSZ XML-generatie",
+    "xmlDesc": "XSD v1.13-conforme payloads voor Checkinatwork (dagelijkse aanwezigheid) en CIAO (real-time tijdstempels met rustpauzes)",
+    "privacy": "Geen gegevensopslag",
+    "privacyDesc": "Alle persoonsgegevens verwerkt in vluchtig geheugen. Geen database-opslag van namen, INSZ, BIS of Limosa. AVG/GBA-conform."
+  },
+  "pricing": {
+    "title": "Eenvoudige, vaste prijzen",
+    "business": "Business",
+    "businessPrice": "\u20ac99",
+    "businessPeriod": "/maand",
+    "businessDesc": "Alles voor Belgische aanwezigheidsconformiteit",
+    "features": ["Onbeperkt CSV/Excel uploads", "INSZ/BIS/Limosa validatie", "AI-gegevenscorrectie", "Checkinatwork + CIAO XML", "Geen gegevensopslag", "Prioritaire ondersteuning"],
+    "cta": "Aan de slag",
+    "risk": "Vermijd boetes van \u20ac6.000 per niet-geregistreerde werknemer"
+  },
+  "trust": {
+    "gdpr": "AVG-conform",
+    "gba": "GBA-conform",
+    "zero": "Geen opslag",
+    "nsso": "RSZ-gecertificeerd"
+  },
+  "footer": {
+    "description": "Checkin OK automatiseert Belgische RSZ-aanwezigheidsaangiften voor Checkinatwork- en CIAO-conformiteit.",
+    "product": "Product",
+    "legal": "Juridisch",
+    "privacy": "Privacybeleid",
+    "terms": "Voorwaarden",
+    "impressum": "Impressum",
+    "copyright": "\u00a9 2026 Checkin OK. Alle rechten voorbehouden."
+  },
+  "cookie": {
+    "message": "Wij gebruiken technische cookies om uw ervaring te verbeteren. Geen gegevens worden gedeeld met derden.",
+    "accept": "Accepteren",
+    "decline": "Weigeren"
+  },
+  "legal": {
+    "privacyTitle": "Privacybeleid",
+    "privacyIntroTitle": "Inleiding",
+    "privacyIntroText": "Checkin OK, beheerd door Radom UG (haftungsbeschr\u00e4nkt), zet zich in voor de bescherming van uw privacy.",
+    "privacyDataTitle": "Verwerkte gegevens",
+    "privacyDataText": "Wij verwerken aanwezigheidsbestanden (CSV/Excel) met werknemers-ID\u0027s (INSZ/BIS/Limosa). Bestanden worden uitsluitend in vluchtig geheugen verwerkt. Alle persoonsgegevens worden onmiddellijk na RSZ-transmissie gewist.",
+    "privacyRetentionTitle": "Gegevensbewaring",
+    "privacyRetentionText": "Geen bewaring van persoonsgegevens. Wij bewaren alleen geaggregeerde gebruiksstatistieken voor facturering.",
+    "privacyCookiesTitle": "Cookies",
+    "privacyCookiesText": "Alleen technische cookies (taalvoorkeur, sessie). Geen tracking-cookies.",
+    "privacyRightsTitle": "Uw rechten",
+    "privacyRightsText": "Op grond van de AVG heeft u recht op toegang, rectificatie, verwijdering en overdraagbaarheid. Aangezien wij geen persoonsgegevens bewaren, worden deze rechten automatisch nagekomen.",
+    "privacyContactTitle": "Contact",
+    "privacyContactText": "Radom UG (haftungsbeschr\u00e4nkt), Frankfurt am Main, Duitsland. Email: privacy@checkin-ok.be",
+    "termsTitle": "Algemene Voorwaarden",
+    "termsIntroTitle": "Aanvaarding van voorwaarden",
+    "termsIntroText": "Door Checkin OK te gebruiken gaat u akkoord met deze voorwaarden. Aangeboden door Radom UG (haftungsbeschr\u00e4nkt), Frankfurt am Main, Duitsland.",
+    "termsServiceTitle": "Beschrijving van de dienst",
+    "termsServiceText": "Checkin OK biedt geautomatiseerde verwerking van aanwezigheidsgegevens, Belgische ID-validatie, AI-correctie en RSZ-conforme XML-generatie. De dienst wordt geleverd zoals deze is, zonder garantie.",
+    "termsLiabilityTitle": "Beperking van aansprakelijkheid",
+    "termsLiabilityText": "Checkin OK en Radom UG zijn niet aansprakelijk voor indirecte schade, inclusief RSZ-boetes. Gebruikers moeten de nauwkeurigheid van aangiften verifi\u00ebren v\u00f3\u00f3r indiening.",
+    "termsTerminationTitle": "Be\u00ebindiging",
+    "termsTerminationText": "Wij kunnen de toegang op elk moment opschorten wegens schending van de voorwaarden.",
+    "termsGoverningTitle": "Toepasselijk recht",
+    "termsGoverningText": "Deze voorwaarden worden beheerst door de wetten van de Bondsrepubliek Duitsland. Bevoegde rechtbank: Frankfurt am Main.",
+    "impressumTitle": "Impressum",
+    "impressumCompanyTitle": "Bedrijf",
+    "impressumCompanyText": "Radom UG (haftungsbeschr\u00e4nkt)",
+    "impressumAddressTitle": "Adres",
+    "impressumAddressText": "Frankfurt am Main, Duitsland",
+    "impressumContactTitle": "Contact",
+    "impressumContactText": "Email: info@checkin-ok.be",
+    "impressumRegisterTitle": "Registratie",
+    "impressumRegisterText": "Amtsgericht Frankfurt am Main, HRB [nummer in afwachting]",
+    "impressumDisclaimerTitle": "Disclaimer",
+    "impressumDisclaimerText": "De informatie op deze website is bedoeld voor algemene informatiedoeleinden. Wij geven geen garanties over volledigheid of nauwkeurigheid."
+  }
+}

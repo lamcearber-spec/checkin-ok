@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "declarations": "D\u00e9clarations",
+    "settings": "Param\u00e8tres",
+    "help": "Aide"
+  },
+  "hero": {
+    "title": "Conformit\u00e9 ONSS en quelques minutes",
+    "subtitle": "T\u00e9l\u00e9chargez vos donn\u00e9es de pr\u00e9sence CSV/Excel, validez les identifiants belges (NISS/BIS/Limosa) et g\u00e9n\u00e9rez du XML conforme pour Checkinatwork & CIAO. Aucun mat\u00e9riel requis.",
+    "cta": "T\u00e9l\u00e9chargez votre fichier",
+    "trusted": "Checkinatwork \u2022 CIAO \u2022 ONSS XSD v1.13 \u2022 Conforme SIRS"
+  },
+  "kpi": {
+    "totalScans": "Total des scans",
+    "aiCorrections": "Corrections IA",
+    "apiFaults": "Erreurs API"
+  },
+  "upload": {
+    "title": "Zone d\u0027ingestion",
+    "dropzone": "D\u00e9posez votre fichier de pr\u00e9sence ici",
+    "dropzoneAlt": "ou cliquez pour parcourir",
+    "formats": "Formats : .csv, .xlsx",
+    "processing": "Analyse des donn\u00e9es...",
+    "success": "Fichier analys\u00e9 avec succ\u00e8s !",
+    "error": "Erreur lors de l\u0027analyse"
+  },
+  "resolution": {
+    "title": "Matrice de r\u00e9solution",
+    "subtitle": "V\u00e9rifiez les corrections IA avant soumission",
+    "original": "Original (invalide)",
+    "corrected": "Correction IA",
+    "confidence": "Confiance",
+    "approve": "Approuver",
+    "approveAll": "Tout approuver",
+    "reject": "Rejeter",
+    "noIssues": "Aucun probl\u00e8me trouv\u00e9. Tous les enregistrements sont valid\u00e9s.",
+    "field": "Champ",
+    "value": "Valeur",
+    "status": "Statut",
+    "actions": "Actions"
+  },
+  "results": {
+    "title": "D\u00e9clarations valides",
+    "niss": "NISS/BIS",
+    "limosa": "Limosa L1",
+    "workplace": "ID lieu de travail",
+    "date": "Date",
+    "arrival": "Arriv\u00e9e",
+    "departure": "D\u00e9part",
+    "type": "Type",
+    "transactions": "enregistrements",
+    "generateXml": "G\u00e9n\u00e9rer XML ONSS",
+    "exportCsv": "Exporter CSV",
+    "noData": "Aucune donn\u00e9e. T\u00e9l\u00e9chargez un fichier de pr\u00e9sence pour commencer.",
+    "checkinatwork": "Checkinatwork",
+    "ciao": "CIAO"
+  },
+  "features": {
+    "title": "Pourquoi Checkin OK ?",
+    "validation": "Validation cryptographique des ID",
+    "validationDesc": "V\u00e9rification modulo-97 pour NISS/BIS avec d\u00e9tection pr\u00e9/post-2000 et normalisation des mois BIS",
+    "ai": "Assainissement IA des donn\u00e9es",
+    "aiDesc": "Azure GPT-4o corrige les erreurs typographiques, extrait les horodatages et s\u00e9pare les champs concat\u00e9n\u00e9s",
+    "xml": "G\u00e9n\u00e9ration XML ONSS",
+    "xmlDesc": "Payloads conformes XSD v1.13 pour Checkinatwork (pr\u00e9sence journali\u00e8re) et CIAO (horodatages en temps r\u00e9el)",
+    "privacy": "Z\u00e9ro r\u00e9tention de donn\u00e9es",
+    "privacyDesc": "Toutes les donn\u00e9es personnelles trait\u00e9es en m\u00e9moire volatile uniquement. Aucun stockage de NISS, BIS ou Limosa. Conforme GBA/RGPD."
+  },
+  "pricing": {
+    "title": "Tarification simple et forfaitaire",
+    "business": "Business",
+    "businessPrice": "\u20ac99",
+    "businessPeriod": "/mois",
+    "businessDesc": "Tout pour la conformit\u00e9 belge de pr\u00e9sence",
+    "features": ["Uploads CSV/Excel illimit\u00e9s", "Validation NISS/BIS/Limosa", "Correction IA des donn\u00e9es", "XML Checkinatwork + CIAO", "Z\u00e9ro r\u00e9tention de donn\u00e9es", "Support prioritaire"],
+    "cta": "Commencer",
+    "risk": "\u00c9vitez les amendes de 6 000 \u20ac par travailleur non enregistr\u00e9"
+  },
+  "trust": {
+    "gdpr": "Conforme au RGPD",
+    "gba": "Conforme GBA",
+    "zero": "Z\u00e9ro r\u00e9tention",
+    "nsso": "Certifi\u00e9 ONSS"
+  },
+  "footer": {
+    "description": "Checkin OK automatise les d\u00e9clarations de pr\u00e9sence ONSS pour la conformit\u00e9 Checkinatwork et CIAO.",
+    "product": "Produit",
+    "legal": "Juridique",
+    "privacy": "Politique de confidentialit\u00e9",
+    "terms": "Conditions g\u00e9n\u00e9rales",
+    "impressum": "Mentions l\u00e9gales",
+    "copyright": "\u00a9 2026 Checkin OK. Tous droits r\u00e9serv\u00e9s."
+  },
+  "cookie": {
+    "message": "Nous utilisons des cookies techniques pour am\u00e9liorer votre exp\u00e9rience. Aucune donn\u00e9e n\u0027est partag\u00e9e avec des tiers.",
+    "accept": "Accepter",
+    "decline": "Refuser"
+  },
+  "legal": {
+    "privacyTitle": "Politique de confidentialit\u00e9",
+    "privacyIntroTitle": "Introduction",
+    "privacyIntroText": "Checkin OK, exploit\u00e9 par Radom UG (haftungsbeschr\u00e4nkt), s\u0027engage \u00e0 prot\u00e9ger votre vie priv\u00e9e. Cette politique explique comment nous traitons les donn\u00e9es lorsque vous utilisez notre service.",
+    "privacyDataTitle": "Donn\u00e9es trait\u00e9es",
+    "privacyDataText": "Nous traitons les fichiers de pr\u00e9sence (CSV/Excel) contenant des identifiants de travailleurs (NISS/BIS/Limosa). Les fichiers sont trait\u00e9s en m\u00e9moire volatile uniquement et ne sont jamais \u00e9crits sur disque. Toutes les donn\u00e9es personnelles sont purg\u00e9es imm\u00e9diatement apr\u00e8s transmission \u00e0 l\u0027ONSS.",
+    "privacyRetentionTitle": "Conservation des donn\u00e9es",
+    "privacyRetentionText": "Z\u00e9ro r\u00e9tention pour les donn\u00e9es personnelles. Nous ne stockons que des statistiques agr\u00e9g\u00e9es (compteurs succ\u00e8s/\u00e9chec) pour la facturation.",
+    "privacyCookiesTitle": "Cookies",
+    "privacyCookiesText": "Nous utilisons uniquement des cookies techniques essentiels (pr\u00e9f\u00e9rence linguistique, session). Aucun cookie de suivi n\u0027est utilis\u00e9.",
+    "privacyRightsTitle": "Vos droits",
+    "privacyRightsText": "En vertu du RGPD, vous avez le droit d\u0027acc\u00e9der, rectifier, effacer et porter vos donn\u00e9es. Comme nous ne conservons aucune donn\u00e9e personnelle, ces droits sont automatiquement respect\u00e9s.",
+    "privacyContactTitle": "Contact",
+    "privacyContactText": "Radom UG (haftungsbeschr\u00e4nkt), Francfort-sur-le-Main, Allemagne. Email : privacy@checkin-ok.be",
+    "termsTitle": "Conditions g\u00e9n\u00e9rales",
+    "termsIntroTitle": "Acceptation des conditions",
+    "termsIntroText": "En utilisant Checkin OK, vous acceptez ces conditions. Checkin OK est fourni par Radom UG (haftungsbeschr\u00e4nkt), Francfort-sur-le-Main, Allemagne.",
+    "termsServiceTitle": "Description du service",
+    "termsServiceText": "Checkin OK fournit l\u0027analyse automatis\u00e9e des donn\u00e9es de pr\u00e9sence, la validation d\u0027identifiants belges, la correction IA et la g\u00e9n\u00e9ration XML conforme \u00e0 l\u0027ONSS. Le service est fourni tel quel, sans garantie.",
+    "termsLiabilityTitle": "Limitation de responsabilit\u00e9",
+    "termsLiabilityText": "Checkin OK et Radom UG ne sont pas responsables des dommages indirects, y compris les amendes ONSS. Les utilisateurs doivent v\u00e9rifier l\u0027exactitude des d\u00e9clarations avant soumission.",
+    "termsTerminationTitle": "R\u00e9siliation",
+    "termsTerminationText": "Nous pouvons suspendre l\u0027acc\u00e8s au service \u00e0 tout moment en cas de violation des conditions.",
+    "termsGoverningTitle": "Droit applicable",
+    "termsGoverningText": "Ces conditions sont r\u00e9gies par les lois de la R\u00e9publique f\u00e9d\u00e9rale d\u0027Allemagne. Tribunaux comp\u00e9tents : Francfort-sur-le-Main.",
+    "impressumTitle": "Mentions l\u00e9gales",
+    "impressumCompanyTitle": "Soci\u00e9t\u00e9",
+    "impressumCompanyText": "Radom UG (haftungsbeschr\u00e4nkt)",
+    "impressumAddressTitle": "Adresse",
+    "impressumAddressText": "Francfort-sur-le-Main, Allemagne",
+    "impressumContactTitle": "Contact",
+    "impressumContactText": "Email : info@checkin-ok.be",
+    "impressumRegisterTitle": "Inscription",
+    "impressumRegisterText": "Amtsgericht Frankfurt am Main, HRB [num\u00e9ro en attente]",
+    "impressumDisclaimerTitle": "Avertissement",
+    "impressumDisclaimerText": "Les informations sur ce site sont fournies \u00e0 titre informatif. Nous ne garantissons pas leur exhaustivit\u00e9 ou exactitude."
+  }
+}

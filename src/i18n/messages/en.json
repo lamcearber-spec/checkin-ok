@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "declarations": "Declarations",
+    "settings": "Settings",
+    "help": "Help"
+  },
+  "hero": {
+    "title": "NSSO Attendance Compliance in Minutes",
+    "subtitle": "Upload attendance CSV/Excel, validate Belgian IDs (NISS/BIS/Limosa), and generate compliant XML for Checkinatwork & CIAO. Zero hardware required.",
+    "cta": "Upload attendance file",
+    "trusted": "Checkinatwork \u2022 CIAO \u2022 NSSO XSD v1.13 \u2022 SIOD Compliant"
+  },
+  "kpi": {
+    "totalScans": "Total Scans",
+    "aiCorrections": "AI Corrections",
+    "apiFaults": "API Faults"
+  },
+  "upload": {
+    "title": "Attendance Ingestion",
+    "dropzone": "Drop your attendance file here",
+    "dropzoneAlt": "or click to browse",
+    "formats": "Supported: .csv, .xlsx",
+    "processing": "Parsing attendance data...",
+    "success": "File parsed successfully!",
+    "error": "Error parsing file"
+  },
+  "resolution": {
+    "title": "Resolution Matrix",
+    "subtitle": "Review AI-corrected records before submission",
+    "original": "Original (Invalid)",
+    "corrected": "AI Correction",
+    "confidence": "Confidence",
+    "approve": "Approve",
+    "approveAll": "Approve All",
+    "reject": "Reject",
+    "noIssues": "No issues found. All records validated successfully.",
+    "field": "Field",
+    "value": "Value",
+    "status": "Status",
+    "actions": "Actions"
+  },
+  "results": {
+    "title": "Valid Declarations",
+    "niss": "NISS/BIS",
+    "limosa": "Limosa L1",
+    "workplace": "Workplace ID",
+    "date": "Date",
+    "arrival": "Arrival",
+    "departure": "Departure",
+    "type": "Type",
+    "transactions": "records",
+    "generateXml": "Generate NSSO XML",
+    "exportCsv": "Export CSV",
+    "noData": "No data yet. Upload an attendance file to get started.",
+    "checkinatwork": "Checkinatwork",
+    "ciao": "CIAO"
+  },
+  "features": {
+    "title": "Why Checkin OK?",
+    "validation": "Cryptographic ID Validation",
+    "validationDesc": "Modulo-97 checksum verification for NISS/BIS numbers with pre/post-2000 birth year detection and BIS month normalization",
+    "ai": "AI Data Sanitization",
+    "aiDesc": "Azure GPT-4o fixes typographical errors, extracts timestamps from natural language, and separates concatenated fields",
+    "xml": "NSSO XML Generation",
+    "xmlDesc": "XSD v1.13 compliant payloads for both Checkinatwork (daily presence) and CIAO (real-time timestamps with rest breaks)",
+    "privacy": "Zero Data Retention",
+    "privacyDesc": "All PII processed in volatile RAM only. No database storage of names, NISS, BIS, or Limosa IDs. GBA/GDPR compliant."
+  },
+  "pricing": {
+    "title": "Simple, flat pricing",
+    "business": "Business",
+    "businessPrice": "\u20ac99",
+    "businessPeriod": "/month",
+    "businessDesc": "Everything you need for Belgian attendance compliance",
+    "features": ["Unlimited CSV/Excel uploads", "NISS/BIS/Limosa validation", "AI data correction", "Checkinatwork + CIAO XML", "Zero data retention", "Priority support"],
+    "cta": "Get started",
+    "risk": "Avoid \u20ac6,000 fines per unregistered worker"
+  },
+  "trust": {
+    "gdpr": "GDPR Compliant",
+    "gba": "GBA Compliant",
+    "zero": "Zero Retention",
+    "nsso": "NSSO Certified"
+  },
+  "footer": {
+    "description": "Checkin OK automates Belgian NSSO attendance declarations for Checkinatwork and CIAO compliance.",
+    "product": "Product",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "impressum": "Impressum",
+    "copyright": "\u00a9 2026 Checkin OK. All rights reserved."
+  },
+  "cookie": {
+    "message": "We use technical cookies to improve your experience. No personal data is shared with third parties.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "privacyIntroTitle": "Introduction",
+    "privacyIntroText": "Checkin OK, operated by Radom UG (haftungsbeschr\u00e4nkt), is committed to protecting your privacy. This policy explains how we handle data when you use our service.",
+    "privacyDataTitle": "Data We Process",
+    "privacyDataText": "We process attendance files (CSV/Excel) containing worker IDs (NISS/BIS/Limosa) that you upload. Files are processed in volatile memory only and never written to disk or stored in any database. All PII is purged immediately after NSSO transmission.",
+    "privacyRetentionTitle": "Data Retention",
+    "privacyRetentionText": "Zero data retention for PII. We only store aggregate usage statistics (success/fail counts) for billing purposes. No names, NISS, BIS, or Limosa IDs are ever persisted.",
+    "privacyCookiesTitle": "Cookies",
+    "privacyCookiesText": "We use only technical cookies essential for the functioning of the application (language preference, session). No tracking or analytics cookies are used.",
+    "privacyRightsTitle": "Your Rights",
+    "privacyRightsText": "Under the GDPR, you have the right to access, rectify, erase, and port your personal data. Since we do not retain any PII, these rights are automatically fulfilled.",
+    "privacyContactTitle": "Contact",
+    "privacyContactText": "For privacy-related inquiries, contact Radom UG (haftungsbeschr\u00e4nkt), Frankfurt am Main, Germany. Email: privacy@checkin-ok.be",
+    "termsTitle": "Terms & Conditions",
+    "termsIntroTitle": "Acceptance of Terms",
+    "termsIntroText": "By using Checkin OK, you agree to these terms and conditions. Checkin OK is provided by Radom UG (haftungsbeschr\u00e4nkt), a company registered in Frankfurt am Main, Germany.",
+    "termsServiceTitle": "Service Description",
+    "termsServiceText": "Checkin OK provides automated parsing of attendance data, Belgian government ID validation (NISS/BIS/Limosa), AI-powered data correction, and NSSO-compliant XML generation for Checkinatwork and CIAO declarations. The service is provided as-is without warranty.",
+    "termsLiabilityTitle": "Limitation of Liability",
+    "termsLiabilityText": "Checkin OK and Radom UG shall not be liable for any indirect, incidental, or consequential damages including NSSO fines. Users are responsible for verifying the accuracy of declarations before submission to government systems.",
+    "termsTerminationTitle": "Termination",
+    "termsTerminationText": "We may suspend or terminate access to the service at any time for violation of these terms or for any other reason at our sole discretion.",
+    "termsGoverningTitle": "Governing Law",
+    "termsGoverningText": "These terms are governed by and construed in accordance with the laws of the Federal Republic of Germany. The courts of Frankfurt am Main shall have exclusive jurisdiction.",
+    "impressumTitle": "Impressum",
+    "impressumCompanyTitle": "Company",
+    "impressumCompanyText": "Radom UG (haftungsbeschr\u00e4nkt)",
+    "impressumAddressTitle": "Address",
+    "impressumAddressText": "Frankfurt am Main, Germany",
+    "impressumContactTitle": "Contact",
+    "impressumContactText": "Email: info@checkin-ok.be",
+    "impressumRegisterTitle": "Registration",
+    "impressumRegisterText": "Registered at Amtsgericht Frankfurt am Main, HRB [number pending]",
+    "impressumDisclaimerTitle": "Disclaimer",
+    "impressumDisclaimerText": "The information on this website is provided for general informational purposes. We make no warranties about the completeness, reliability, or accuracy of this information."
+  }
+}
