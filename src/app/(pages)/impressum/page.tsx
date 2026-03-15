@@ -24,6 +24,14 @@ export default function ImpressumPage() {
           <p>{t('impressumRegisterText')}</p>
         </section>
         <section>
+          <h2 className="text-base font-semibold text-navy mb-2">{t('impressumVatTitle')}</h2>
+          <p>{t('impressumVatText')}</p>
+        </section>
+        <section>
+          <h2 className="text-base font-semibold text-navy mb-2">{t('impressumCeoTitle')}</h2>
+          <p>{t('impressumCeoText')}</p>
+        </section>
+        <section>
           <h2 className="text-base font-semibold text-navy mb-2">{t('impressumDisclaimerTitle')}</h2>
           <p>{t('impressumDisclaimerText')}</p>
         </section>

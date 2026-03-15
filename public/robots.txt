@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://checkin-ok.be/sitemap.xml

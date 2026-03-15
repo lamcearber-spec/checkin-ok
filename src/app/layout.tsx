@@ -11,6 +11,23 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Checkin OK — Belgian NSSO Attendance Compliance',
   description: 'Automated Checkinatwork & CIAO declarations. Upload CSV/Excel, validate NISS/BIS/Limosa, generate NSSO-compliant XML. Zero data retention.',
+  icons: {
+    icon: '/favicon.svg',
+  },
+  manifest: '/manifest.json',
+  openGraph: {
+    title: 'Checkin OK — Belgian NSSO Attendance Compliance',
+    description: 'Automated Checkinatwork & CIAO declarations. Upload CSV/Excel, validate NISS/BIS/Limosa, generate NSSO-compliant XML. Zero data retention.',
+    url: 'https://checkin-ok.be',
+    siteName: 'Checkin OK',
+    locale: 'nl_BE',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Checkin OK — Belgian NSSO Attendance Compliance',
+    description: 'Automated Checkinatwork & CIAO declarations. Upload CSV/Excel, validate NISS/BIS/Limosa, generate NSSO-compliant XML. Zero data retention.',
+  },
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

@@ -24,6 +24,8 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+ENV HOSTNAME=0.0.0.0
+
 USER nextjs
 EXPOSE 3011
 CMD ["node", "server.js"]

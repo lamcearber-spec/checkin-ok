@@ -1,0 +1,14 @@
+{
+  "name": "Checkin-OK.be",
+  "short_name": "Checkin-OK",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#059669",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

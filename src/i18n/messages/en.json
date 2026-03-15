@@ -126,11 +126,15 @@
     "impressumCompanyTitle": "Company",
     "impressumCompanyText": "Radom UG (haftungsbeschr\u00e4nkt)",
     "impressumAddressTitle": "Address",
-    "impressumAddressText": "Frankfurt am Main, Germany",
+    "impressumAddressText": "Taunusanlage 8, 60329 Frankfurt am Main, Germany",
     "impressumContactTitle": "Contact",
-    "impressumContactText": "Email: info@checkin-ok.be",
+    "impressumContactText": "Email: info@checkin-ok.be\nPhone: +49 176 99742900",
     "impressumRegisterTitle": "Registration",
-    "impressumRegisterText": "Registered at Amtsgericht Frankfurt am Main, HRB [number pending]",
+    "impressumRegisterText": "Registered at Amtsgericht Frankfurt am Main, HRB 130877",
+    "impressumVatTitle": "VAT Number",
+    "impressumVatText": "DE367553843",
+    "impressumCeoTitle": "Managing Director",
+    "impressumCeoText": "Arber Lamce",
     "impressumDisclaimerTitle": "Disclaimer",
     "impressumDisclaimerText": "The information on this website is provided for general informational purposes. We make no warranties about the completeness, reliability, or accuracy of this information."
   }
