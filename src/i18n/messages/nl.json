@@ -3,11 +3,15 @@
     "dashboard": "Dashboard",
     "declarations": "Aangiften",
     "settings": "Instellingen",
-    "help": "Help"
+    "help": "Help",
+    "home": "Home",
+    "pricing": "Tarieven",
+    "contact": "Contact",
+    "features": "Functies"
   },
   "hero": {
     "title": "RSZ-aanwezigheidsconformiteit in minuten",
-    "subtitle": "Upload aanwezigheids-CSV/Excel, valideer Belgische ID\u0027s (INSZ/BIS/Limosa) en genereer conforme XML voor Checkinatwork & CIAO. Geen hardware nodig.",
+    "subtitle": "Upload aanwezigheids-CSV/Excel, valideer Belgische ID's (INSZ/BIS/Limosa) en genereer conforme XML voor Checkinatwork & CIAO. Geen hardware nodig.",
     "cta": "Upload uw bestand",
     "trusted": "Checkinatwork \u2022 CIAO \u2022 RSZ XSD v1.13 \u2022 SIOD-conform"
   },
@@ -77,6 +81,44 @@
     "cta": "Aan de slag",
     "risk": "Vermijd boetes van \u20ac6.000 per niet-geregistreerde werknemer"
   },
+  "pricingPage": {
+    "title": "Abonnementen & Tarieven",
+    "subtitle": "Kies het abonnement dat bij u past. Van gratis anoniem gebruik tot volledige professionele conformiteit.",
+    "perMonth": "/maand",
+    "perDay": "/dag",
+    "perMo": "/mnd",
+    "popular": "Populairste",
+    "cta": "Aan de slag",
+    "free": "Gratis",
+    "tiers": {
+      "anonymous": {
+        "name": "Gratis Anoniem",
+        "price": "\u20ac0",
+        "limit": "1 aangifte/dag",
+        "features": ["CSV/Excel uploaden", "INSZ/BIS-validatie", "XML-generatie", "Geen account nodig"]
+      },
+      "registered": {
+        "name": "Gratis Geregistreerd",
+        "price": "\u20ac0",
+        "limit": "5 aangiften/dag",
+        "features": ["Alles in Gratis Anoniem", "5 aangiften per dag", "Conversiegeschiedenis", "E-mailondersteuning"]
+      },
+      "starter": {
+        "name": "Starter",
+        "price": "\u20ac20",
+        "limit": "200 aangiften/mnd",
+        "features": ["Alles in Gratis Geregistreerd", "200 aangiften per maand", "AI-gegevenscorrectie", "Prioritaire ondersteuning"]
+      },
+      "professional": {
+        "name": "Professioneel",
+        "price": "\u20ac50",
+        "limit": "1000 aangiften/mnd",
+        "features": ["Alles in Starter", "1000 aangiften per maand", "Bulk XML-export", "Persoonlijke ondersteuning", "API-toegang"]
+      }
+    },
+    "homeCta": "Bekijk alle abonnementen & tarieven",
+    "risk": "Vermijd boetes van \u20ac6.000 per niet-geregistreerde werknemer"
+  },
   "trust": {
     "gdpr": "AVG-conform",
     "gba": "GBA-conform",
@@ -91,6 +133,7 @@
     "terms": "Voorwaarden",
     "impressum": "Impressum",
     "contact": "Contact",
+    "pricing": "Tarieven",
     "copyright": "\u00a9 2026 Checkin OK. Alle rechten voorbehouden."
   },
   "cookie": {
@@ -103,7 +146,7 @@
     "privacyIntroTitle": "Inleiding",
     "privacyIntroText": "Checkin OK, beheerd door Radom UG (haftungsbeschr\u00e4nkt), zet zich in voor de bescherming van uw privacy.",
     "privacyDataTitle": "Verwerkte gegevens",
-    "privacyDataText": "Wij verwerken aanwezigheidsbestanden (CSV/Excel) met werknemers-ID\u0027s (INSZ/BIS/Limosa). Bestanden worden uitsluitend in vluchtig geheugen verwerkt. Alle persoonsgegevens worden onmiddellijk na RSZ-transmissie gewist.",
+    "privacyDataText": "Wij verwerken aanwezigheidsbestanden (CSV/Excel) met werknemers-ID's (INSZ/BIS/Limosa). Bestanden worden uitsluitend in vluchtig geheugen verwerkt. Alle persoonsgegevens worden onmiddellijk na RSZ-transmissie gewist.",
     "privacyRetentionTitle": "Gegevensbewaring",
     "privacyRetentionText": "Geen bewaring van persoonsgegevens. Wij bewaren alleen geaggregeerde gebruiksstatistieken voor facturering.",
     "privacyCookiesTitle": "Cookies",
@@ -134,7 +177,7 @@
     "impressumRegisterText": "Amtsgericht Frankfurt am Main, HRB 130877",
     "impressumVatTitle": "BTW-nummer",
     "impressumVatText": "DE367553843",
-    "impressumCeoTitle": "Geschäftsführer",
+    "impressumCeoTitle": "Gesch\u00e4ftsf\u00fchrer",
     "impressumCeoText": "Arber Lamce",
     "impressumDisclaimerTitle": "Disclaimer",
     "impressumDisclaimerText": "De informatie op deze website is bedoeld voor algemene informatiedoeleinden. Wij geven geen garanties over volledigheid of nauwkeurigheid."
@@ -189,7 +232,7 @@
         "name": "Luc B.",
         "location": "Luik",
         "role": "Accountant",
-        "text": "Eindelijk een eenvoudige oplossing voor RSZ-aangiften. De interface is intuïtief en het XML-export werkt feilloos. Sterk aanbevolen voor elke Belgische werkgever.",
+        "text": "Eindelijk een eenvoudige oplossing voor RSZ-aangiften. De interface is intu\u00eftief en het XML-export werkt feilloos. Sterk aanbevolen voor elke Belgische werkgever.",
         "rating": 5
       }
     ]
@@ -205,12 +248,26 @@
     "emailLabel": "E-mail",
     "email": "info@checkin-ok.be",
     "addressLabel": "Adres",
-    "address": "Radom UG (haftungsbeschränkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nDuitsland",
+    "address": "Radom UG (haftungsbeschr\u00e4nkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nDuitsland",
     "cta": "Stuur ons een e-mail"
   },
   "notFound": {
     "title": "Pagina niet gevonden",
     "message": "De pagina die u zoekt bestaat niet of is verplaatst.",
     "back": "Terug naar de startpagina"
+  },
+  "metadata": {
+    "homeTitle": "Checkin OK \u2014 Belgische RSZ-aanwezigheidsconformiteit",
+    "homeDescription": "Geautomatiseerde Checkinatwork & CIAO-aangiften. Upload CSV/Excel, valideer INSZ/BIS/Limosa, genereer RSZ-conforme XML. Geen gegevensopslag.",
+    "pricingTitle": "Tarieven & Abonnementen \u2014 Checkin OK",
+    "pricingDescription": "Kies uw Checkin OK-abonnement. Van gratis anoniem gebruik tot professionele RSZ-conformiteit met 1000 aangiften per maand.",
+    "contactTitle": "Contact \u2014 Checkin OK",
+    "contactDescription": "Neem contact op met Checkin OK. Vragen over RSZ-conformiteit, Checkinatwork of CIAO-aangiften? Wij helpen u graag.",
+    "impressumTitle": "Impressum \u2014 Checkin OK",
+    "impressumDescription": "Juridische informatie over Radom UG (haftungsbeschr\u00e4nkt), het bedrijf achter Checkin OK.",
+    "privacyTitle": "Privacybeleid \u2014 Checkin OK",
+    "privacyDescription": "Hoe Checkin OK uw gegevens verwerkt. Geen opslag van persoonsgegevens, AVG- en GBA-conforme verwerking.",
+    "termsTitle": "Algemene Voorwaarden \u2014 Checkin OK",
+    "termsDescription": "Voorwaarden voor het gebruik van het Checkin OK RSZ-aanwezigheidsplatform."
   }
 }

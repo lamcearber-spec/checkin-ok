@@ -21,8 +21,8 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold text-navy mb-3 uppercase tracking-wider">{t('product')}</h4>
             <ul className="space-y-2 text-xs text-slate-text/60">
-              <li><a href="#features" className="hover:text-corp-green transition-colors">Features</a></li>
-              <li><a href="#pricing" className="hover:text-corp-green transition-colors">Pricing</a></li>
+              <li><a href="/#features" className="hover:text-corp-green transition-colors">Features</a></li>
+              <li><Link href="/pricing" className="hover:text-corp-green transition-colors">{t('pricing')}</Link></li>
             </ul>
           </div>
           <div>

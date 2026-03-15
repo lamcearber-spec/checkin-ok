@@ -3,7 +3,11 @@
     "dashboard": "Dashboard",
     "declarations": "Declarations",
     "settings": "Settings",
-    "help": "Help"
+    "help": "Help",
+    "home": "Home",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "features": "Features"
   },
   "hero": {
     "title": "NSSO Attendance Compliance in Minutes",
@@ -77,6 +81,44 @@
     "cta": "Get started",
     "risk": "Avoid \u20ac6,000 fines per unregistered worker"
   },
+  "pricingPage": {
+    "title": "Plans & Pricing",
+    "subtitle": "Choose the plan that fits your needs. From free anonymous use to full professional compliance.",
+    "perMonth": "/month",
+    "perDay": "/day",
+    "perMo": "/mo",
+    "popular": "Most popular",
+    "cta": "Get started",
+    "free": "Free",
+    "tiers": {
+      "anonymous": {
+        "name": "Free Anonymous",
+        "price": "\u20ac0",
+        "limit": "1 declaration/day",
+        "features": ["Upload CSV/Excel", "NISS/BIS validation", "XML generation", "No account required"]
+      },
+      "registered": {
+        "name": "Free Registered",
+        "price": "\u20ac0",
+        "limit": "5 declarations/day",
+        "features": ["Everything in Free Anonymous", "5 declarations per day", "Conversion history", "Email support"]
+      },
+      "starter": {
+        "name": "Starter",
+        "price": "\u20ac20",
+        "limit": "200 declarations/mo",
+        "features": ["Everything in Free Registered", "200 declarations per month", "AI data correction", "Priority support"]
+      },
+      "professional": {
+        "name": "Professional",
+        "price": "\u20ac50",
+        "limit": "1000 declarations/mo",
+        "features": ["Everything in Starter", "1000 declarations per month", "Bulk XML export", "Dedicated support", "API access"]
+      }
+    },
+    "homeCta": "View all plans & pricing",
+    "risk": "Avoid \u20ac6,000 fines per unregistered worker"
+  },
   "trust": {
     "gdpr": "GDPR Compliant",
     "gba": "GBA Compliant",
@@ -91,6 +133,7 @@
     "terms": "Terms & Conditions",
     "impressum": "Impressum",
     "contact": "Contact",
+    "pricing": "Pricing",
     "copyright": "\u00a9 2026 Checkin OK. All rights reserved."
   },
   "cookie": {
@@ -187,7 +230,7 @@
       },
       {
         "name": "Luc B.",
-        "location": "Liège",
+        "location": "Li\u00e8ge",
         "role": "Accountant",
         "text": "Finally a simple solution for NSSO declarations. The interface is intuitive and the XML export works flawlessly. Highly recommended for any Belgian employer.",
         "rating": 5
@@ -205,12 +248,26 @@
     "emailLabel": "Email",
     "email": "info@checkin-ok.be",
     "addressLabel": "Address",
-    "address": "Radom UG (haftungsbeschränkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nGermany",
+    "address": "Radom UG (haftungsbeschr\u00e4nkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nGermany",
     "cta": "Send us an email"
   },
   "notFound": {
     "title": "Page Not Found",
     "message": "The page you are looking for does not exist or has been moved.",
     "back": "Back to homepage"
+  },
+  "metadata": {
+    "homeTitle": "Checkin OK \u2014 Belgian NSSO Attendance Compliance",
+    "homeDescription": "Automated Checkinatwork & CIAO declarations. Upload CSV/Excel, validate NISS/BIS/Limosa, generate NSSO-compliant XML. Zero data retention.",
+    "pricingTitle": "Pricing & Plans \u2014 Checkin OK",
+    "pricingDescription": "Choose your Checkin OK plan. From free anonymous use to professional NSSO compliance with up to 1000 declarations per month.",
+    "contactTitle": "Contact \u2014 Checkin OK",
+    "contactDescription": "Get in touch with Checkin OK. Questions about NSSO compliance, Checkinatwork or CIAO declarations? We're here to help.",
+    "impressumTitle": "Impressum \u2014 Checkin OK",
+    "impressumDescription": "Legal information about Radom UG (haftungsbeschr\u00e4nkt), the company behind Checkin OK.",
+    "privacyTitle": "Privacy Policy \u2014 Checkin OK",
+    "privacyDescription": "How Checkin OK handles your data. Zero PII retention, GDPR and GBA compliant processing.",
+    "termsTitle": "Terms & Conditions \u2014 Checkin OK",
+    "termsDescription": "Terms and conditions for using the Checkin OK NSSO attendance compliance platform."
   }
 }

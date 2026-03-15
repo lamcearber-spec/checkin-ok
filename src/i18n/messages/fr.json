@@ -3,7 +3,11 @@
     "dashboard": "Tableau de bord",
     "declarations": "D\u00e9clarations",
     "settings": "Param\u00e8tres",
-    "help": "Aide"
+    "help": "Aide",
+    "home": "Accueil",
+    "pricing": "Tarifs",
+    "contact": "Contact",
+    "features": "Fonctionnalit\u00e9s"
   },
   "hero": {
     "title": "Conformit\u00e9 ONSS en quelques minutes",
@@ -17,13 +21,13 @@
     "apiFaults": "Erreurs API"
   },
   "upload": {
-    "title": "Zone d\u0027ingestion",
+    "title": "Zone d'ingestion",
     "dropzone": "D\u00e9posez votre fichier de pr\u00e9sence ici",
     "dropzoneAlt": "ou cliquez pour parcourir",
     "formats": "Formats : .csv, .xlsx",
     "processing": "Analyse des donn\u00e9es...",
     "success": "Fichier analys\u00e9 avec succ\u00e8s !",
-    "error": "Erreur lors de l\u0027analyse"
+    "error": "Erreur lors de l'analyse"
   },
   "resolution": {
     "title": "Matrice de r\u00e9solution",
@@ -77,6 +81,44 @@
     "cta": "Commencer",
     "risk": "\u00c9vitez les amendes de 6 000 \u20ac par travailleur non enregistr\u00e9"
   },
+  "pricingPage": {
+    "title": "Formules & Tarifs",
+    "subtitle": "Choisissez la formule qui vous convient. De l'utilisation anonyme gratuite \u00e0 la conformit\u00e9 professionnelle compl\u00e8te.",
+    "perMonth": "/mois",
+    "perDay": "/jour",
+    "perMo": "/mois",
+    "popular": "Le plus populaire",
+    "cta": "Commencer",
+    "free": "Gratuit",
+    "tiers": {
+      "anonymous": {
+        "name": "Gratuit Anonyme",
+        "price": "\u20ac0",
+        "limit": "1 d\u00e9claration/jour",
+        "features": ["Upload CSV/Excel", "Validation NISS/BIS", "G\u00e9n\u00e9ration XML", "Aucun compte requis"]
+      },
+      "registered": {
+        "name": "Gratuit Enregistr\u00e9",
+        "price": "\u20ac0",
+        "limit": "5 d\u00e9clarations/jour",
+        "features": ["Tout dans Gratuit Anonyme", "5 d\u00e9clarations par jour", "Historique des conversions", "Support par e-mail"]
+      },
+      "starter": {
+        "name": "Starter",
+        "price": "\u20ac20",
+        "limit": "200 d\u00e9clarations/mois",
+        "features": ["Tout dans Gratuit Enregistr\u00e9", "200 d\u00e9clarations par mois", "Correction IA des donn\u00e9es", "Support prioritaire"]
+      },
+      "professional": {
+        "name": "Professionnel",
+        "price": "\u20ac50",
+        "limit": "1000 d\u00e9clarations/mois",
+        "features": ["Tout dans Starter", "1000 d\u00e9clarations par mois", "Export XML en masse", "Support d\u00e9di\u00e9", "Acc\u00e8s API"]
+      }
+    },
+    "homeCta": "Voir toutes les formules & tarifs",
+    "risk": "\u00c9vitez les amendes de 6 000 \u20ac par travailleur non enregistr\u00e9"
+  },
   "trust": {
     "gdpr": "Conforme au RGPD",
     "gba": "Conforme GBA",
@@ -91,38 +133,39 @@
     "terms": "Conditions g\u00e9n\u00e9rales",
     "impressum": "Mentions l\u00e9gales",
     "contact": "Contact",
+    "pricing": "Tarifs",
     "copyright": "\u00a9 2026 Checkin OK. Tous droits r\u00e9serv\u00e9s."
   },
   "cookie": {
-    "message": "Nous utilisons des cookies techniques pour am\u00e9liorer votre exp\u00e9rience. Aucune donn\u00e9e n\u0027est partag\u00e9e avec des tiers.",
+    "message": "Nous utilisons des cookies techniques pour am\u00e9liorer votre exp\u00e9rience. Aucune donn\u00e9e n'est partag\u00e9e avec des tiers.",
     "accept": "Accepter",
     "decline": "Refuser"
   },
   "legal": {
     "privacyTitle": "Politique de confidentialit\u00e9",
     "privacyIntroTitle": "Introduction",
-    "privacyIntroText": "Checkin OK, exploit\u00e9 par Radom UG (haftungsbeschr\u00e4nkt), s\u0027engage \u00e0 prot\u00e9ger votre vie priv\u00e9e. Cette politique explique comment nous traitons les donn\u00e9es lorsque vous utilisez notre service.",
+    "privacyIntroText": "Checkin OK, exploit\u00e9 par Radom UG (haftungsbeschr\u00e4nkt), s'engage \u00e0 prot\u00e9ger votre vie priv\u00e9e. Cette politique explique comment nous traitons les donn\u00e9es lorsque vous utilisez notre service.",
     "privacyDataTitle": "Donn\u00e9es trait\u00e9es",
-    "privacyDataText": "Nous traitons les fichiers de pr\u00e9sence (CSV/Excel) contenant des identifiants de travailleurs (NISS/BIS/Limosa). Les fichiers sont trait\u00e9s en m\u00e9moire volatile uniquement et ne sont jamais \u00e9crits sur disque. Toutes les donn\u00e9es personnelles sont purg\u00e9es imm\u00e9diatement apr\u00e8s transmission \u00e0 l\u0027ONSS.",
+    "privacyDataText": "Nous traitons les fichiers de pr\u00e9sence (CSV/Excel) contenant des identifiants de travailleurs (NISS/BIS/Limosa). Les fichiers sont trait\u00e9s en m\u00e9moire volatile uniquement et ne sont jamais \u00e9crits sur disque. Toutes les donn\u00e9es personnelles sont purg\u00e9es imm\u00e9diatement apr\u00e8s transmission \u00e0 l'ONSS.",
     "privacyRetentionTitle": "Conservation des donn\u00e9es",
     "privacyRetentionText": "Z\u00e9ro r\u00e9tention pour les donn\u00e9es personnelles. Nous ne stockons que des statistiques agr\u00e9g\u00e9es (compteurs succ\u00e8s/\u00e9chec) pour la facturation.",
     "privacyCookiesTitle": "Cookies",
-    "privacyCookiesText": "Nous utilisons uniquement des cookies techniques essentiels (pr\u00e9f\u00e9rence linguistique, session). Aucun cookie de suivi n\u0027est utilis\u00e9.",
+    "privacyCookiesText": "Nous utilisons uniquement des cookies techniques essentiels (pr\u00e9f\u00e9rence linguistique, session). Aucun cookie de suivi n'est utilis\u00e9.",
     "privacyRightsTitle": "Vos droits",
-    "privacyRightsText": "En vertu du RGPD, vous avez le droit d\u0027acc\u00e9der, rectifier, effacer et porter vos donn\u00e9es. Comme nous ne conservons aucune donn\u00e9e personnelle, ces droits sont automatiquement respect\u00e9s.",
+    "privacyRightsText": "En vertu du RGPD, vous avez le droit d'acc\u00e9der, rectifier, effacer et porter vos donn\u00e9es. Comme nous ne conservons aucune donn\u00e9e personnelle, ces droits sont automatiquement respect\u00e9s.",
     "privacyContactTitle": "Contact",
     "privacyContactText": "Radom UG (haftungsbeschr\u00e4nkt), Francfort-sur-le-Main, Allemagne. Email : privacy@checkin-ok.be",
     "termsTitle": "Conditions g\u00e9n\u00e9rales",
     "termsIntroTitle": "Acceptation des conditions",
     "termsIntroText": "En utilisant Checkin OK, vous acceptez ces conditions. Checkin OK est fourni par Radom UG (haftungsbeschr\u00e4nkt), Francfort-sur-le-Main, Allemagne.",
     "termsServiceTitle": "Description du service",
-    "termsServiceText": "Checkin OK fournit l\u0027analyse automatis\u00e9e des donn\u00e9es de pr\u00e9sence, la validation d\u0027identifiants belges, la correction IA et la g\u00e9n\u00e9ration XML conforme \u00e0 l\u0027ONSS. Le service est fourni tel quel, sans garantie.",
+    "termsServiceText": "Checkin OK fournit l'analyse automatis\u00e9e des donn\u00e9es de pr\u00e9sence, la validation d'identifiants belges, la correction IA et la g\u00e9n\u00e9ration XML conforme \u00e0 l'ONSS. Le service est fourni tel quel, sans garantie.",
     "termsLiabilityTitle": "Limitation de responsabilit\u00e9",
-    "termsLiabilityText": "Checkin OK et Radom UG ne sont pas responsables des dommages indirects, y compris les amendes ONSS. Les utilisateurs doivent v\u00e9rifier l\u0027exactitude des d\u00e9clarations avant soumission.",
+    "termsLiabilityText": "Checkin OK et Radom UG ne sont pas responsables des dommages indirects, y compris les amendes ONSS. Les utilisateurs doivent v\u00e9rifier l'exactitude des d\u00e9clarations avant soumission.",
     "termsTerminationTitle": "R\u00e9siliation",
-    "termsTerminationText": "Nous pouvons suspendre l\u0027acc\u00e8s au service \u00e0 tout moment en cas de violation des conditions.",
+    "termsTerminationText": "Nous pouvons suspendre l'acc\u00e8s au service \u00e0 tout moment en cas de violation des conditions.",
     "termsGoverningTitle": "Droit applicable",
-    "termsGoverningText": "Ces conditions sont r\u00e9gies par les lois de la R\u00e9publique f\u00e9d\u00e9rale d\u0027Allemagne. Tribunaux comp\u00e9tents : Francfort-sur-le-Main.",
+    "termsGoverningText": "Ces conditions sont r\u00e9gies par les lois de la R\u00e9publique f\u00e9d\u00e9rale d'Allemagne. Tribunaux comp\u00e9tents : Francfort-sur-le-Main.",
     "impressumTitle": "Mentions l\u00e9gales",
     "impressumCompanyTitle": "Soci\u00e9t\u00e9",
     "impressumCompanyText": "Radom UG (haftungsbeschr\u00e4nkt)",
@@ -212,5 +255,19 @@
     "title": "Page non trouv\u00e9e",
     "message": "La page que vous recherchez n'existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
     "back": "Retour \u00e0 l'accueil"
+  },
+  "metadata": {
+    "homeTitle": "Checkin OK \u2014 Conformit\u00e9 ONSS belge",
+    "homeDescription": "D\u00e9clarations automatis\u00e9es Checkinatwork & CIAO. Uploadez CSV/Excel, validez NISS/BIS/Limosa, g\u00e9n\u00e9rez du XML conforme ONSS. Z\u00e9ro r\u00e9tention.",
+    "pricingTitle": "Tarifs & Formules \u2014 Checkin OK",
+    "pricingDescription": "Choisissez votre formule Checkin OK. De l'utilisation anonyme gratuite \u00e0 la conformit\u00e9 ONSS professionnelle avec 1000 d\u00e9clarations par mois.",
+    "contactTitle": "Contact \u2014 Checkin OK",
+    "contactDescription": "Contactez Checkin OK. Questions sur la conformit\u00e9 ONSS, Checkinatwork ou d\u00e9clarations CIAO ? Nous sommes l\u00e0 pour vous aider.",
+    "impressumTitle": "Mentions l\u00e9gales \u2014 Checkin OK",
+    "impressumDescription": "Informations l\u00e9gales sur Radom UG (haftungsbeschr\u00e4nkt), la soci\u00e9t\u00e9 derri\u00e8re Checkin OK.",
+    "privacyTitle": "Politique de confidentialit\u00e9 \u2014 Checkin OK",
+    "privacyDescription": "Comment Checkin OK traite vos donn\u00e9es. Z\u00e9ro r\u00e9tention de donn\u00e9es personnelles, traitement conforme RGPD et GBA.",
+    "termsTitle": "Conditions g\u00e9n\u00e9rales \u2014 Checkin OK",
+    "termsDescription": "Conditions d'utilisation de la plateforme de conformit\u00e9 ONSS Checkin OK."
   }
 }

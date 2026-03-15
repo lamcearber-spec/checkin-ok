@@ -30,12 +30,35 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Checkin-OK.be',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web',
+  description: 'Geautomatiseerde Checkinatwork & CIAO-aangiften. Upload CSV/Excel, valideer INSZ/BIS/Limosa, genereer RSZ-conforme XML. Geen gegevensopslag.',
+  url: 'https://checkin-ok.be',
+  offers: {
+    '@type': 'AggregateOffer',
+    lowPrice: '0',
+    highPrice: '50',
+    priceCurrency: 'EUR',
+    offerCount: '4',
+  },
+};
+
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
   const messages = await getMessages();
 
   return (
     <html lang={locale}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen flex">
         <NextIntlClientProvider messages={messages}>
           <AttendanceProvider>

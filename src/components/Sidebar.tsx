@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { LayoutDashboard, FileCheck, Settings, HelpCircle, ChevronLeft, ChevronRight, ClipboardCheck } from 'lucide-react';
+import { LayoutDashboard, FileCheck, CreditCard, Settings, HelpCircle, ChevronLeft, ChevronRight, ClipboardCheck } from 'lucide-react';
+import Link from 'next/link';
 
 export function Sidebar() {
   const t = useTranslations('nav');
@@ -10,6 +11,7 @@ export function Sidebar() {
 
   const navItems = [
     { icon: LayoutDashboard, label: t('dashboard'), href: '/', active: true },
+    { icon: CreditCard, label: t('pricing'), href: '/pricing', active: false },
     { icon: FileCheck, label: t('declarations'), href: '#declarations', active: false },
     { icon: Settings, label: t('settings'), href: '#settings', active: false },
     { icon: HelpCircle, label: t('help'), href: '#help', active: false },
@@ -29,21 +31,25 @@ export function Sidebar() {
 
       {/* Nav */}
       <nav className="flex-1 py-3 px-2 space-y-0.5">
-        {navItems.map((item) => (
-          <a
-            key={item.label}
-            href={item.href}
-            className={`flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${
-              item.active
-                ? 'bg-corp-green-light text-corp-green font-medium'
-                : 'text-slate-text/70 hover:bg-slate-bg hover:text-navy'
-            }`}
-            title={collapsed ? item.label : undefined}
-          >
-            <item.icon className="h-4 w-4 flex-shrink-0" />
-            {!collapsed && <span>{item.label}</span>}
-          </a>
-        ))}
+        {navItems.map((item) => {
+          const isHash = item.href.startsWith('#');
+          const Component = isHash ? 'a' : Link;
+          return (
+            <Component
+              key={item.label}
+              href={item.href}
+              className={`flex items-center gap-3 px-3 py-2 rounded text-sm transition-colors ${
+                item.active
+                  ? 'bg-corp-green-light text-corp-green font-medium'
+                  : 'text-slate-text/70 hover:bg-slate-bg hover:text-navy'
+              }`}
+              title={collapsed ? item.label : undefined}
+            >
+              <item.icon className="h-4 w-4 flex-shrink-0" />
+              {!collapsed && <span>{item.label}</span>}
+            </Component>
+          );
+        })}
       </nav>
 
       {/* Collapse toggle */}

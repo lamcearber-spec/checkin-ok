@@ -5,7 +5,18 @@ import { ResolutionMatrix } from '@/components/ResolutionMatrix';
 import { DeclarationTable } from '@/components/DeclarationTable';
 import { FAQ } from '@/components/FAQ';
 import { Testimonials } from '@/components/Testimonials';
-import { Shield, Sparkles, FileCode, Lock, ClipboardCheck, AlertTriangle, Check, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { Shield, Sparkles, FileCode, Lock, ClipboardCheck, ArrowRight } from 'lucide-react';
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('metadata');
+  return {
+    title: t('homeTitle'),
+    description: t('homeDescription'),
+  };
+}
 
 export default function HomePage() {
   const t = useTranslations();
@@ -56,34 +67,17 @@ export default function HomePage() {
         ))}
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="bg-white border border-border rounded-lg p-6 md:p-8">
-        <h2 className="text-lg font-bold text-navy mb-6">{t('pricing.title')}</h2>
-        <div className="max-w-sm">
-          <div className="border-2 border-corp-green rounded-lg p-6">
-            <h3 className="text-sm font-semibold text-navy">{t('pricing.business')}</h3>
-            <div className="flex items-baseline gap-1 mt-2">
-              <span className="text-3xl font-bold text-navy">{t('pricing.businessPrice')}</span>
-              <span className="text-sm text-slate-text/50">{t('pricing.businessPeriod')}</span>
-            </div>
-            <p className="text-xs text-slate-text/60 mt-2">{t('pricing.businessDesc')}</p>
-            <ul className="mt-4 space-y-2">
-              {(t.raw('pricing.features') as string[]).map((feature: string) => (
-                <li key={feature} className="flex items-center gap-2 text-xs text-slate-text/70">
-                  <Check className="h-3.5 w-3.5 text-corp-green flex-shrink-0" />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-            <button className="w-full mt-5 bg-corp-green text-white py-2.5 rounded text-sm font-medium hover:bg-corp-green-dark transition-colors">
-              {t('pricing.cta')}
-            </button>
-            <div className="flex items-center gap-2 mt-3 text-xs text-error/80">
-              <AlertTriangle className="h-3.5 w-3.5 flex-shrink-0" />
-              {t('pricing.risk')}
-            </div>
-          </div>
-        </div>
+      {/* Pricing CTA */}
+      <section id="pricing" className="bg-white border border-border rounded-lg p-6 md:p-8 text-center">
+        <h2 className="text-lg font-bold text-navy mb-3">{t('pricing.title')}</h2>
+        <p className="text-sm text-slate-text/60 mb-5">{t('pricing.businessDesc')}</p>
+        <Link
+          href="/pricing"
+          className="inline-flex items-center gap-2 bg-corp-green text-white py-3 px-6 rounded text-sm font-semibold hover:bg-corp-green-dark transition-colors"
+        >
+          {t('pricingPage.homeCta')}
+          <ArrowRight className="h-4 w-4" />
+        </Link>
       </section>
 
       {/* Trust badges */}
@@ -107,7 +101,7 @@ export default function HomePage() {
         <h2 className="text-xl md:text-2xl font-bold text-white mb-3">{t('bottomCta.title')}</h2>
         <p className="text-sm text-white/80 mb-6 max-w-lg mx-auto">{t('bottomCta.subtitle')}</p>
         <a
-          href="#"
+          href="/#upload"
           className="inline-flex items-center gap-2 bg-white text-corp-green py-3 px-6 rounded text-sm font-semibold hover:bg-white/90 transition-colors"
         >
           {t('bottomCta.cta')}

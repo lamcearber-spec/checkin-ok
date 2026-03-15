@@ -1,4 +1,14 @@
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
+import type { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations('metadata');
+  return {
+    title: t('impressumTitle'),
+    description: t('impressumDescription'),
+  };
+}
 
 export default function ImpressumPage() {
   const t = useTranslations('legal');

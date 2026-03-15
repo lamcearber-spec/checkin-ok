@@ -5,7 +5,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://checkin-ok.be',
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 1.0,
+    },
+    {
+      url: 'https://checkin-ok.be/pricing',
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://checkin-ok.be/contact',
+      changeFrequency: 'monthly',
+      priority: 0.6,
     },
     {
       url: 'https://checkin-ok.be/impressum',
