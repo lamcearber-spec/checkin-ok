@@ -3,7 +3,9 @@ import { KpiCards } from '@/components/KpiCards';
 import { UploadZone } from '@/components/UploadZone';
 import { ResolutionMatrix } from '@/components/ResolutionMatrix';
 import { DeclarationTable } from '@/components/DeclarationTable';
-import { Shield, Sparkles, FileCode, Lock, ClipboardCheck, AlertTriangle, Check } from 'lucide-react';
+import { FAQ } from '@/components/FAQ';
+import { Testimonials } from '@/components/Testimonials';
+import { Shield, Sparkles, FileCode, Lock, ClipboardCheck, AlertTriangle, Check, ArrowRight } from 'lucide-react';
 
 export default function HomePage() {
   const t = useTranslations();
@@ -92,6 +94,25 @@ export default function HomePage() {
             {badge}
           </div>
         ))}
+      </section>
+
+      {/* FAQ */}
+      <FAQ />
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* Bottom CTA */}
+      <section className="rounded-lg p-8 md:p-12 text-center" style={{ background: 'linear-gradient(135deg, #059669, #047857)' }}>
+        <h2 className="text-xl md:text-2xl font-bold text-white mb-3">{t('bottomCta.title')}</h2>
+        <p className="text-sm text-white/80 mb-6 max-w-lg mx-auto">{t('bottomCta.subtitle')}</p>
+        <a
+          href="#"
+          className="inline-flex items-center gap-2 bg-white text-corp-green py-3 px-6 rounded text-sm font-semibold hover:bg-white/90 transition-colors"
+        >
+          {t('bottomCta.cta')}
+          <ArrowRight className="h-4 w-4" />
+        </a>
       </section>
     </div>
   );

@@ -90,6 +90,7 @@
     "privacy": "Privacybeleid",
     "terms": "Voorwaarden",
     "impressum": "Impressum",
+    "contact": "Contact",
     "copyright": "\u00a9 2026 Checkin OK. Alle rechten voorbehouden."
   },
   "cookie": {
@@ -137,5 +138,79 @@
     "impressumCeoText": "Arber Lamce",
     "impressumDisclaimerTitle": "Disclaimer",
     "impressumDisclaimerText": "De informatie op deze website is bedoeld voor algemene informatiedoeleinden. Wij geven geen garanties over volledigheid of nauwkeurigheid."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": [
+      {
+        "question": "Wat is Checkin-OK.be?",
+        "answer": "Checkin-OK.be is een online platform dat Belgische bedrijven helpt bij het automatisch genereren van RSZ-conforme aanwezigheidsaangiften voor Checkinatwork en CIAO. Upload uw CSV of Excel, en wij doen de rest."
+      },
+      {
+        "question": "Welke bestanden kan ik uploaden?",
+        "answer": "U kunt CSV- en Excel-bestanden (.xlsx) uploaden met aanwezigheidsgegevens van uw werknemers. Het systeem herkent automatisch de kolomindeling en valideert de gegevens."
+      },
+      {
+        "question": "Hoe werkt de AI-correctie?",
+        "answer": "Onze AI-module (Azure GPT-4o) detecteert en corrigeert automatisch typefouten in INSZ/BIS-nummers, extraheert tijdstempels uit natuurlijke taal en scheidt samengevoegde velden. U behoudt altijd controle via de resolutiematrix."
+      },
+      {
+        "question": "Is mijn data veilig?",
+        "answer": "Absoluut. Alle persoonsgegevens worden uitsluitend in vluchtig geheugen verwerkt. Er is geen database-opslag van namen, INSZ, BIS of Limosa-nummers. Wij zijn volledig AVG- en GBA-conform."
+      },
+      {
+        "question": "Moet ik een account aanmaken?",
+        "answer": "Nee, u kunt direct beginnen zonder account. Voor geavanceerde functies zoals conversiegeschiedenis en prioritaire ondersteuning is een Business-abonnement beschikbaar."
+      },
+      {
+        "question": "Hoe exporteer ik naar RSZ XML?",
+        "answer": "Na het uploaden en valideren van uw gegevens klikt u op 'Genereer RSZ XML'. Het systeem genereert XSD v1.13-conforme payloads voor zowel Checkinatwork als CIAO, klaar voor indiening bij de RSZ."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Wat onze klanten zeggen",
+    "items": [
+      {
+        "name": "Marc D.",
+        "location": "Brussel",
+        "role": "HR Manager",
+        "text": "Checkin-OK heeft ons uren werk bespaard. Wat vroeger een hele dag kostte, is nu in minuten gedaan. De AI-correctie vangt fouten op die we zelf over het hoofd zouden zien.",
+        "rating": 5
+      },
+      {
+        "name": "Sophie V.",
+        "location": "Antwerpen",
+        "role": "Payroll Admin",
+        "text": "De AI-correctie is ongelooflijk nauwkeurig. Geen enkele INSZ-fout meer sinds we Checkin-OK gebruiken. Onmisbaar voor ons payroll-team.",
+        "rating": 5
+      },
+      {
+        "name": "Luc B.",
+        "location": "Luik",
+        "role": "Accountant",
+        "text": "Eindelijk een eenvoudige oplossing voor RSZ-aangiften. De interface is intuïtief en het XML-export werkt feilloos. Sterk aanbevolen voor elke Belgische werkgever.",
+        "rating": 5
+      }
+    ]
+  },
+  "bottomCta": {
+    "title": "Klaar om te beginnen?",
+    "subtitle": "Vermijd RSZ-boetes en automatiseer uw aanwezigheidsaangiften vandaag nog.",
+    "cta": "Begin vandaag"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Heeft u vragen? Neem gerust contact met ons op.",
+    "emailLabel": "E-mail",
+    "email": "info@checkin-ok.be",
+    "addressLabel": "Adres",
+    "address": "Radom UG (haftungsbeschränkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nDuitsland",
+    "cta": "Stuur ons een e-mail"
+  },
+  "notFound": {
+    "title": "Pagina niet gevonden",
+    "message": "De pagina die u zoekt bestaat niet of is verplaatst.",
+    "back": "Terug naar de startpagina"
   }
 }

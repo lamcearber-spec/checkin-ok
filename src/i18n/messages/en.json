@@ -90,6 +90,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
     "impressum": "Impressum",
+    "contact": "Contact",
     "copyright": "\u00a9 2026 Checkin OK. All rights reserved."
   },
   "cookie": {
@@ -137,5 +138,79 @@
     "impressumCeoText": "Arber Lamce",
     "impressumDisclaimerTitle": "Disclaimer",
     "impressumDisclaimerText": "The information on this website is provided for general informational purposes. We make no warranties about the completeness, reliability, or accuracy of this information."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "What is Checkin-OK.be?",
+        "answer": "Checkin-OK.be is an online platform that helps Belgian companies automatically generate NSSO-compliant attendance declarations for Checkinatwork and CIAO. Upload your CSV or Excel, and we do the rest."
+      },
+      {
+        "question": "What files can I upload?",
+        "answer": "You can upload CSV and Excel files (.xlsx) containing your employee attendance data. The system automatically recognizes the column layout and validates the data."
+      },
+      {
+        "question": "How does the AI correction work?",
+        "answer": "Our AI module (Azure GPT-4o) automatically detects and corrects typos in NISS/BIS numbers, extracts timestamps from natural language, and separates concatenated fields. You always maintain control via the resolution matrix."
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "Absolutely. All personal data is processed exclusively in volatile memory. There is no database storage of names, NISS, BIS, or Limosa numbers. We are fully GDPR and GBA compliant."
+      },
+      {
+        "question": "Do I need to create an account?",
+        "answer": "No, you can start immediately without an account. For advanced features like conversion history and priority support, a Business subscription is available."
+      },
+      {
+        "question": "How do I export to NSSO XML?",
+        "answer": "After uploading and validating your data, click 'Generate NSSO XML'. The system generates XSD v1.13-compliant payloads for both Checkinatwork and CIAO, ready for submission to the NSSO."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": [
+      {
+        "name": "Marc D.",
+        "location": "Brussels",
+        "role": "HR Manager",
+        "text": "Checkin-OK has saved us hours of work. What used to take an entire day is now done in minutes. The AI correction catches errors we would have overlooked.",
+        "rating": 5
+      },
+      {
+        "name": "Sophie V.",
+        "location": "Antwerp",
+        "role": "Payroll Admin",
+        "text": "The AI correction is incredibly accurate. Not a single NISS error since we started using Checkin-OK. Indispensable for our payroll team.",
+        "rating": 5
+      },
+      {
+        "name": "Luc B.",
+        "location": "Liège",
+        "role": "Accountant",
+        "text": "Finally a simple solution for NSSO declarations. The interface is intuitive and the XML export works flawlessly. Highly recommended for any Belgian employer.",
+        "rating": 5
+      }
+    ]
+  },
+  "bottomCta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Avoid NSSO fines and automate your attendance declarations today.",
+    "cta": "Start today"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have questions? Feel free to reach out to us.",
+    "emailLabel": "Email",
+    "email": "info@checkin-ok.be",
+    "addressLabel": "Address",
+    "address": "Radom UG (haftungsbeschränkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nGermany",
+    "cta": "Send us an email"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you are looking for does not exist or has been moved.",
+    "back": "Back to homepage"
   }
 }

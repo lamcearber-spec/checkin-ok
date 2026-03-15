@@ -90,6 +90,7 @@
     "privacy": "Politique de confidentialit\u00e9",
     "terms": "Conditions g\u00e9n\u00e9rales",
     "impressum": "Mentions l\u00e9gales",
+    "contact": "Contact",
     "copyright": "\u00a9 2026 Checkin OK. Tous droits r\u00e9serv\u00e9s."
   },
   "cookie": {
@@ -137,5 +138,79 @@
     "impressumCeoText": "Arber Lamce",
     "impressumDisclaimerTitle": "Avertissement",
     "impressumDisclaimerText": "Les informations sur ce site sont fournies \u00e0 titre informatif. Nous ne garantissons pas leur exhaustivit\u00e9 ou exactitude."
+  },
+  "faq": {
+    "title": "Questions fr\u00e9quentes",
+    "items": [
+      {
+        "question": "Qu'est-ce que Checkin-OK.be ?",
+        "answer": "Checkin-OK.be est une plateforme en ligne qui aide les entreprises belges \u00e0 g\u00e9n\u00e9rer automatiquement des d\u00e9clarations de pr\u00e9sence conformes \u00e0 l'ONSS pour Checkinatwork et CIAO. T\u00e9l\u00e9chargez votre CSV ou Excel, et nous faisons le reste."
+      },
+      {
+        "question": "Quels fichiers puis-je t\u00e9l\u00e9charger ?",
+        "answer": "Vous pouvez t\u00e9l\u00e9charger des fichiers CSV et Excel (.xlsx) contenant les donn\u00e9es de pr\u00e9sence de vos employ\u00e9s. Le syst\u00e8me reconna\u00eet automatiquement la disposition des colonnes et valide les donn\u00e9es."
+      },
+      {
+        "question": "Comment fonctionne la correction IA ?",
+        "answer": "Notre module IA (Azure GPT-4o) d\u00e9tecte et corrige automatiquement les erreurs typographiques dans les num\u00e9ros NISS/BIS, extrait les horodatages du langage naturel et s\u00e9pare les champs concat\u00e9n\u00e9s. Vous gardez toujours le contr\u00f4le via la matrice de r\u00e9solution."
+      },
+      {
+        "question": "Mes donn\u00e9es sont-elles en s\u00e9curit\u00e9 ?",
+        "answer": "Absolument. Toutes les donn\u00e9es personnelles sont trait\u00e9es exclusivement en m\u00e9moire volatile. Aucun stockage en base de donn\u00e9es des noms, NISS, BIS ou num\u00e9ros Limosa. Nous sommes enti\u00e8rement conformes au RGPD et au GBA."
+      },
+      {
+        "question": "Dois-je cr\u00e9er un compte ?",
+        "answer": "Non, vous pouvez commencer imm\u00e9diatement sans compte. Pour les fonctionnalit\u00e9s avanc\u00e9es comme l'historique des conversions et le support prioritaire, un abonnement Business est disponible."
+      },
+      {
+        "question": "Comment exporter vers XML ONSS ?",
+        "answer": "Apr\u00e8s avoir t\u00e9l\u00e9charg\u00e9 et valid\u00e9 vos donn\u00e9es, cliquez sur 'G\u00e9n\u00e9rer XML ONSS'. Le syst\u00e8me g\u00e9n\u00e8re des payloads conformes XSD v1.13 pour Checkinatwork et CIAO, pr\u00eats \u00e0 \u00eatre soumis \u00e0 l'ONSS."
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "items": [
+      {
+        "name": "Marc D.",
+        "location": "Bruxelles",
+        "role": "Responsable RH",
+        "text": "Checkin-OK nous a fait gagner des heures de travail. Ce qui prenait une journ\u00e9e enti\u00e8re se fait maintenant en quelques minutes. La correction IA d\u00e9tecte les erreurs que nous aurions manqu\u00e9es.",
+        "rating": 5
+      },
+      {
+        "name": "Sophie V.",
+        "location": "Anvers",
+        "role": "Admin Paie",
+        "text": "La correction IA est incroyablement pr\u00e9cise. Plus aucune erreur NISS depuis que nous utilisons Checkin-OK. Indispensable pour notre \u00e9quipe paie.",
+        "rating": 5
+      },
+      {
+        "name": "Luc B.",
+        "location": "Li\u00e8ge",
+        "role": "Comptable",
+        "text": "Enfin une solution simple pour les d\u00e9clarations ONSS. L'interface est intuitive et l'export XML fonctionne parfaitement. Fortement recommand\u00e9 pour tout employeur belge.",
+        "rating": 5
+      }
+    ]
+  },
+  "bottomCta": {
+    "title": "Pr\u00eat \u00e0 commencer ?",
+    "subtitle": "\u00c9vitez les amendes ONSS et automatisez vos d\u00e9clarations de pr\u00e9sence d\u00e8s aujourd'hui.",
+    "cta": "Commencez aujourd'hui"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Vous avez des questions ? N'h\u00e9sitez pas \u00e0 nous contacter.",
+    "emailLabel": "E-mail",
+    "email": "info@checkin-ok.be",
+    "addressLabel": "Adresse",
+    "address": "Radom UG (haftungsbeschr\u00e4nkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nAllemagne",
+    "cta": "Envoyez-nous un e-mail"
+  },
+  "notFound": {
+    "title": "Page non trouv\u00e9e",
+    "message": "La page que vous recherchez n'existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
+    "back": "Retour \u00e0 l'accueil"
   }
 }

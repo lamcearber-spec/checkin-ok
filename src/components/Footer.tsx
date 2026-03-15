@@ -31,6 +31,7 @@ export function Footer() {
               <li><Link href="/privacy" className="hover:text-corp-green transition-colors">{t('privacy')}</Link></li>
               <li><Link href="/terms" className="hover:text-corp-green transition-colors">{t('terms')}</Link></li>
               <li><Link href="/impressum" className="hover:text-corp-green transition-colors">{t('impressum')}</Link></li>
+              <li><Link href="/contact" className="hover:text-corp-green transition-colors">{t('contact')}</Link></li>
             </ul>
           </div>
         </div>
