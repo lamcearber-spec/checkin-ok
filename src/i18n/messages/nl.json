@@ -94,62 +94,60 @@
     "risk": "Vermijd boetes van €6.000 per niet-geregistreerde werknemer"
   },
   "pricingPage": {
-    "title": "Abonnementen & Tarieven",
-    "subtitle": "Kies het abonnement dat bij u past. Van gratis anoniem gebruik tot volledige professionele conformiteit.",
+    "title": "Abonnementen & Prijzen",
+    "subtitle": "Kies het plan dat bij u past. Van gratis anoniem gebruik tot volledige professionele compliance.",
+    "monthly": "Maandelijks",
+    "yearly": "Jaarlijks",
+    "yearlyDiscount": "2 maanden gratis",
     "perMonth": "/maand",
-    "perDay": "/dag",
-    "perMo": "/mnd",
-    "popular": "Populairste",
-    "cta": "Aan de slag",
+    "perYear": "/jaar",
+    "declarationsPerDay": "aangiften/dag",
+    "declarationPerDay": "aangifte/dag",
+    "declarationsPerMonth": "aangiften/maand",
+    "custom": "Op maat",
+    "contact": "Neem contact op",
+    "currentPlan": "Huidig plan",
+    "getStarted": "Aan de slag",
     "free": "Gratis",
-    "tiers": {
-      "anonymous": {
-        "name": "Gratis Anoniem",
-        "price": "€0",
-        "limit": "1 aangifte/dag",
-        "features": [
-          "CSV/Excel uploaden",
-          "INSZ/BIS-validatie",
-          "XML-generatie",
-          "Geen account nodig"
-        ]
-      },
-      "registered": {
-        "name": "Gratis Geregistreerd",
-        "price": "€0",
-        "limit": "5 aangiften/dag",
-        "features": [
-          "Alles in Gratis Anoniem",
-          "5 aangiften per dag",
-          "Conversiegeschiedenis",
-          "E-mailondersteuning"
-        ]
-      },
-      "starter": {
-        "name": "Starter",
-        "price": "€20",
-        "limit": "200 aangiften/mnd",
-        "features": [
-          "Alles in Gratis Geregistreerd",
-          "200 aangiften per maand",
-          "AI-gegevenscorrectie",
-          "Prioritaire ondersteuning"
-        ]
-      },
-      "professional": {
-        "name": "Professioneel",
-        "price": "€50",
-        "limit": "1000 aangiften/mnd",
-        "features": [
-          "Alles in Starter",
-          "1000 aangiften per maand",
-          "Bulk XML-export",
-          "Persoonlijke ondersteuning",
-          "API-toegang"
-        ]
-      }
-    },
-    "homeCta": "Bekijk alle abonnementen & tarieven",
+    "freeAnonymous": "Gratis (anoniem)",
+    "freeRegistered": "Gratis (geregistreerd)",
+    "starter": "Starter",
+    "professional": "Professional",
+    "business": "Business",
+    "enterprise": "Enterprise",
+    "freeAnonymousDesc": "Probeer zonder account",
+    "freeRegisteredDesc": "Maak een gratis account aan",
+    "starterDesc": "Voor kleine bedrijven",
+    "professionalDesc": "Voor groeiende bedrijven",
+    "businessDesc": "Voor grote bedrijven",
+    "enterpriseDesc": "Voor ondernemingen met specifieke behoeften",
+    "feature_freeAnonymous_1": "CSV/Excel-upload",
+    "feature_freeAnonymous_2": "INSZ/BIS-validatie + XML",
+    "feature_freeRegistered_1": "Alles in Gratis Anoniem",
+    "feature_freeRegistered_2": "Aangiftegeschiedenis",
+    "feature_freeRegistered_3": "E-mailondersteuning",
+    "feature_starter_1": "Alles in Gratis",
+    "feature_starter_2": "AI-datacorrectie",
+    "feature_starter_3": "Prioriteitsondersteuning",
+    "feature_starter_4": "Bulk XML-export",
+    "feature_professional_1": "Alles in Starter",
+    "feature_professional_2": "1.000 aangiften/maand",
+    "feature_professional_3": "API-toegang",
+    "feature_professional_4": "Dedicated support",
+    "feature_professional_5": "Geavanceerde analyses",
+    "feature_business_1": "Alles in Professional",
+    "feature_business_2": "Dedicated support",
+    "feature_business_3": "Beheer meerdere werven",
+    "feature_business_4": "Teamaccounts",
+    "feature_business_5": "SLA-garantie",
+    "feature_enterprise_1": "Alles in Business",
+    "feature_enterprise_2": "Onbeperkte aangiften",
+    "feature_enterprise_3": "Maatwerkoplossingen",
+    "feature_enterprise_4": "Onboarding & training",
+    "feature_enterprise_5": "Dedicated accountmanager",
+    "subscriptionActivated": "Abonnement succesvol geactiveerd!",
+    "checkoutCanceled": "Afrekenen is geannuleerd.",
+    "manage": "Beheren",
     "risk": "Vermijd boetes van €6.000 per niet-geregistreerde werknemer"
   },
   "trust": {

@@ -96,60 +96,58 @@
   "pricingPage": {
     "title": "Plans & Pricing",
     "subtitle": "Choose the plan that fits your needs. From free anonymous use to full professional compliance.",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "yearlyDiscount": "2 months free",
     "perMonth": "/month",
-    "perDay": "/day",
-    "perMo": "/mo",
-    "popular": "Most popular",
-    "cta": "Get started",
+    "perYear": "/year",
+    "declarationsPerDay": "declarations/day",
+    "declarationPerDay": "declaration/day",
+    "declarationsPerMonth": "declarations/month",
+    "custom": "Custom",
+    "contact": "Contact us",
+    "currentPlan": "Current plan",
+    "getStarted": "Get started",
     "free": "Free",
-    "tiers": {
-      "anonymous": {
-        "name": "Free Anonymous",
-        "price": "€0",
-        "limit": "1 declaration/day",
-        "features": [
-          "Upload CSV/Excel",
-          "NISS/BIS validation",
-          "XML generation",
-          "No account required"
-        ]
-      },
-      "registered": {
-        "name": "Free Registered",
-        "price": "€0",
-        "limit": "5 declarations/day",
-        "features": [
-          "Everything in Free Anonymous",
-          "5 declarations per day",
-          "Conversion history",
-          "Email support"
-        ]
-      },
-      "starter": {
-        "name": "Starter",
-        "price": "€20",
-        "limit": "200 declarations/mo",
-        "features": [
-          "Everything in Free Registered",
-          "200 declarations per month",
-          "AI data correction",
-          "Priority support"
-        ]
-      },
-      "professional": {
-        "name": "Professional",
-        "price": "€50",
-        "limit": "1000 declarations/mo",
-        "features": [
-          "Everything in Starter",
-          "1000 declarations per month",
-          "Bulk XML export",
-          "Dedicated support",
-          "API access"
-        ]
-      }
-    },
-    "homeCta": "View all plans & pricing",
+    "freeAnonymous": "Free (anonymous)",
+    "freeRegistered": "Free (registered)",
+    "starter": "Starter",
+    "professional": "Professional",
+    "business": "Business",
+    "enterprise": "Enterprise",
+    "freeAnonymousDesc": "Try without an account",
+    "freeRegisteredDesc": "Create a free account",
+    "starterDesc": "For small businesses",
+    "professionalDesc": "For growing businesses",
+    "businessDesc": "For large businesses",
+    "enterpriseDesc": "For enterprises with specific needs",
+    "feature_freeAnonymous_1": "CSV/Excel upload",
+    "feature_freeAnonymous_2": "NISS/BIS validation + XML",
+    "feature_freeRegistered_1": "Everything in Free Anonymous",
+    "feature_freeRegistered_2": "Declaration history",
+    "feature_freeRegistered_3": "Email support",
+    "feature_starter_1": "Everything in Free",
+    "feature_starter_2": "AI data correction",
+    "feature_starter_3": "Priority support",
+    "feature_starter_4": "Bulk XML export",
+    "feature_professional_1": "Everything in Starter",
+    "feature_professional_2": "1,000 declarations/month",
+    "feature_professional_3": "API access",
+    "feature_professional_4": "Dedicated support",
+    "feature_professional_5": "Advanced analytics",
+    "feature_business_1": "Everything in Professional",
+    "feature_business_2": "Dedicated support",
+    "feature_business_3": "Multi-site management",
+    "feature_business_4": "Team accounts",
+    "feature_business_5": "SLA guarantee",
+    "feature_enterprise_1": "Everything in Business",
+    "feature_enterprise_2": "Unlimited declarations",
+    "feature_enterprise_3": "Custom development",
+    "feature_enterprise_4": "Onboarding & training",
+    "feature_enterprise_5": "Dedicated account manager",
+    "subscriptionActivated": "Subscription activated successfully!",
+    "checkoutCanceled": "Checkout was canceled.",
+    "manage": "Manage",
     "risk": "Avoid €6,000 fines per unregistered worker"
   },
   "trust": {
