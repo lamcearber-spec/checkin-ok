@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Scenario 13: NLP Entity Extraction from Unstructured Input
+     Raw: "PeetersJ_85.05.12-123.45 starts at half acht"
+     AI extracts: NISS=85051212345, KBO=0412345678, WorkPlace=W123456789
+     "half acht" (Dutch) → 07:30:00
+     Routes to CIAO schema (timestamp-driven) -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://socialsecurity.be/presenceregistration/v1"
+                  xmlns:v11="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:RegisterPresencesRequest>
+         <v1:CIAOPresenceDeclaration>
+            <v11:INSS>85051212345</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W123456789</v11:WorkPlaceId>
+            <v11:WorkPeriods>
+               <v11:Period>
+                  <v11:Action>IN</v11:Action>
+                  <v11:Timestamp>2026-03-16T07:30:00+01:00</v11:Timestamp>
+               </v11:Period>
+            </v11:WorkPeriods>
+         </v1:CIAOPresenceDeclaration>
+      </v1:RegisterPresencesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

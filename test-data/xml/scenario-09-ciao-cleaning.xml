@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Scenario 9: CIAO Granular Shift (PC 121 Cleaning)
+     Two work blocks with mandatory lunch break demarcation.
+     07:00-12:00, 13:00-17:00 → 4 Period nodes (IN/OUT/IN/OUT)
+     Timestamps include CET timezone offset +01:00 -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://socialsecurity.be/presenceregistration/v1"
+                  xmlns:v11="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:RegisterPresencesRequest>
+         <v1:CIAOPresenceDeclaration>
+            <v11:INSS>92051011122</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W999888777</v11:WorkPlaceId>
+            <v11:WorkPeriods>
+               <v11:Period>
+                  <v11:Action>IN</v11:Action>
+                  <v11:Timestamp>2026-03-16T07:00:00+01:00</v11:Timestamp>
+               </v11:Period>
+               <v11:Period>
+                  <v11:Action>OUT</v11:Action>
+                  <v11:Timestamp>2026-03-16T12:00:00+01:00</v11:Timestamp>
+               </v11:Period>
+               <v11:Period>
+                  <v11:Action>IN</v11:Action>
+                  <v11:Timestamp>2026-03-16T13:00:00+01:00</v11:Timestamp>
+               </v11:Period>
+               <v11:Period>
+                  <v11:Action>OUT</v11:Action>
+                  <v11:Timestamp>2026-03-16T17:00:00+01:00</v11:Timestamp>
+               </v11:Period>
+            </v11:WorkPeriods>
+         </v1:CIAOPresenceDeclaration>
+      </v1:RegisterPresencesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

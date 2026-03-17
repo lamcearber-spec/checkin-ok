@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Scenario 1: Standard Daily Check-in (Checkinatwork)
+     5 Belgian nationals, JC 124 construction, single site
+     Tests: batch PresenceRegistrationRequest, NISS validation -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://socialsecurity.be/presenceregistration/v1"
+                  xmlns:v11="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:RegisterPresencesRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>85051212345</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W123456789</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>90081598765</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W123456789</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>82010145612</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W123456789</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>79112233488</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W123456789</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>95022874136</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W123456789</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+      </v1:RegisterPresencesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

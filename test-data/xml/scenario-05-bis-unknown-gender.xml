@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Scenario 5: BIS Number — Unknown Gender (Month + 20)
+     Born March 1990, gender unknown: MM=03+20=23 → 902315123
+     Mod-97: 902315123 mod 97 = 83, CC = 97-83 = 14
+     Valid BIS: 90231512314 -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://socialsecurity.be/presenceregistration/v1"
+                  xmlns:v11="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:RegisterPresencesRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>90231512314</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W111222333</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+      </v1:RegisterPresencesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

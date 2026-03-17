@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Scenario 3: Pre-2000 NISS Checksum Validation
+     Born 1985-01-15, seq 123: N=850115123, 850115123 mod 97 = 42, CC = 97-42 = 55
+     Valid NISS: 85011512355 -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://socialsecurity.be/presenceregistration/v1"
+                  xmlns:v11="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:RegisterPresencesRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>85011512355</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W111222333</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+      </v1:RegisterPresencesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Scenario 10: Presence Cancellation (Worker called in sick)
+     Uses PresenceRegistrationId from original registration.
+     CancellationReason enum: SICKNESS -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://socialsecurity.be/presenceregistration/v1"
+                  xmlns:v11="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:CancelPresencesRequest>
+         <v1:CancelPresenceRequest>
+            <v11:PresenceRegistrationId>85042299</v11:PresenceRegistrationId>
+            <v11:CancellationReason>SICKNESS</v11:CancellationReason>
+         </v1:CancelPresenceRequest>
+      </v1:CancelPresencesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

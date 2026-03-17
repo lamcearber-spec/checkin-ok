@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- NSSO Error Response Example: Invalid KBO/BCE Number (Error Code 2)
+     This is what the NSSO returns when CompanyID fails Mod-97 or is deregistered.
+     Use for testing error handling in the Checkin OK feedback loop. -->
+<ns4:RegisterPresencesResponse xmlns:ns4="http://socialsecurity.be/presenceregistration/v1"
+                                xmlns:ns3="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <ns4:PresenceRegistrationResponse>
+      <ns3:PresenceRegistration>
+         <ns3:PresenceRegistrationSubmitted>
+            <ns3:RegistrationDate>2026-03-16</ns3:RegistrationDate>
+            <ns3:INSS>85051212345</ns3:INSS>
+            <ns3:CompanyID>9999999999</ns3:CompanyID>
+            <ns3:WorkPlaceId>W123456789</ns3:WorkPlaceId>
+         </ns3:PresenceRegistrationSubmitted>
+         <ns3:ErrorList>
+            <ns3:Error>
+               <ns3:Code>2</ns3:Code>
+               <ns3:Description>Invalid companyId node content. Invalid KBO/BCE number.</ns3:Description>
+            </ns3:Error>
+         </ns3:ErrorList>
+      </ns3:PresenceRegistration>
+   </ns4:PresenceRegistrationResponse>
+</ns4:RegisterPresencesResponse>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Scenario 11: Record Modification (Cancel + Re-Register)
+     NSSO has no UPDATE/PUT operation.
+     Must: 1) Cancel with reason ERROR, 2) Register with corrected data.
+     Both operations in single SOAP body. -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://socialsecurity.be/presenceregistration/v1"
+                  xmlns:v11="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:CancelPresencesRequest>
+         <v1:CancelPresenceRequest>
+            <v11:PresenceRegistrationId>85042300</v11:PresenceRegistrationId>
+            <v11:CancellationReason>ERROR</v11:CancellationReason>
+         </v1:CancelPresenceRequest>
+      </v1:CancelPresencesRequest>
+      <v1:RegisterPresencesRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>82030312345</v11:INSS>
+            <v11:CompanyID>0412345678</v11:CompanyID>
+            <v11:WorkPlaceId>W555666777</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+      </v1:RegisterPresencesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

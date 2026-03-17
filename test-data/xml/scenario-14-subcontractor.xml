@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Scenario 14: Subcontractor Chain
+     CompanyID = subcontractor's KBO (0888999777), NOT prime contractor
+     WorkPlaceId = prime contractor's site (W123456789)
+     Wrong KBO triggers SIOD/SIRS audit flags -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://socialsecurity.be/presenceregistration/v1"
+                  xmlns:v11="http://socialsecurity.be/presenceregistration/schemas/v1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:RegisterPresencesRequest>
+         <v1:PresenceRegistrationRequest>
+            <v11:RegistrationDate>2026-03-16</v11:RegistrationDate>
+            <v11:INSS>91021422233</v11:INSS>
+            <v11:CompanyID>0888999777</v11:CompanyID>
+            <v11:WorkPlaceId>W123456789</v11:WorkPlaceId>
+         </v1:PresenceRegistrationRequest>
+      </v1:RegisterPresencesRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
