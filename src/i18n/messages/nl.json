@@ -11,7 +11,8 @@
     "login": "Inloggen",
     "logout": "Uitloggen",
     "history": "Geschiedenis",
-    "register": "Registreren"
+    "register": "Registreren",
+    "blog": "Blog"
   },
   "hero": {
     "title": "RSZ-aanwezigheidsconformiteit in minuten",
@@ -167,7 +168,8 @@
     "contact": "Contact",
     "pricing": "Tarieven",
     "copyright": "© 2026 Checkin OK. Alle rechten voorbehouden.",
-    "features": "Functies"
+    "features": "Functies",
+    "blog": "Blog"
   },
   "cookie": {
     "message": "Wij gebruiken technische cookies om uw ervaring te verbeteren. Geen gegevens worden gedeeld met derden.",
@@ -301,7 +303,9 @@
     "privacyTitle": "Privacybeleid — Checkin OK",
     "privacyDescription": "Hoe Checkin OK uw gegevens verwerkt. Geen opslag van persoonsgegevens, AVG- en GBA-conforme verwerking.",
     "termsTitle": "Algemene Voorwaarden — Checkin OK",
-    "termsDescription": "Voorwaarden voor het gebruik van het Checkin OK RSZ-aanwezigheidsplatform."
+    "termsDescription": "Voorwaarden voor het gebruik van het Checkin OK RSZ-aanwezigheidsplatform.",
+    "blogTitle": "Blog",
+    "blogDescription": "Laatste inzichten over Belgische aanwezigheidsregistratie en RSZ-compliance"
   },
   "auth": {
     "login": "Inloggen",
@@ -374,5 +378,24 @@
     "deleteConfirm": "Weet je het zeker? Deze actie kan niet ongedaan worden gemaakt.",
     "deleteButton": "Verwijder mijn account",
     "companyName": "Bedrijfsnaam"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Laatste inzichten over Belgische aanwezigheidsregistratie en RSZ-compliance",
+    "readMore": "Lees meer",
+    "backToBlog": "Terug naar blog",
+    "minRead": "min leestijd",
+    "post1Title": "Checkinatwork Compliance Gids 2026",
+    "post1Excerpt": "Alles wat u moet weten over het Belgische Checkinatwork-systeem voor aanwezigheidsregistratie in de bouwsector.",
+    "post1Body": "Het Checkinatwork-systeem is het verplichte elektronische aanwezigheidsregistratiesysteem van België voor de bouwsector. Het werd ingevoerd door de RSZ om ervoor te zorgen dat alle werknemers op bouwwerven correct zijn aangegeven.\n\nWie moet voldoen?\nAlle werkgevers en zelfstandigen in de bouwsector (NACE-codes 41-43) moeten de aanwezigheid registreren voor elke bouwwerf.\n\nHoe werkt het:\n1. Elke bouwwerf krijgt een uniek aangiftenummer\n2. Elke werknemer moet worden ingecheckt voor aanvang van het werk\n3. Check-ins kunnen via het online portaal, de mobiele app of geautomatiseerde systemen\n4. Late of ontbrekende aangiften resulteren in boetes\n\nHoe Checkin OK helpt:\nOns platform automatiseert het volledige proces. Upload uw aanwezigheidslijsten en wij genereren conforme RSZ-aangiften automatisch.",
+    "post2Title": "RSZ-aanwezigheidsaangiften uitgelegd",
+    "post2Excerpt": "Een diepgaande blik op de vereisten en deadlines voor aanwezigheidsaangiften bij de Belgische Rijksdienst voor Sociale Zekerheid.",
+    "post2Body": "De Belgische RSZ vereist aanwezigheidsaangiften voor specifieke sectoren om zwartwerk te bestrijden.\n\nGetroffen sectoren:\n- Bouw (verplicht sinds 2014)\n- Vleesverwerking\n- Schoonmaakdiensten\n- Uitzendkantoren (voor bouwopdrachten)\n\nAangiftetypes:\n1. Checkinatwork (Bouw) - Dagelijkse aanwezigheidsregistratie\n2. CIAO (Schoonmaak, Vlees) - Check In And Out systeem\n3. Dimona-aangiften - Verplichte aangifte van begin en einde dienstverband\n\nDeadlines en boetes:\n- Checkinatwork: Vóór aanvang van het werk\n- Late aangiften: Administratieve boetes van EUR 50 tot EUR 2.500",
+    "post3Title": "CIAO-aangiften automatiseren voor schoonmaakbedrijven",
+    "post3Excerpt": "Hoe Belgische schoonmaakbedrijven hun CIAO-aanwezigheidsaangiften kunnen automatiseren.",
+    "post3Body": "CIAO (Check In And Out) is het verplichte aanwezigheidsregistratiesysteem voor Belgische schoonmaakbedrijven en vleesverwerkende bedrijven.\n\nDe administratieve uitdaging:\nSchoonmaakbedrijven hebben vaak tientallen werknemers verspreid over meerdere locaties.\n\nAutomatisering met Checkin OK:\n1. Bulk upload - Upload uw wekelijkse of maandelijkse aanwezigheidslijsten\n2. Automatische validatie - Wij valideren alle INSZ-nummers\n3. Aangifte generatie - Conforme CIAO-aangiften worden gegenereerd\n4. Gescande documenten - Upload gescande PDF's of foto's van papieren urenstaten",
+    "post4Title": "Dimona-regels voor de bouwsector: wat werkgevers moeten weten",
+    "post4Excerpt": "Begrijp Dimona-aangiften voor bouwvakkers, inclusief uitzendkrachten en onderaannemers.",
+    "post4Body": "Dimona (Onmiddellijke Aangifte) is het verplichte realtime aangiftesysteem voor alle Belgische werkgevers.\n\nSpecifieke vereisten bouwsector:\n1. Dimona IN - Moet worden ingediend vóór de eerste werkdag van de werknemer\n2. Dimona OUT - Moet worden ingediend wanneer het dienstverband eindigt\n3. Uitzendkrachten - Uitzendkantoren moeten Dimona indienen voor elke bouwopdracht\n4. Buitenlandse werknemers - Extra vereisten: Limosa-aangifte, A1-certificaat\n\nVeelgemaakte fouten:\n- Te late Dimona IN-aangiften\n- Dimona OUT vergeten bij kortlopende contracten\n- Ontbrekende Limosa-aangiften voor buitenlandse onderaannemers\n\nBoetes: EUR 50 tot EUR 2.500 per overtreding."
   }
 }

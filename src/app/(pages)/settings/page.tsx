@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { useAuth } from '@/components/AuthProvider';
 import { useRouter } from 'next/navigation';
 import { Lock, Trash2, CreditCard } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function SettingsPage() {
   const { user, logout } = useAuth();
+  const t = useTranslations('settings');
   const router = useRouter();
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
@@ -46,11 +48,11 @@ export default function SettingsPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-white mb-8">Settings</h1>
+      <h1 className="text-3xl font-bold text-white mb-8">{t('title')}</h1>
       <div className="space-y-8">
         <div className="bg-[#112240] rounded-xl p-6 border border-white/10">
-          <h2 className="text-lg font-semibold text-white mb-4">Account</h2>
-          <div className="space-y-2 text-sm"><p className="text-gray-400">Email: <span className="text-white">{user?.email}</span></p><p className="text-gray-400">Company: <span className="text-white">{user?.companyName || '\u2014'}</span></p><p className="text-gray-400">Plan: <span className="text-white">{user?.tier}</span></p></div>
+          <h2 className="text-lg font-semibold text-white mb-4">{t('account')}</h2>
+          <div className="space-y-2 text-sm"><p className="text-gray-400">{t('email')}: <span className="text-white">{user?.email}</span></p><p className="text-gray-400">Company: <span className="text-white">{user?.companyName || '\u2014'}</span></p><p className="text-gray-400">{t('plan')}: <span className="text-white">{user?.tier}</span></p></div>
         </div>
         {user?.tier && user.tier !== 'FREE' && (
           <div className="bg-[#112240] rounded-xl p-6 border border-white/10">
@@ -59,7 +61,7 @@ export default function SettingsPage() {
           </div>
         )}
         <div className="bg-[#112240] rounded-xl p-6 border border-white/10">
-          <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2"><Lock size={20} /> Change Password</h2>
+          <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2"><Lock size={20} /> {t('changePassword')}</h2>
           {pwError && <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">{pwError}</div>}
           {pwSuccess && <div className="mb-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg text-green-400 text-sm">{pwSuccess}</div>}
           <form onSubmit={handleChangePassword} className="space-y-4">
@@ -69,7 +71,7 @@ export default function SettingsPage() {
           </form>
         </div>
         <div className="bg-[#112240] rounded-xl p-6 border border-red-500/20">
-          <h2 className="text-lg font-semibold text-red-400 mb-4 flex items-center gap-2"><Trash2 size={20} /> Delete Account</h2>
+          <h2 className="text-lg font-semibold text-red-400 mb-4 flex items-center gap-2"><Trash2 size={20} /> {t('deleteAccount')}</h2>
           <p className="text-gray-400 text-sm mb-4">This will permanently delete your account, all declaration history, and cancel any active subscriptions.</p>
           {!deleteConfirm ? (
             <button onClick={() => setDeleteConfirm(true)} className="bg-red-500/10 hover:bg-red-500/20 text-red-400 px-4 py-2 rounded-lg text-sm transition-colors">Delete Account</button>

@@ -1,3 +1,4 @@
+import { pdfToImages } from '@/lib/pdfToImages';
 import { NextRequest, NextResponse } from "next/server";
 import { parseAttendanceCsv } from "@/lib/attendanceParser";
 import { runAiFallback } from "@/lib/aiFallback";
@@ -34,9 +35,47 @@ export async function POST(request: NextRequest) {
 
     const fileName = file.name.toLowerCase();
 
+    const mimeType = file.type || '';
+    const isPdf = fileName.endsWith('.pdf') || mimeType === 'application/pdf';
+    const isImage = mimeType.startsWith('image/') || /\.(jpg|jpeg|png|heic|tiff?)$/i.test(fileName);
+
+    // For PDFs and images: convert to images and send to GPT-4o Vision
+    if (isPdf || isImage) {
+      const buffer = Buffer.from(await file.arrayBuffer());
+      let imageBuffers: Array<{buffer: Buffer, mimeType: string}> = [];
+
+      if (isPdf) {
+        try {
+          const pages = await pdfToImages(buffer, 5, 200);
+          imageBuffers = pages.map(p => ({ buffer: p.buffer, mimeType: p.mimeType }));
+        } catch (err) {
+          return NextResponse.json({ error: 'Could not process PDF. Ensure it contains attendance data.' }, { status: 400 });
+        }
+      } else {
+        imageBuffers = [{ buffer, mimeType }];
+      }
+
+      // Send images directly to AI for extraction
+      const { runAiFallbackVision } = await import('@/lib/aiFallback');
+      const visionResult = await runAiFallbackVision(imageBuffers);
+
+      if (user) {
+        await prisma.declaration.create({
+          data: { userId: user.id, fileName: file.name, recordCount: visionResult.validRows?.length ?? 0 },
+        });
+      }
+      if (!user) await incrementAnonUsage(ip);
+
+      return NextResponse.json({
+        fileName: file.name,
+        ...visionResult,
+        ingestionSource: 'vision',
+      });
+    }
+
     if (!fileName.endsWith(".csv") && !fileName.endsWith(".txt")) {
       return NextResponse.json(
-        { error: "Only CSV files are supported for server-side parsing. Please convert XLSX to CSV first." },
+        { error: "Supported formats: CSV, TXT, PDF, JPG, PNG. Please convert XLSX to CSV first." },
         { status: 400 }
       );
     }

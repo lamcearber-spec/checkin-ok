@@ -55,6 +55,7 @@ model Subscription {
 }
 
 enum Tier {
+  ENTERPRISE
   FREE
   STARTER
   PROFESSIONAL

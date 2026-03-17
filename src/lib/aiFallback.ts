@@ -1,3 +1,4 @@
+import { pdfToImages } from './pdfToImages';
 /**
  * AI Fallback — Azure GPT-4o
  *
@@ -12,28 +13,69 @@
 
 import type { AiCorrection, AttendanceRecord } from '@/schema/attendanceSchema';
 
-const SYSTEM_PROMPT = `You are a Belgian payroll compliance expert. You receive invalid attendance data rows that failed deterministic validation.
+const SYSTEM_PROMPT = `You are a Belgian NSSO (RSZ/ONSS) attendance registration compliance expert. You receive invalid attendance data rows that failed deterministic validation. Your task: fix the data so it passes NSSO API validation.
 
-Your task: Fix the data so it passes validation.
+**IDENTITY VALIDATION:**
 
-**NISS/INSZ validation rules:**
-- 11 digits total, format: YY.MM.DD-NNN.CC
-- Checksum: CC = 97 - (first9digits mod 97). If result = 0, CC = 97.
-- Post-2000 births: CC = 97 - ((2000000000 + first9digits) mod 97)
-- BIS numbers: month + 20 (unknown gender) or month + 40 (known gender)
-- Common OCR errors: O↔0, l↔1, B↔8, S↔5, Z↔2
+1. NISS/INSZ (Rijksregisternummer / Numero de Registre National):
+   - 11 digits, structure: YYMMDD-SEQ.CC
+   - First 6 digits: date of birth (YYMMDD)
+   - Next 3 digits (SEQ): daily sequence counter. Odd=male, Even=female.
+   - Last 2 digits (CC): Modulo 97 checksum
+   - Pre-2000 births: CC = 97 - (first9digits mod 97). If result = 0, CC = 97.
+   - Post-2000 births: CC = 97 - ((2000000000 + first9digits) mod 97)
 
-**Limosa L1 rules:**
-- Alphanumeric, spaces, hyphens allowed
-- Max 64 characters
+2. BIS Number (non-resident workers):
+   - Same 11-digit format and Modulo 97 checksum as NISS
+   - Month field is MUTATED to prevent collisions:
+     * Gender known: month + 40 (valid months: 41-52)
+     * Gender unknown: month + 20 (valid months: 21-32)
+   - Day may be 00 if birth date unknown (refugees)
+   - Still passes Modulo 97 with the mutated month value
 
-**Date/Time rules:**
-- Dates must be ISO 8601 (YYYY-MM-DD)
-- Times must be HH:MM:SS
-- Convert natural language ("7am" → "07:00:00", "3:30pm" → "15:30:00")
+3. Limosa L1 Declaration (posted foreign workers):
+   - Format: L-XXXXXXXXXX or similar alphanumeric reference
+   - Maps to <v11:LimosaDeclaration> node, NOT <v11:INSS>
+   - If input contains "L-" prefix or "Limosa" keyword, route to Limosa field
 
-**Data separation:**
-- Detect concatenated names+IDs: "JanJansen_24911834005214037" → name: "Jan Jansen", limosa: "24911834005214037"
+4. KBO/BCE Enterprise Number:
+   - 10 digits, format: 0NNN.NNN.NNN
+   - Strip dots, spaces, "BE" prefix
+   - Modulo 97 checksum: last 2 digits = 97 - (first8digits mod 97)
+   - CompanyID must be the DIRECT EMPLOYER (subcontractor, not prime)
+   - For temp agencies (uitzendkrachten): use agency KBO, not client
+
+**COMMON OCR/TYPO CORRECTIONS:**
+- O\u21940, l\u21941, I\u21941, B\u21948, S\u21945, Z\u21942
+- Strip dots, dashes, spaces from NISS before validation
+- "PeetersJ_85.05.12-123.45" \u2192 name: "Peeters J", NISS: "85051212345"
+
+**DATE/TIME RULES:**
+- Dates: ISO 8601 (YYYY-MM-DD). Only today or tomorrow accepted by NSSO.
+- Times: HH:MM:SS format with timezone +01:00 (CET) or +02:00 (CEST)
+- Night shifts crossing midnight: register on SHIFT START date
+
+Belgian time colloquialisms (CRITICAL):
+- Dutch: "half acht" = 07:30, "kwart voor negen" = 08:45, "kwart over zeven" = 07:15
+- French: "midi et quart" = 12:15, "sept heures et demie" = 07:30, "huit heures moins le quart" = 07:45
+- "s morgens" / "s ochtends" = AM, "s middags" / "s avonds" = PM
+- "7u" / "7u30" = 07:00 / 07:30 (Belgian Dutch shorthand)
+- "7h" / "7h30" = 07:00 / 07:30 (Belgian French shorthand)
+
+**DATA SEPARATION (concatenated fields):**
+- "PeetersJ_85.05.12-123.45 starts at half acht" \u2192
+  name: "Peeters J", NISS: "85051212345", arrival: "07:30:00"
+- "Novak, Ivan - Limosa: L-9876543210" \u2192
+  name: "Novak, Ivan", limosaId: "L-9876543210"
+- "Site KBO 0412345678 code W123456789" \u2192
+  companyId: "0412345678", workplaceId: "W123456789"
+
+**SECTOR ROUTING (Joint Committee):**
+- JC 124 (Construction): Checkinatwork (daily boolean, single registration)
+- JC 121 (Cleaning): CIAO (granular IN/OUT timestamps with rest breaks)
+- JC 118 (Meat processing): Checkinatwork
+- JC 317 (Security): Checkinatwork
+- If work periods are provided (e.g., "07:00-12:00, 13:00-17:00"), route to CIAO
 
 Respond ONLY with valid JSON:
 {
@@ -43,13 +85,17 @@ Respond ONLY with valid JSON:
   "correctedLimosaId": "string or null",
   "correctedArrival": "string or null",
   "correctedDeparture": "string or null",
+  "correctedCompanyId": "string or null",
+  "correctedWorkplaceId": "string or null",
+  "detectedSector": "JC124|JC121|JC118|JC317|unknown",
+  "registrationType": "checkinatwork|ciao",
   "confidence": 0.0-1.0,
   "reasoning": "brief explanation"
 }`;
 
 const CONFIDENCE_THRESHOLD = 0.85;
 
-async function callAzureOpenAI(invalidRow: Record<string, string>, errors: string[]): Promise<Partial<AiCorrection> | null> {
+async function callAzureOpenAI(invalidRow: Record<string, string>, errors: string[], imageBuffers?: Array<{buffer: Buffer, mimeType: string}>): Promise<Partial<AiCorrection> | null> {
   const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
   const apiKey = process.env.AZURE_OPENAI_API_KEY;
   const deployment = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-4o';
@@ -72,6 +118,19 @@ async function callAzureOpenAI(invalidRow: Record<string, string>, errors: strin
   ].join('\n');
 
   try {
+    // Build multimodal content if images available
+    const userContent: any[] = [];
+    if (imageBuffers && imageBuffers.length > 0) {
+      for (const img of imageBuffers) {
+        const base64 = img.buffer.toString('base64');
+        userContent.push({
+          type: 'image_url',
+          image_url: { url: `data:${img.mimeType};base64,${base64}`, detail: 'high' },
+        });
+      }
+    }
+    userContent.push({ type: 'text', text: userPrompt });
+
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -81,7 +140,7 @@ async function callAzureOpenAI(invalidRow: Record<string, string>, errors: strin
       body: JSON.stringify({
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
-          { role: 'user', content: userPrompt },
+          { role: 'user', content: imageBuffers ? userContent : userPrompt },
         ],
         max_tokens: 512,
         temperature: 0.1,
@@ -212,4 +271,82 @@ export async function runAiFallback(
   }
 
   return corrections;
+}
+
+
+/**
+ * Vision-based attendance extraction from scanned documents.
+ * Converts images to GPT-4o vision prompts for direct extraction.
+ */
+export async function runAiFallbackVision(
+  imageBuffers: Array<{buffer: Buffer, mimeType: string}>
+): Promise<{ validRows: any[], invalidRows: any[], aiCorrections: any[], warnings: string[] }> {
+  const endpoint = process.env.AZURE_OPENAI_ENDPOINT;
+  const apiKey = process.env.AZURE_OPENAI_API_KEY;
+  const deployment = process.env.AZURE_OPENAI_DEPLOYMENT || 'gpt-4o';
+  const apiVersion = process.env.AZURE_OPENAI_API_VERSION || '2024-12-01-preview';
+
+  if (!endpoint || !apiKey) {
+    return { validRows: [], invalidRows: [], aiCorrections: [], warnings: ['Azure OpenAI not configured'] };
+  }
+
+  const url = `${endpoint.replace(/\/+$/, '')}/openai/deployments/${deployment}/chat/completions?api-version=${apiVersion}`;
+
+  const userContent: any[] = [];
+  for (const img of imageBuffers) {
+    const base64 = img.buffer.toString('base64');
+    userContent.push({
+      type: 'image_url',
+      image_url: { url: `data:${img.mimeType};base64,${base64}`, detail: 'high' },
+    });
+  }
+  userContent.push({
+    type: 'text',
+    text: `Extract ALL attendance records from this scanned document image. Return JSON with this structure:
+{
+  "rows": [
+    {
+      "workerName": "string",
+      "niss": "11-digit NISS/INSZ or BIS number",
+      "date": "YYYY-MM-DD",
+      "arrival": "HH:MM:SS or null",
+      "departure": "HH:MM:SS or null",
+      "companyId": "10-digit KBO or null",
+      "workplaceId": "string or null",
+      "limosaId": "string or null"
+    }
+  ],
+  "confidence": 0.0-1.0,
+  "warnings": ["list of extraction issues"]
+}`,
+  });
+
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'api-key': apiKey },
+      body: JSON.stringify({
+        messages: [
+          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'user', content: userContent },
+        ],
+        max_tokens: 4096,
+        temperature: 0.1,
+        response_format: { type: 'json_object' },
+      }),
+    });
+
+    if (!response.ok) throw new Error(await response.text());
+    const result = await response.json();
+    const parsed = JSON.parse(result.choices?.[0]?.message?.content || '{}');
+
+    return {
+      validRows: parsed.rows || [],
+      invalidRows: [],
+      aiCorrections: [],
+      warnings: parsed.warnings || [],
+    };
+  } catch (err) {
+    return { validRows: [], invalidRows: [], aiCorrections: [], warnings: [(err as Error).message] };
+  }
 }

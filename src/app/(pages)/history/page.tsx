@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { FileText, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface Declaration { id: string; fileName: string; format: string; recordCount: number; status: string; createdAt: string; }
 interface Pagination { page: number; limit: number; total: number; pages: number; }
@@ -9,6 +10,7 @@ export default function HistoryPage() {
   const [declarations, setDeclarations] = useState<Declaration[]>([]);
   const [pagination, setPagination] = useState<Pagination>({ page: 1, limit: 20, total: 0, pages: 0 });
   const [loading, setLoading] = useState(true);
+  const t = useTranslations('history');
   const fetchHistory = async (page: number) => {
     setLoading(true);
     try { const res = await fetch(`/api/declarations?page=${page}&limit=20`); if (res.ok) { const data = await res.json(); setDeclarations(data.declarations); setPagination(data.pagination); } } catch (e) { console.error(e); }
@@ -30,11 +32,11 @@ export default function HistoryPage() {
           <div className="bg-[#112240] rounded-xl border border-white/10 overflow-hidden">
             <table className="w-full">
               <thead><tr className="border-b border-white/10">
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">File</th>
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">Format</th>
+                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">{t('file')}</th>
+                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">{t('format')}</th>
                 <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">Records</th>
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">Status</th>
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">Date</th>
+                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">{t('status')}</th>
+                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">{t('date')}</th>
               </tr></thead>
               <tbody>{declarations.map(d => (
                 <tr key={d.id} className="border-b border-white/5 hover:bg-white/5">

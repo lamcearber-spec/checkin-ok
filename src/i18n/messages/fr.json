@@ -11,7 +11,8 @@
     "login": "Connexion",
     "logout": "Déconnexion",
     "history": "Historique",
-    "register": "S\"inscrire"
+    "register": "S\"inscrire",
+    "blog": "Blog"
   },
   "hero": {
     "title": "Conformité ONSS en quelques minutes",
@@ -167,7 +168,8 @@
     "contact": "Contact",
     "pricing": "Tarifs",
     "copyright": "© 2026 Checkin OK. Tous droits réservés.",
-    "features": "Fonctionnalités"
+    "features": "Fonctionnalités",
+    "blog": "Blog"
   },
   "cookie": {
     "message": "Nous utilisons des cookies techniques pour améliorer votre expérience. Aucune donnée n'est partagée avec des tiers.",
@@ -301,7 +303,9 @@
     "privacyTitle": "Politique de confidentialité — Checkin OK",
     "privacyDescription": "Comment Checkin OK traite vos données. Zéro rétention de données personnelles, traitement conforme RGPD et GBA.",
     "termsTitle": "Conditions générales — Checkin OK",
-    "termsDescription": "Conditions d'utilisation de la plateforme de conformité ONSS Checkin OK."
+    "termsDescription": "Conditions d'utilisation de la plateforme de conformité ONSS Checkin OK.",
+    "blogTitle": "Blog",
+    "blogDescription": "Dernières informations sur les déclarations de présence belges et la conformité ONSS"
   },
   "auth": {
     "login": "Connexion",
@@ -374,5 +378,24 @@
     "deleteConfirm": "Êtes-vous sûr ? Cette action est irréversible.",
     "deleteButton": "Supprimer mon compte",
     "companyName": "Nom de l\"entreprise"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Dernières informations sur les déclarations de présence belges et la conformité ONSS",
+    "readMore": "Lire la suite",
+    "backToBlog": "Retour au blog",
+    "minRead": "min de lecture",
+    "post1Title": "Guide de conformité Checkinatwork 2026",
+    "post1Excerpt": "Tout ce que vous devez savoir sur le système belge Checkinatwork pour les déclarations de présence dans le secteur de la construction.",
+    "post1Body": "Le système Checkinatwork est le système obligatoire d'enregistrement électronique de présence en Belgique pour le secteur de la construction.\n\nQui doit se conformer ?\nTous les employeurs et travailleurs indépendants du secteur de la construction (codes NACE 41-43).\n\nComment ça fonctionne :\n1. Chaque chantier reçoit un numéro de déclaration unique\n2. Chaque travailleur doit être enregistré avant le début du travail\n3. Les enregistrements peuvent se faire via le portail en ligne, l'application mobile ou des systèmes automatisés\n\nComment Checkin OK vous aide :\nNotre plateforme automatise l'ensemble du processus.",
+    "post2Title": "Déclarations de présence ONSS expliquées",
+    "post2Excerpt": "Un examen approfondi des exigences de l'ONSS en matière de déclarations de présence et des délais.",
+    "post2Body": "L'ONSS belge exige des déclarations de présence pour des secteurs spécifiques afin de lutter contre le travail non déclaré.\n\nSecteurs concernés :\n- Construction (obligatoire depuis 2014)\n- Transformation de viande\n- Services de nettoyage\n- Agences d'intérim\n\nTypes de déclarations :\n1. Checkinatwork (Construction)\n2. CIAO (Nettoyage, Viande)\n3. Déclarations Dimona",
+    "post3Title": "Automatiser les déclarations CIAO pour les entreprises de nettoyage",
+    "post3Excerpt": "Comment les entreprises de nettoyage belges peuvent automatiser leurs déclarations de présence CIAO.",
+    "post3Body": "CIAO (Check In And Out) est le système obligatoire d'enregistrement de présence pour les entreprises de nettoyage belges.\n\nAutomatisation avec Checkin OK :\n1. Téléchargement en masse\n2. Validation automatique\n3. Génération de déclarations\n4. Documents scannés - Téléchargez des PDF's ou photos scannés",
+    "post4Title": "Règles Dimona pour le secteur de la construction",
+    "post4Excerpt": "Comprendre les déclarations Dimona pour les travailleurs de la construction.",
+    "post4Body": "Dimona (Déclaration Immédiate) est le système de déclaration obligatoire en temps réel pour tous les employeurs belges.\n\nSpécificités du secteur de la construction :\n1. Dimona IN - Doit être soumis avant le premier jour du travailleur\n2. Dimona OUT - Doit être soumis à la fin de la relation de travail\n3. Travailleurs intérimaires\n4. Travailleurs étrangers - Déclaration Limosa, certificat A1\n\nAmendes : EUR 50 à EUR 2.500 par infraction."
   }
 }

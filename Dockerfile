@@ -21,7 +21,7 @@ FROM node:18-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3011
-RUN apk add --no-cache openssl
+RUN apk add --no-cache openssl poppler-utils
 
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs

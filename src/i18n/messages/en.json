@@ -11,7 +11,8 @@
     "login": "Login",
     "logout": "Logout",
     "history": "History",
-    "register": "Register"
+    "register": "Register",
+    "blog": "Blog"
   },
   "hero": {
     "title": "NSSO Attendance Compliance in Minutes",
@@ -167,7 +168,8 @@
     "contact": "Contact",
     "pricing": "Pricing",
     "copyright": "© 2026 Checkin OK. All rights reserved.",
-    "features": "Features"
+    "features": "Features",
+    "blog": "Blog"
   },
   "cookie": {
     "message": "We use technical cookies to improve your experience. No personal data is shared with third parties.",
@@ -301,7 +303,9 @@
     "privacyTitle": "Privacy Policy — Checkin OK",
     "privacyDescription": "How Checkin OK handles your data. Zero PII retention, GDPR and GBA compliant processing.",
     "termsTitle": "Terms & Conditions — Checkin OK",
-    "termsDescription": "Terms and conditions for using the Checkin OK NSSO attendance compliance platform."
+    "termsDescription": "Terms and conditions for using the Checkin OK NSSO attendance compliance platform.",
+    "blogTitle": "Blog",
+    "blogDescription": "Latest insights on Belgian attendance declarations and NSSO compliance"
   },
   "auth": {
     "login": "Login",
@@ -374,5 +378,24 @@
     "deleteConfirm": "Are you sure? This action cannot be undone.",
     "deleteButton": "Delete my account",
     "companyName": "Company name"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Latest insights on Belgian attendance declarations and NSSO compliance",
+    "readMore": "Read more",
+    "backToBlog": "Back to blog",
+    "minRead": "min read",
+    "post1Title": "Checkinatwork Compliance Guide 2026",
+    "post1Excerpt": "Everything you need to know about the Belgian Checkinatwork system for construction sector attendance declarations.",
+    "post1Body": "The Checkinatwork system is Belgium's mandatory electronic attendance registration system for the construction sector. Introduced by the NSSO (RSZ/ONSS), it ensures that all workers present on construction sites are properly declared.\n\nWho Must Comply?\nAll employers and self-employed workers in the construction sector (NACE codes 41-43) must register attendance for every construction site where workers are present.\n\nHow It Works:\n1. Each construction site gets a unique declaration number\n2. Every worker must be checked in before starting work\n3. Check-ins can be done via the online portal, mobile app, or automated systems\n4. Late or missing declarations result in fines\n\nKey Requirements:\n- Workers must be checked in on the day they are present\n- Declarations must include the worker's NISS/INSZ number\n- The construction site must be registered in advance\n- Subcontractors are responsible for their own workers\n\nHow Checkin OK Helps:\nOur platform automates the entire process. Upload your attendance lists (CSV, Excel, or even scanned documents) and we generate compliant NSSO declarations automatically. We validate NISS numbers, check for duplicate entries, and flag potential compliance issues before submission.",
+    "post2Title": "NSSO Attendance Declarations Explained",
+    "post2Excerpt": "A deep dive into the Belgian National Social Security Office attendance declaration requirements and deadlines.",
+    "post2Body": "The Belgian National Social Security Office (NSSO/RSZ/ONSS) requires attendance declarations for specific sectors to combat undeclared work and ensure social security compliance.\n\nAffected Sectors:\n- Construction (mandatory since 2014)\n- Meat processing\n- Cleaning services\n- Temporary work agencies (for construction assignments)\n\nDeclaration Types:\n\n1. Checkinatwork (Construction)\nDaily attendance registration for all workers on construction sites. Must be submitted before work begins.\n\n2. CIAO (Cleaning, Meat)\nThe CIAO system (Check In And Out) tracks worker presence in the cleaning and meat processing sectors.\n\n3. Dimona Declarations\nWhile not an attendance declaration per se, Dimona (Declaration Immediate/Onmiddellijke Aangifte) is the mandatory declaration of employment start and end dates.\n\nDeadlines and Penalties:\n- Checkinatwork: Before the worker starts on site\n- Late declarations: Administrative fines from EUR 50 to EUR 2,500 per missing declaration\n- Repeated violations: Criminal prosecution possible\n\nCheckin OK processes all three declaration types from a single upload.",
+    "post3Title": "Automating CIAO Declarations for Cleaning Companies",
+    "post3Excerpt": "How Belgian cleaning companies can automate their CIAO attendance declarations and reduce administrative burden.",
+    "post3Body": "CIAO (Check In And Out) is the mandatory attendance registration system for Belgian cleaning companies and meat processing firms. Unlike Checkinatwork which only requires check-in, CIAO requires both check-in and check-out times.\n\nThe Administrative Challenge:\nCleaning companies often have dozens of workers spread across multiple locations. Manually submitting CIAO declarations for each worker at each location every day is time-consuming and error-prone.\n\nAutomation with Checkin OK:\n\n1. Bulk Upload\nUpload your weekly or monthly attendance sheets in CSV or Excel format. We support common scheduling software exports.\n\n2. Automatic Validation\nWe validate all NISS numbers, check that work hours comply with labor regulations, and flag any inconsistencies.\n\n3. Declaration Generation\nCompliant CIAO declarations are generated for each worker, each day, each location.\n\n4. Scanned Documents\nFor companies still using paper timesheets, upload scanned PDFs or photos. Our AI-powered extraction reads the attendance data automatically.\n\nBest Practices:\n- Submit declarations within 24 hours\n- Keep paper records as backup\n- Regular audits of NISS numbers against active contracts\n- Train supervisors on proper attendance recording",
+    "post4Title": "Construction Sector Dimona Rules: What Employers Need to Know",
+    "post4Excerpt": "Understanding Dimona declarations for construction workers, including temporary workers and subcontractors.",
+    "post4Body": "Dimona (Declaration Immediate/Onmiddellijke Aangifte) is the mandatory real-time declaration system for all Belgian employers to report the start and end of employment relationships.\n\nConstruction Sector Specifics:\n\nThe construction sector has additional Dimona requirements beyond the standard rules:\n\n1. Dimona IN\nMust be submitted before the worker's first day. For construction, this must include:\n- Worker's NISS/INSZ number\n- Expected start date\n- Joint committee number (PC 124 for construction)\n- Type of contract\n\n2. Dimona OUT\nMust be submitted when the employment relationship ends. The deadline is the next working day after the last day of work.\n\n3. Temporary Workers\nTemporary employment agencies must submit Dimona for each construction assignment. The user company (construction firm) must also ensure Checkinatwork compliance.\n\n4. Foreign Workers\nAdditional requirements apply:\n- Limosa declaration for posted workers\n- A1 certificate for social security coverage\n- Belgian work permit if applicable\n\nCommon Mistakes:\n- Late Dimona IN declarations (must be BEFORE first day)\n- Forgetting Dimona OUT for short-term contracts\n- Not updating Dimona when contract type changes\n- Missing Limosa declarations for foreign subcontractors\n\nPenalties:\nAdministrative fines range from EUR 50 to EUR 2,500 per violation. Systematic violations can lead to criminal prosecution and exclusion from public contracts.\n\nCheckin OK integrates Dimona status checks with your attendance declarations, flagging any workers who may have expired or missing Dimona declarations."
   }
 }

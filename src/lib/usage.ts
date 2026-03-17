@@ -6,6 +6,7 @@ export const TIER_LIMITS: Record<string, { daily: number; monthly: number }> = {
   FREE: { daily: 5, monthly: 50 },
   STARTER: { daily: 20, monthly: 200 },
   PROFESSIONAL: { daily: 999999, monthly: 999999 },
+  ENTERPRISE: { daily: 999999, monthly: 999999 },
 };
 
 const anonUsage = new Map<string, { count: number; date: string }>();
