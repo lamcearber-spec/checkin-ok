@@ -1,19 +1,23 @@
 {
   "nav": {
     "dashboard": "Tableau de bord",
-    "declarations": "D\u00e9clarations",
-    "settings": "Param\u00e8tres",
+    "declarations": "Déclarations",
+    "settings": "Paramètres",
     "help": "Aide",
     "home": "Accueil",
     "pricing": "Tarifs",
     "contact": "Contact",
-    "features": "Fonctionnalit\u00e9s"
+    "features": "Fonctionnalités",
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "history": "Historique",
+    "register": "S\"inscrire"
   },
   "hero": {
-    "title": "Conformit\u00e9 ONSS en quelques minutes",
-    "subtitle": "T\u00e9l\u00e9chargez vos donn\u00e9es de pr\u00e9sence CSV/Excel, validez les identifiants belges (NISS/BIS/Limosa) et g\u00e9n\u00e9rez du XML conforme pour Checkinatwork & CIAO. Aucun mat\u00e9riel requis.",
-    "cta": "T\u00e9l\u00e9chargez votre fichier",
-    "trusted": "Checkinatwork \u2022 CIAO \u2022 ONSS XSD v1.13 \u2022 Conforme SIRS"
+    "title": "Conformité ONSS en quelques minutes",
+    "subtitle": "Téléchargez vos données de présence CSV/Excel, validez les identifiants belges (NISS/BIS/Limosa) et générez du XML conforme pour Checkinatwork & CIAO. Aucun matériel requis.",
+    "cta": "Téléchargez votre fichier",
+    "trusted": "Checkinatwork • CIAO • ONSS XSD v1.13 • Conforme SIRS"
   },
   "kpi": {
     "totalScans": "Total des scans",
@@ -22,68 +26,75 @@
   },
   "upload": {
     "title": "Zone d'ingestion",
-    "dropzone": "D\u00e9posez votre fichier de pr\u00e9sence ici",
+    "dropzone": "Déposez votre fichier de présence ici",
     "dropzoneAlt": "ou cliquez pour parcourir",
     "formats": "Formats : .csv, .xlsx",
-    "processing": "Analyse des donn\u00e9es...",
-    "success": "Fichier analys\u00e9 avec succ\u00e8s !",
+    "processing": "Analyse des données...",
+    "success": "Fichier analysé avec succès !",
     "error": "Erreur lors de l'analyse"
   },
   "resolution": {
-    "title": "Matrice de r\u00e9solution",
-    "subtitle": "V\u00e9rifiez les corrections IA avant soumission",
+    "title": "Matrice de résolution",
+    "subtitle": "Vérifiez les corrections IA avant soumission",
     "original": "Original (invalide)",
     "corrected": "Correction IA",
     "confidence": "Confiance",
     "approve": "Approuver",
     "approveAll": "Tout approuver",
     "reject": "Rejeter",
-    "noIssues": "Aucun probl\u00e8me trouv\u00e9. Tous les enregistrements sont valid\u00e9s.",
+    "noIssues": "Aucun problème trouvé. Tous les enregistrements sont validés.",
     "field": "Champ",
     "value": "Valeur",
     "status": "Statut",
     "actions": "Actions"
   },
   "results": {
-    "title": "D\u00e9clarations valides",
+    "title": "Déclarations valides",
     "niss": "NISS/BIS",
     "limosa": "Limosa L1",
     "workplace": "ID lieu de travail",
     "date": "Date",
-    "arrival": "Arriv\u00e9e",
-    "departure": "D\u00e9part",
+    "arrival": "Arrivée",
+    "departure": "Départ",
     "type": "Type",
     "transactions": "enregistrements",
-    "generateXml": "G\u00e9n\u00e9rer XML ONSS",
+    "generateXml": "Générer XML ONSS",
     "exportCsv": "Exporter CSV",
-    "noData": "Aucune donn\u00e9e. T\u00e9l\u00e9chargez un fichier de pr\u00e9sence pour commencer.",
+    "noData": "Aucune donnée. Téléchargez un fichier de présence pour commencer.",
     "checkinatwork": "Checkinatwork",
     "ciao": "CIAO"
   },
   "features": {
     "title": "Pourquoi Checkin OK ?",
     "validation": "Validation cryptographique des ID",
-    "validationDesc": "V\u00e9rification modulo-97 pour NISS/BIS avec d\u00e9tection pr\u00e9/post-2000 et normalisation des mois BIS",
-    "ai": "Assainissement IA des donn\u00e9es",
-    "aiDesc": "Azure GPT-4o corrige les erreurs typographiques, extrait les horodatages et s\u00e9pare les champs concat\u00e9n\u00e9s",
-    "xml": "G\u00e9n\u00e9ration XML ONSS",
-    "xmlDesc": "Payloads conformes XSD v1.13 pour Checkinatwork (pr\u00e9sence journali\u00e8re) et CIAO (horodatages en temps r\u00e9el)",
-    "privacy": "Z\u00e9ro r\u00e9tention de donn\u00e9es",
-    "privacyDesc": "Toutes les donn\u00e9es personnelles trait\u00e9es en m\u00e9moire volatile uniquement. Aucun stockage de NISS, BIS ou Limosa. Conforme GBA/RGPD."
+    "validationDesc": "Vérification modulo-97 pour NISS/BIS avec détection pré/post-2000 et normalisation des mois BIS",
+    "ai": "Assainissement IA des données",
+    "aiDesc": "Azure GPT-4o corrige les erreurs typographiques, extrait les horodatages et sépare les champs concaténés",
+    "xml": "Génération XML ONSS",
+    "xmlDesc": "Payloads conformes XSD v1.13 pour Checkinatwork (présence journalière) et CIAO (horodatages en temps réel)",
+    "privacy": "Zéro rétention de données",
+    "privacyDesc": "Toutes les données personnelles traitées en mémoire volatile uniquement. Aucun stockage de NISS, BIS ou Limosa. Conforme GBA/RGPD."
   },
   "pricing": {
     "title": "Tarification simple et forfaitaire",
     "business": "Business",
-    "businessPrice": "\u20ac99",
+    "businessPrice": "€99",
     "businessPeriod": "/mois",
-    "businessDesc": "Tout pour la conformit\u00e9 belge de pr\u00e9sence",
-    "features": ["Uploads CSV/Excel illimit\u00e9s", "Validation NISS/BIS/Limosa", "Correction IA des donn\u00e9es", "XML Checkinatwork + CIAO", "Z\u00e9ro r\u00e9tention de donn\u00e9es", "Support prioritaire"],
+    "businessDesc": "Tout pour la conformité belge de présence",
+    "features": [
+      "Uploads CSV/Excel illimités",
+      "Validation NISS/BIS/Limosa",
+      "Correction IA des données",
+      "XML Checkinatwork + CIAO",
+      "Zéro rétention de données",
+      "Support prioritaire"
+    ],
     "cta": "Commencer",
-    "risk": "\u00c9vitez les amendes de 6 000 \u20ac par travailleur non enregistr\u00e9"
+    "risk": "Évitez les amendes de 6 000 € par travailleur non enregistré"
   },
   "pricingPage": {
     "title": "Formules & Tarifs",
-    "subtitle": "Choisissez la formule qui vous convient. De l'utilisation anonyme gratuite \u00e0 la conformit\u00e9 professionnelle compl\u00e8te.",
+    "subtitle": "Choisissez la formule qui vous convient. De l'utilisation anonyme gratuite à la conformité professionnelle complète.",
     "perMonth": "/mois",
     "perDay": "/jour",
     "perMo": "/mois",
@@ -93,121 +104,143 @@
     "tiers": {
       "anonymous": {
         "name": "Gratuit Anonyme",
-        "price": "\u20ac0",
-        "limit": "1 d\u00e9claration/jour",
-        "features": ["Upload CSV/Excel", "Validation NISS/BIS", "G\u00e9n\u00e9ration XML", "Aucun compte requis"]
+        "price": "€0",
+        "limit": "1 déclaration/jour",
+        "features": [
+          "Upload CSV/Excel",
+          "Validation NISS/BIS",
+          "Génération XML",
+          "Aucun compte requis"
+        ]
       },
       "registered": {
-        "name": "Gratuit Enregistr\u00e9",
-        "price": "\u20ac0",
-        "limit": "5 d\u00e9clarations/jour",
-        "features": ["Tout dans Gratuit Anonyme", "5 d\u00e9clarations par jour", "Historique des conversions", "Support par e-mail"]
+        "name": "Gratuit Enregistré",
+        "price": "€0",
+        "limit": "5 déclarations/jour",
+        "features": [
+          "Tout dans Gratuit Anonyme",
+          "5 déclarations par jour",
+          "Historique des conversions",
+          "Support par e-mail"
+        ]
       },
       "starter": {
         "name": "Starter",
-        "price": "\u20ac20",
-        "limit": "200 d\u00e9clarations/mois",
-        "features": ["Tout dans Gratuit Enregistr\u00e9", "200 d\u00e9clarations par mois", "Correction IA des donn\u00e9es", "Support prioritaire"]
+        "price": "€20",
+        "limit": "200 déclarations/mois",
+        "features": [
+          "Tout dans Gratuit Enregistré",
+          "200 déclarations par mois",
+          "Correction IA des données",
+          "Support prioritaire"
+        ]
       },
       "professional": {
         "name": "Professionnel",
-        "price": "\u20ac50",
-        "limit": "1000 d\u00e9clarations/mois",
-        "features": ["Tout dans Starter", "1000 d\u00e9clarations par mois", "Export XML en masse", "Support d\u00e9di\u00e9", "Acc\u00e8s API"]
+        "price": "€50",
+        "limit": "1000 déclarations/mois",
+        "features": [
+          "Tout dans Starter",
+          "1000 déclarations par mois",
+          "Export XML en masse",
+          "Support dédié",
+          "Accès API"
+        ]
       }
     },
     "homeCta": "Voir toutes les formules & tarifs",
-    "risk": "\u00c9vitez les amendes de 6 000 \u20ac par travailleur non enregistr\u00e9"
+    "risk": "Évitez les amendes de 6 000 € par travailleur non enregistré"
   },
   "trust": {
     "gdpr": "Conforme au RGPD",
     "gba": "Conforme GBA",
-    "zero": "Z\u00e9ro r\u00e9tention",
-    "nsso": "Certifi\u00e9 ONSS"
+    "zero": "Zéro rétention",
+    "nsso": "Certifié ONSS"
   },
   "footer": {
-    "description": "Checkin OK automatise les d\u00e9clarations de pr\u00e9sence ONSS pour la conformit\u00e9 Checkinatwork et CIAO.",
+    "description": "Checkin OK automatise les déclarations de présence ONSS pour la conformité Checkinatwork et CIAO.",
     "product": "Produit",
     "legal": "Juridique",
-    "privacy": "Politique de confidentialit\u00e9",
-    "terms": "Conditions g\u00e9n\u00e9rales",
-    "impressum": "Mentions l\u00e9gales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "impressum": "Mentions légales",
     "contact": "Contact",
     "pricing": "Tarifs",
-    "copyright": "\u00a9 2026 Checkin OK. Tous droits r\u00e9serv\u00e9s."
+    "copyright": "© 2026 Checkin OK. Tous droits réservés.",
+    "features": "Fonctionnalités"
   },
   "cookie": {
-    "message": "Nous utilisons des cookies techniques pour am\u00e9liorer votre exp\u00e9rience. Aucune donn\u00e9e n'est partag\u00e9e avec des tiers.",
+    "message": "Nous utilisons des cookies techniques pour améliorer votre expérience. Aucune donnée n'est partagée avec des tiers.",
     "accept": "Accepter",
     "decline": "Refuser"
   },
   "legal": {
-    "privacyTitle": "Politique de confidentialit\u00e9",
+    "privacyTitle": "Politique de confidentialité",
     "privacyIntroTitle": "Introduction",
-    "privacyIntroText": "Checkin OK, exploit\u00e9 par Radom UG (haftungsbeschr\u00e4nkt), s'engage \u00e0 prot\u00e9ger votre vie priv\u00e9e. Cette politique explique comment nous traitons les donn\u00e9es lorsque vous utilisez notre service.",
-    "privacyDataTitle": "Donn\u00e9es trait\u00e9es",
-    "privacyDataText": "Nous traitons les fichiers de pr\u00e9sence (CSV/Excel) contenant des identifiants de travailleurs (NISS/BIS/Limosa). Les fichiers sont trait\u00e9s en m\u00e9moire volatile uniquement et ne sont jamais \u00e9crits sur disque. Toutes les donn\u00e9es personnelles sont purg\u00e9es imm\u00e9diatement apr\u00e8s transmission \u00e0 l'ONSS.",
-    "privacyRetentionTitle": "Conservation des donn\u00e9es",
-    "privacyRetentionText": "Z\u00e9ro r\u00e9tention pour les donn\u00e9es personnelles. Nous ne stockons que des statistiques agr\u00e9g\u00e9es (compteurs succ\u00e8s/\u00e9chec) pour la facturation.",
+    "privacyIntroText": "Checkin OK, exploité par Radom UG (haftungsbeschränkt), s'engage à protéger votre vie privée. Cette politique explique comment nous traitons les données lorsque vous utilisez notre service.",
+    "privacyDataTitle": "Données traitées",
+    "privacyDataText": "Nous traitons les fichiers de présence (CSV/Excel) contenant des identifiants de travailleurs (NISS/BIS/Limosa). Les fichiers sont traités en mémoire volatile uniquement et ne sont jamais écrits sur disque. Toutes les données personnelles sont purgées immédiatement après transmission à l'ONSS.",
+    "privacyRetentionTitle": "Conservation des données",
+    "privacyRetentionText": "Zéro rétention pour les données personnelles. Nous ne stockons que des statistiques agrégées (compteurs succès/échec) pour la facturation.",
     "privacyCookiesTitle": "Cookies",
-    "privacyCookiesText": "Nous utilisons uniquement des cookies techniques essentiels (pr\u00e9f\u00e9rence linguistique, session). Aucun cookie de suivi n'est utilis\u00e9.",
+    "privacyCookiesText": "Nous utilisons uniquement des cookies techniques essentiels (préférence linguistique, session). Aucun cookie de suivi n'est utilisé.",
     "privacyRightsTitle": "Vos droits",
-    "privacyRightsText": "En vertu du RGPD, vous avez le droit d'acc\u00e9der, rectifier, effacer et porter vos donn\u00e9es. Comme nous ne conservons aucune donn\u00e9e personnelle, ces droits sont automatiquement respect\u00e9s.",
+    "privacyRightsText": "En vertu du RGPD, vous avez le droit d'accéder, rectifier, effacer et porter vos données. Comme nous ne conservons aucune donnée personnelle, ces droits sont automatiquement respectés.",
     "privacyContactTitle": "Contact",
-    "privacyContactText": "Radom UG (haftungsbeschr\u00e4nkt), Francfort-sur-le-Main, Allemagne. Email : privacy@checkin-ok.be",
-    "termsTitle": "Conditions g\u00e9n\u00e9rales",
+    "privacyContactText": "Radom UG (haftungsbeschränkt), Francfort-sur-le-Main, Allemagne. Email : privacy@checkin-ok.be",
+    "termsTitle": "Conditions générales",
     "termsIntroTitle": "Acceptation des conditions",
-    "termsIntroText": "En utilisant Checkin OK, vous acceptez ces conditions. Checkin OK est fourni par Radom UG (haftungsbeschr\u00e4nkt), Francfort-sur-le-Main, Allemagne.",
+    "termsIntroText": "En utilisant Checkin OK, vous acceptez ces conditions. Checkin OK est fourni par Radom UG (haftungsbeschränkt), Francfort-sur-le-Main, Allemagne.",
     "termsServiceTitle": "Description du service",
-    "termsServiceText": "Checkin OK fournit l'analyse automatis\u00e9e des donn\u00e9es de pr\u00e9sence, la validation d'identifiants belges, la correction IA et la g\u00e9n\u00e9ration XML conforme \u00e0 l'ONSS. Le service est fourni tel quel, sans garantie.",
-    "termsLiabilityTitle": "Limitation de responsabilit\u00e9",
-    "termsLiabilityText": "Checkin OK et Radom UG ne sont pas responsables des dommages indirects, y compris les amendes ONSS. Les utilisateurs doivent v\u00e9rifier l'exactitude des d\u00e9clarations avant soumission.",
-    "termsTerminationTitle": "R\u00e9siliation",
-    "termsTerminationText": "Nous pouvons suspendre l'acc\u00e8s au service \u00e0 tout moment en cas de violation des conditions.",
+    "termsServiceText": "Checkin OK fournit l'analyse automatisée des données de présence, la validation d'identifiants belges, la correction IA et la génération XML conforme à l'ONSS. Le service est fourni tel quel, sans garantie.",
+    "termsLiabilityTitle": "Limitation de responsabilité",
+    "termsLiabilityText": "Checkin OK et Radom UG ne sont pas responsables des dommages indirects, y compris les amendes ONSS. Les utilisateurs doivent vérifier l'exactitude des déclarations avant soumission.",
+    "termsTerminationTitle": "Résiliation",
+    "termsTerminationText": "Nous pouvons suspendre l'accès au service à tout moment en cas de violation des conditions.",
     "termsGoverningTitle": "Droit applicable",
-    "termsGoverningText": "Ces conditions sont r\u00e9gies par les lois de la R\u00e9publique f\u00e9d\u00e9rale d'Allemagne. Tribunaux comp\u00e9tents : Francfort-sur-le-Main.",
-    "impressumTitle": "Mentions l\u00e9gales",
-    "impressumCompanyTitle": "Soci\u00e9t\u00e9",
-    "impressumCompanyText": "Radom UG (haftungsbeschr\u00e4nkt)",
+    "termsGoverningText": "Ces conditions sont régies par les lois de la République fédérale d'Allemagne. Tribunaux compétents : Francfort-sur-le-Main.",
+    "impressumTitle": "Mentions légales",
+    "impressumCompanyTitle": "Société",
+    "impressumCompanyText": "Radom UG (haftungsbeschränkt)",
     "impressumAddressTitle": "Adresse",
     "impressumAddressText": "Taunusanlage 8, 60329 Frankfurt am Main, Allemagne",
     "impressumContactTitle": "Contact",
-    "impressumContactText": "Email : info@checkin-ok.be\nT\u00e9l\u00e9phone : +49 176 99742900",
+    "impressumContactText": "Email : info@checkin-ok.be\nTéléphone : +49 176 99742900",
     "impressumRegisterTitle": "Inscription",
     "impressumRegisterText": "Amtsgericht Frankfurt am Main, HRB 130877",
-    "impressumVatTitle": "Num\u00e9ro de TVA",
+    "impressumVatTitle": "Numéro de TVA",
     "impressumVatText": "DE367553843",
-    "impressumCeoTitle": "Directeur g\u00e9n\u00e9ral",
+    "impressumCeoTitle": "Directeur général",
     "impressumCeoText": "Arber Lamce",
     "impressumDisclaimerTitle": "Avertissement",
-    "impressumDisclaimerText": "Les informations sur ce site sont fournies \u00e0 titre informatif. Nous ne garantissons pas leur exhaustivit\u00e9 ou exactitude."
+    "impressumDisclaimerText": "Les informations sur ce site sont fournies à titre informatif. Nous ne garantissons pas leur exhaustivité ou exactitude."
   },
   "faq": {
-    "title": "Questions fr\u00e9quentes",
+    "title": "Questions fréquentes",
     "items": [
       {
         "question": "Qu'est-ce que Checkin-OK.be ?",
-        "answer": "Checkin-OK.be est une plateforme en ligne qui aide les entreprises belges \u00e0 g\u00e9n\u00e9rer automatiquement des d\u00e9clarations de pr\u00e9sence conformes \u00e0 l'ONSS pour Checkinatwork et CIAO. T\u00e9l\u00e9chargez votre CSV ou Excel, et nous faisons le reste."
+        "answer": "Checkin-OK.be est une plateforme en ligne qui aide les entreprises belges à générer automatiquement des déclarations de présence conformes à l'ONSS pour Checkinatwork et CIAO. Téléchargez votre CSV ou Excel, et nous faisons le reste."
       },
       {
-        "question": "Quels fichiers puis-je t\u00e9l\u00e9charger ?",
-        "answer": "Vous pouvez t\u00e9l\u00e9charger des fichiers CSV et Excel (.xlsx) contenant les donn\u00e9es de pr\u00e9sence de vos employ\u00e9s. Le syst\u00e8me reconna\u00eet automatiquement la disposition des colonnes et valide les donn\u00e9es."
+        "question": "Quels fichiers puis-je télécharger ?",
+        "answer": "Vous pouvez télécharger des fichiers CSV et Excel (.xlsx) contenant les données de présence de vos employés. Le système reconnaît automatiquement la disposition des colonnes et valide les données."
       },
       {
         "question": "Comment fonctionne la correction IA ?",
-        "answer": "Notre module IA (Azure GPT-4o) d\u00e9tecte et corrige automatiquement les erreurs typographiques dans les num\u00e9ros NISS/BIS, extrait les horodatages du langage naturel et s\u00e9pare les champs concat\u00e9n\u00e9s. Vous gardez toujours le contr\u00f4le via la matrice de r\u00e9solution."
+        "answer": "Notre module IA (Azure GPT-4o) détecte et corrige automatiquement les erreurs typographiques dans les numéros NISS/BIS, extrait les horodatages du langage naturel et sépare les champs concaténés. Vous gardez toujours le contrôle via la matrice de résolution."
       },
       {
-        "question": "Mes donn\u00e9es sont-elles en s\u00e9curit\u00e9 ?",
-        "answer": "Absolument. Toutes les donn\u00e9es personnelles sont trait\u00e9es exclusivement en m\u00e9moire volatile. Aucun stockage en base de donn\u00e9es des noms, NISS, BIS ou num\u00e9ros Limosa. Nous sommes enti\u00e8rement conformes au RGPD et au GBA."
+        "question": "Mes données sont-elles en sécurité ?",
+        "answer": "Absolument. Toutes les données personnelles sont traitées exclusivement en mémoire volatile. Aucun stockage en base de données des noms, NISS, BIS ou numéros Limosa. Nous sommes entièrement conformes au RGPD et au GBA."
       },
       {
-        "question": "Dois-je cr\u00e9er un compte ?",
-        "answer": "Non, vous pouvez commencer imm\u00e9diatement sans compte. Pour les fonctionnalit\u00e9s avanc\u00e9es comme l'historique des conversions et le support prioritaire, un abonnement Business est disponible."
+        "question": "Dois-je créer un compte ?",
+        "answer": "Non, vous pouvez commencer immédiatement sans compte. Pour les fonctionnalités avancées comme l'historique des conversions et le support prioritaire, un abonnement Business est disponible."
       },
       {
         "question": "Comment exporter vers XML ONSS ?",
-        "answer": "Apr\u00e8s avoir t\u00e9l\u00e9charg\u00e9 et valid\u00e9 vos donn\u00e9es, cliquez sur 'G\u00e9n\u00e9rer XML ONSS'. Le syst\u00e8me g\u00e9n\u00e8re des payloads conformes XSD v1.13 pour Checkinatwork et CIAO, pr\u00eats \u00e0 \u00eatre soumis \u00e0 l'ONSS."
+        "answer": "Après avoir téléchargé et validé vos données, cliquez sur 'Générer XML ONSS'. Le système génère des payloads conformes XSD v1.13 pour Checkinatwork et CIAO, prêts à être soumis à l'ONSS."
       }
     ]
   },
@@ -218,56 +251,128 @@
         "name": "Marc D.",
         "location": "Bruxelles",
         "role": "Responsable RH",
-        "text": "Checkin-OK nous a fait gagner des heures de travail. Ce qui prenait une journ\u00e9e enti\u00e8re se fait maintenant en quelques minutes. La correction IA d\u00e9tecte les erreurs que nous aurions manqu\u00e9es.",
+        "text": "Checkin-OK nous a fait gagner des heures de travail. Ce qui prenait une journée entière se fait maintenant en quelques minutes. La correction IA détecte les erreurs que nous aurions manquées.",
         "rating": 5
       },
       {
         "name": "Sophie V.",
         "location": "Anvers",
         "role": "Admin Paie",
-        "text": "La correction IA est incroyablement pr\u00e9cise. Plus aucune erreur NISS depuis que nous utilisons Checkin-OK. Indispensable pour notre \u00e9quipe paie.",
+        "text": "La correction IA est incroyablement précise. Plus aucune erreur NISS depuis que nous utilisons Checkin-OK. Indispensable pour notre équipe paie.",
         "rating": 5
       },
       {
         "name": "Luc B.",
-        "location": "Li\u00e8ge",
+        "location": "Liège",
         "role": "Comptable",
-        "text": "Enfin une solution simple pour les d\u00e9clarations ONSS. L'interface est intuitive et l'export XML fonctionne parfaitement. Fortement recommand\u00e9 pour tout employeur belge.",
+        "text": "Enfin une solution simple pour les déclarations ONSS. L'interface est intuitive et l'export XML fonctionne parfaitement. Fortement recommandé pour tout employeur belge.",
         "rating": 5
       }
     ]
   },
   "bottomCta": {
-    "title": "Pr\u00eat \u00e0 commencer ?",
-    "subtitle": "\u00c9vitez les amendes ONSS et automatisez vos d\u00e9clarations de pr\u00e9sence d\u00e8s aujourd'hui.",
+    "title": "Prêt à commencer ?",
+    "subtitle": "Évitez les amendes ONSS et automatisez vos déclarations de présence dès aujourd'hui.",
     "cta": "Commencez aujourd'hui"
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Vous avez des questions ? N'h\u00e9sitez pas \u00e0 nous contacter.",
+    "subtitle": "Vous avez des questions ? N'hésitez pas à nous contacter.",
     "emailLabel": "E-mail",
     "email": "info@checkin-ok.be",
     "addressLabel": "Adresse",
-    "address": "Radom UG (haftungsbeschr\u00e4nkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nAllemagne",
+    "address": "Radom UG (haftungsbeschränkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nAllemagne",
     "cta": "Envoyez-nous un e-mail"
   },
   "notFound": {
-    "title": "Page non trouv\u00e9e",
-    "message": "La page que vous recherchez n'existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
-    "back": "Retour \u00e0 l'accueil"
+    "title": "Page non trouvée",
+    "message": "La page que vous recherchez n'existe pas ou a été déplacée.",
+    "back": "Retour à l'accueil"
   },
   "metadata": {
-    "homeTitle": "Checkin OK \u2014 Conformit\u00e9 ONSS belge",
-    "homeDescription": "D\u00e9clarations automatis\u00e9es Checkinatwork & CIAO. Uploadez CSV/Excel, validez NISS/BIS/Limosa, g\u00e9n\u00e9rez du XML conforme ONSS. Z\u00e9ro r\u00e9tention.",
-    "pricingTitle": "Tarifs & Formules \u2014 Checkin OK",
-    "pricingDescription": "Choisissez votre formule Checkin OK. De l'utilisation anonyme gratuite \u00e0 la conformit\u00e9 ONSS professionnelle avec 1000 d\u00e9clarations par mois.",
-    "contactTitle": "Contact \u2014 Checkin OK",
-    "contactDescription": "Contactez Checkin OK. Questions sur la conformit\u00e9 ONSS, Checkinatwork ou d\u00e9clarations CIAO ? Nous sommes l\u00e0 pour vous aider.",
-    "impressumTitle": "Mentions l\u00e9gales \u2014 Checkin OK",
-    "impressumDescription": "Informations l\u00e9gales sur Radom UG (haftungsbeschr\u00e4nkt), la soci\u00e9t\u00e9 derri\u00e8re Checkin OK.",
-    "privacyTitle": "Politique de confidentialit\u00e9 \u2014 Checkin OK",
-    "privacyDescription": "Comment Checkin OK traite vos donn\u00e9es. Z\u00e9ro r\u00e9tention de donn\u00e9es personnelles, traitement conforme RGPD et GBA.",
-    "termsTitle": "Conditions g\u00e9n\u00e9rales \u2014 Checkin OK",
-    "termsDescription": "Conditions d'utilisation de la plateforme de conformit\u00e9 ONSS Checkin OK."
+    "homeTitle": "Checkin OK — Conformité ONSS belge",
+    "homeDescription": "Déclarations automatisées Checkinatwork & CIAO. Uploadez CSV/Excel, validez NISS/BIS/Limosa, générez du XML conforme ONSS. Zéro rétention.",
+    "pricingTitle": "Tarifs & Formules — Checkin OK",
+    "pricingDescription": "Choisissez votre formule Checkin OK. De l'utilisation anonyme gratuite à la conformité ONSS professionnelle avec 1000 déclarations par mois.",
+    "contactTitle": "Contact — Checkin OK",
+    "contactDescription": "Contactez Checkin OK. Questions sur la conformité ONSS, Checkinatwork ou déclarations CIAO ? Nous sommes là pour vous aider.",
+    "impressumTitle": "Mentions légales — Checkin OK",
+    "impressumDescription": "Informations légales sur Radom UG (haftungsbeschränkt), la société derrière Checkin OK.",
+    "privacyTitle": "Politique de confidentialité — Checkin OK",
+    "privacyDescription": "Comment Checkin OK traite vos données. Zéro rétention de données personnelles, traitement conforme RGPD et GBA.",
+    "termsTitle": "Conditions générales — Checkin OK",
+    "termsDescription": "Conditions d'utilisation de la plateforme de conformité ONSS Checkin OK."
+  },
+  "auth": {
+    "login": "Connexion",
+    "register": "S\"inscrire",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "name": "Nom complet",
+    "companyName": "Nom de l\"entreprise",
+    "forgotPassword": "Mot de passe oublié ?",
+    "resetPassword": "Réinitialiser le mot de passe",
+    "sendResetLink": "Envoyer le lien",
+    "backToLogin": "Retour à la connexion",
+    "noAccount": "Pas encore de compte ?",
+    "hasAccount": "Vous avez déjà un compte ?",
+    "loginButton": "Se connecter",
+    "registerButton": "Créer un compte",
+    "resetButton": "Réinitialiser",
+    "resetSent": "Vérifiez votre e-mail pour un lien de réinitialisation.",
+    "resetSuccess": "Mot de passe réinitialisé. Vous pouvez maintenant vous connecter.",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "loginError": "E-mail ou mot de passe invalide",
+    "registerError": "L\"inscription a échoué. Veuillez réessayer.",
+    "emailRequired": "L\"adresse e-mail est requise",
+    "passwordRequired": "Le mot de passe est requis",
+    "passwordMin": "Le mot de passe doit contenir au moins 8 caractères"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bon retour",
+    "usage": "Utilisation",
+    "dailyUsage": "Utilisation quotidienne",
+    "monthlyUsage": "Utilisation mensuelle",
+    "declarations": "déclarations",
+    "currentPlan": "Abonnement actuel",
+    "upgradePlan": "Changer d\"abonnement",
+    "quickActions": "Actions rapides",
+    "newDeclaration": "Nouvelle déclaration",
+    "viewHistory": "Voir l\"historique",
+    "manageBilling": "Gérer la facturation",
+    "unlimited": "Illimité"
+  },
+  "history": {
+    "title": "Historique des déclarations",
+    "noDeclarations": "Aucune déclaration",
+    "date": "Date",
+    "fileName": "Nom du fichier",
+    "recordCount": "Enregistrements",
+    "status": "Statut",
+    "success": "Réussi",
+    "failed": "Échoué",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "page": "Page"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "changePassword": "Changer le mot de passe",
+    "currentPassword": "Mot de passe actuel",
+    "newPassword": "Nouveau mot de passe",
+    "confirmNewPassword": "Confirmer le nouveau mot de passe",
+    "updatePassword": "Mettre à jour",
+    "passwordChanged": "Mot de passe modifié avec succès",
+    "billing": "Facturation",
+    "manageBilling": "Gérer la facturation",
+    "billingDescription": "Gérez votre abonnement et vos moyens de paiement",
+    "dangerZone": "Zone de danger",
+    "deleteAccount": "Supprimer le compte",
+    "deleteAccountDescription": "Supprimer définitivement votre compte et toutes vos données",
+    "deleteConfirm": "Êtes-vous sûr ? Cette action est irréversible.",
+    "deleteButton": "Supprimer mon compte",
+    "companyName": "Nom de l\"entreprise"
   }
 }

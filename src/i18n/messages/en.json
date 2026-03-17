@@ -7,13 +7,17 @@
     "home": "Home",
     "pricing": "Pricing",
     "contact": "Contact",
-    "features": "Features"
+    "features": "Features",
+    "login": "Login",
+    "logout": "Logout",
+    "history": "History",
+    "register": "Register"
   },
   "hero": {
     "title": "NSSO Attendance Compliance in Minutes",
     "subtitle": "Upload attendance CSV/Excel, validate Belgian IDs (NISS/BIS/Limosa), and generate compliant XML for Checkinatwork & CIAO. Zero hardware required.",
     "cta": "Upload attendance file",
-    "trusted": "Checkinatwork \u2022 CIAO \u2022 NSSO XSD v1.13 \u2022 SIOD Compliant"
+    "trusted": "Checkinatwork • CIAO • NSSO XSD v1.13 • SIOD Compliant"
   },
   "kpi": {
     "totalScans": "Total Scans",
@@ -74,12 +78,19 @@
   "pricing": {
     "title": "Simple, flat pricing",
     "business": "Business",
-    "businessPrice": "\u20ac99",
+    "businessPrice": "€99",
     "businessPeriod": "/month",
     "businessDesc": "Everything you need for Belgian attendance compliance",
-    "features": ["Unlimited CSV/Excel uploads", "NISS/BIS/Limosa validation", "AI data correction", "Checkinatwork + CIAO XML", "Zero data retention", "Priority support"],
+    "features": [
+      "Unlimited CSV/Excel uploads",
+      "NISS/BIS/Limosa validation",
+      "AI data correction",
+      "Checkinatwork + CIAO XML",
+      "Zero data retention",
+      "Priority support"
+    ],
     "cta": "Get started",
-    "risk": "Avoid \u20ac6,000 fines per unregistered worker"
+    "risk": "Avoid €6,000 fines per unregistered worker"
   },
   "pricingPage": {
     "title": "Plans & Pricing",
@@ -93,31 +104,52 @@
     "tiers": {
       "anonymous": {
         "name": "Free Anonymous",
-        "price": "\u20ac0",
+        "price": "€0",
         "limit": "1 declaration/day",
-        "features": ["Upload CSV/Excel", "NISS/BIS validation", "XML generation", "No account required"]
+        "features": [
+          "Upload CSV/Excel",
+          "NISS/BIS validation",
+          "XML generation",
+          "No account required"
+        ]
       },
       "registered": {
         "name": "Free Registered",
-        "price": "\u20ac0",
+        "price": "€0",
         "limit": "5 declarations/day",
-        "features": ["Everything in Free Anonymous", "5 declarations per day", "Conversion history", "Email support"]
+        "features": [
+          "Everything in Free Anonymous",
+          "5 declarations per day",
+          "Conversion history",
+          "Email support"
+        ]
       },
       "starter": {
         "name": "Starter",
-        "price": "\u20ac20",
+        "price": "€20",
         "limit": "200 declarations/mo",
-        "features": ["Everything in Free Registered", "200 declarations per month", "AI data correction", "Priority support"]
+        "features": [
+          "Everything in Free Registered",
+          "200 declarations per month",
+          "AI data correction",
+          "Priority support"
+        ]
       },
       "professional": {
         "name": "Professional",
-        "price": "\u20ac50",
+        "price": "€50",
         "limit": "1000 declarations/mo",
-        "features": ["Everything in Starter", "1000 declarations per month", "Bulk XML export", "Dedicated support", "API access"]
+        "features": [
+          "Everything in Starter",
+          "1000 declarations per month",
+          "Bulk XML export",
+          "Dedicated support",
+          "API access"
+        ]
       }
     },
     "homeCta": "View all plans & pricing",
-    "risk": "Avoid \u20ac6,000 fines per unregistered worker"
+    "risk": "Avoid €6,000 fines per unregistered worker"
   },
   "trust": {
     "gdpr": "GDPR Compliant",
@@ -134,7 +166,8 @@
     "impressum": "Impressum",
     "contact": "Contact",
     "pricing": "Pricing",
-    "copyright": "\u00a9 2026 Checkin OK. All rights reserved."
+    "copyright": "© 2026 Checkin OK. All rights reserved.",
+    "features": "Features"
   },
   "cookie": {
     "message": "We use technical cookies to improve your experience. No personal data is shared with third parties.",
@@ -144,7 +177,7 @@
   "legal": {
     "privacyTitle": "Privacy Policy",
     "privacyIntroTitle": "Introduction",
-    "privacyIntroText": "Checkin OK, operated by Radom UG (haftungsbeschr\u00e4nkt), is committed to protecting your privacy. This policy explains how we handle data when you use our service.",
+    "privacyIntroText": "Checkin OK, operated by Radom UG (haftungsbeschränkt), is committed to protecting your privacy. This policy explains how we handle data when you use our service.",
     "privacyDataTitle": "Data We Process",
     "privacyDataText": "We process attendance files (CSV/Excel) containing worker IDs (NISS/BIS/Limosa) that you upload. Files are processed in volatile memory only and never written to disk or stored in any database. All PII is purged immediately after NSSO transmission.",
     "privacyRetentionTitle": "Data Retention",
@@ -154,10 +187,10 @@
     "privacyRightsTitle": "Your Rights",
     "privacyRightsText": "Under the GDPR, you have the right to access, rectify, erase, and port your personal data. Since we do not retain any PII, these rights are automatically fulfilled.",
     "privacyContactTitle": "Contact",
-    "privacyContactText": "For privacy-related inquiries, contact Radom UG (haftungsbeschr\u00e4nkt), Frankfurt am Main, Germany. Email: privacy@checkin-ok.be",
+    "privacyContactText": "For privacy-related inquiries, contact Radom UG (haftungsbeschränkt), Frankfurt am Main, Germany. Email: privacy@checkin-ok.be",
     "termsTitle": "Terms & Conditions",
     "termsIntroTitle": "Acceptance of Terms",
-    "termsIntroText": "By using Checkin OK, you agree to these terms and conditions. Checkin OK is provided by Radom UG (haftungsbeschr\u00e4nkt), a company registered in Frankfurt am Main, Germany.",
+    "termsIntroText": "By using Checkin OK, you agree to these terms and conditions. Checkin OK is provided by Radom UG (haftungsbeschränkt), a company registered in Frankfurt am Main, Germany.",
     "termsServiceTitle": "Service Description",
     "termsServiceText": "Checkin OK provides automated parsing of attendance data, Belgian government ID validation (NISS/BIS/Limosa), AI-powered data correction, and NSSO-compliant XML generation for Checkinatwork and CIAO declarations. The service is provided as-is without warranty.",
     "termsLiabilityTitle": "Limitation of Liability",
@@ -168,7 +201,7 @@
     "termsGoverningText": "These terms are governed by and construed in accordance with the laws of the Federal Republic of Germany. The courts of Frankfurt am Main shall have exclusive jurisdiction.",
     "impressumTitle": "Impressum",
     "impressumCompanyTitle": "Company",
-    "impressumCompanyText": "Radom UG (haftungsbeschr\u00e4nkt)",
+    "impressumCompanyText": "Radom UG (haftungsbeschränkt)",
     "impressumAddressTitle": "Address",
     "impressumAddressText": "Taunusanlage 8, 60329 Frankfurt am Main, Germany",
     "impressumContactTitle": "Contact",
@@ -230,7 +263,7 @@
       },
       {
         "name": "Luc B.",
-        "location": "Li\u00e8ge",
+        "location": "Liège",
         "role": "Accountant",
         "text": "Finally a simple solution for NSSO declarations. The interface is intuitive and the XML export works flawlessly. Highly recommended for any Belgian employer.",
         "rating": 5
@@ -248,7 +281,7 @@
     "emailLabel": "Email",
     "email": "info@checkin-ok.be",
     "addressLabel": "Address",
-    "address": "Radom UG (haftungsbeschr\u00e4nkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nGermany",
+    "address": "Radom UG (haftungsbeschränkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nGermany",
     "cta": "Send us an email"
   },
   "notFound": {
@@ -257,17 +290,89 @@
     "back": "Back to homepage"
   },
   "metadata": {
-    "homeTitle": "Checkin OK \u2014 Belgian NSSO Attendance Compliance",
+    "homeTitle": "Checkin OK — Belgian NSSO Attendance Compliance",
     "homeDescription": "Automated Checkinatwork & CIAO declarations. Upload CSV/Excel, validate NISS/BIS/Limosa, generate NSSO-compliant XML. Zero data retention.",
-    "pricingTitle": "Pricing & Plans \u2014 Checkin OK",
+    "pricingTitle": "Pricing & Plans — Checkin OK",
     "pricingDescription": "Choose your Checkin OK plan. From free anonymous use to professional NSSO compliance with up to 1000 declarations per month.",
-    "contactTitle": "Contact \u2014 Checkin OK",
+    "contactTitle": "Contact — Checkin OK",
     "contactDescription": "Get in touch with Checkin OK. Questions about NSSO compliance, Checkinatwork or CIAO declarations? We're here to help.",
-    "impressumTitle": "Impressum \u2014 Checkin OK",
-    "impressumDescription": "Legal information about Radom UG (haftungsbeschr\u00e4nkt), the company behind Checkin OK.",
-    "privacyTitle": "Privacy Policy \u2014 Checkin OK",
+    "impressumTitle": "Impressum — Checkin OK",
+    "impressumDescription": "Legal information about Radom UG (haftungsbeschränkt), the company behind Checkin OK.",
+    "privacyTitle": "Privacy Policy — Checkin OK",
     "privacyDescription": "How Checkin OK handles your data. Zero PII retention, GDPR and GBA compliant processing.",
-    "termsTitle": "Terms & Conditions \u2014 Checkin OK",
+    "termsTitle": "Terms & Conditions — Checkin OK",
     "termsDescription": "Terms and conditions for using the Checkin OK NSSO attendance compliance platform."
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "name": "Full name",
+    "companyName": "Company name",
+    "forgotPassword": "Forgot password?",
+    "resetPassword": "Reset password",
+    "sendResetLink": "Send reset link",
+    "backToLogin": "Back to login",
+    "noAccount": "Don\"t have an account?",
+    "hasAccount": "Already have an account?",
+    "loginButton": "Log in",
+    "registerButton": "Create account",
+    "resetButton": "Reset password",
+    "resetSent": "Check your email for a reset link.",
+    "resetSuccess": "Password reset successfully. You can now log in.",
+    "passwordMismatch": "Passwords do not match",
+    "loginError": "Invalid email or password",
+    "registerError": "Registration failed. Please try again.",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "passwordMin": "Password must be at least 8 characters"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "usage": "Usage",
+    "dailyUsage": "Daily usage",
+    "monthlyUsage": "Monthly usage",
+    "declarations": "declarations",
+    "currentPlan": "Current plan",
+    "upgradePlan": "Upgrade plan",
+    "quickActions": "Quick actions",
+    "newDeclaration": "New declaration",
+    "viewHistory": "View history",
+    "manageBilling": "Manage billing",
+    "unlimited": "Unlimited"
+  },
+  "history": {
+    "title": "Declaration History",
+    "noDeclarations": "No declarations yet",
+    "date": "Date",
+    "fileName": "File name",
+    "recordCount": "Records",
+    "status": "Status",
+    "success": "Success",
+    "failed": "Failed",
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page"
+  },
+  "settings": {
+    "title": "Settings",
+    "changePassword": "Change password",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmNewPassword": "Confirm new password",
+    "updatePassword": "Update password",
+    "passwordChanged": "Password changed successfully",
+    "billing": "Billing",
+    "manageBilling": "Manage billing",
+    "billingDescription": "Manage your subscription and payment methods",
+    "dangerZone": "Danger zone",
+    "deleteAccount": "Delete account",
+    "deleteAccountDescription": "Permanently delete your account and all data",
+    "deleteConfirm": "Are you sure? This action cannot be undone.",
+    "deleteButton": "Delete my account",
+    "companyName": "Company name"
   }
 }

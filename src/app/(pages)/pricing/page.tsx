@@ -1,20 +1,46 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import { Check, AlertTriangle, ArrowRight } from 'lucide-react';
-import type { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
-
-export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('metadata');
-  return {
-    title: t('pricingTitle'),
-    description: t('pricingDescription'),
-  };
-}
+import { useAuth } from '@/components/AuthProvider';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 const tierKeys = ['anonymous', 'registered', 'starter', 'professional'] as const;
 
 export default function PricingPage() {
   const t = useTranslations('pricingPage');
+  const { user } = useAuth();
+  const router = useRouter();
+  const [loadingTier, setLoadingTier] = useState<string | null>(null);
+
+  const handleCheckout = async (tier: string) => {
+    if (!user) {
+      router.push('/auth');
+      return;
+    }
+    if (tier === 'anonymous' || tier === 'registered') {
+      router.push('/#upload');
+      return;
+    }
+    setLoadingTier(tier);
+    try {
+      const res = await fetch('/api/stripe/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ tier: tier.toUpperCase() }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        console.error('No checkout URL returned');
+      }
+    } catch (e) {
+      console.error('Checkout error:', e);
+    }
+    setLoadingTier(null);
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -60,14 +86,16 @@ export default function PricingPage() {
                 ))}
               </ul>
               <button
-                className={`w-full mt-5 py-2.5 rounded text-sm font-medium transition-colors ${
+                onClick={() => handleCheckout(key)}
+                disabled={loadingTier === key}
+                className={`w-full mt-5 py-2.5 rounded text-sm font-medium transition-colors disabled:opacity-50 ${
                   isPro
                     ? 'bg-corp-green text-white hover:bg-corp-green-dark'
                     : 'bg-slate-bg text-navy border border-border hover:bg-white'
                 }`}
               >
-                {t('cta')}
-                {isPro && <ArrowRight className="inline h-3.5 w-3.5 ml-1" />}
+                {loadingTier === key ? 'Loading...' : t('cta')}
+                {isPro && loadingTier !== key && <ArrowRight className="inline h-3.5 w-3.5 ml-1" />}
               </button>
             </div>
           );
