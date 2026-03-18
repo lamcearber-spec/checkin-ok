@@ -136,7 +136,12 @@
     "subscriptionActivated": "Abonnement succesvol geactiveerd!",
     "checkoutCanceled": "Afrekenen is geannuleerd.",
     "manage": "Beheren",
-    "risk": "Vermijd boetes van €6.000 per niet-geregistreerde werknemer"
+    "risk": "Vermijd boetes van €6.000 per niet-geregistreerde werknemer",
+    "business": "Business",
+    "businessDesc": "Voor grote bedrijven",
+    "feature_business_1": "3.000 aangiften/maand",
+    "feature_business_2": "Alles in Professional",
+    "feature_business_3": "Prioriteit e-mailondersteuning"
   },
   "trust": {
     "gdpr": "AVG-conform",
