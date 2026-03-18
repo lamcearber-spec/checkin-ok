@@ -12,6 +12,7 @@ const featureCounts: Record<string, number> = {
   freeRegistered: 3,
   starter: 3,
   professional: 3,
+  business: 3,
   enterprise: 2,
 };
 
@@ -65,6 +66,18 @@ const tiers = [
     priceIdYearly: process.env.NEXT_PUBLIC_STRIPE_PRICE_PROFESSIONAL_YEARLY || null,
   },
 
+  {
+    key: 'business',
+    tier: 'BUSINESS',
+    price: 99,
+    yearlyPrice: 990,
+    limit: '3,000',
+    limitType: 'month',
+    featured: false,
+    green: false,
+    priceIdMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_BUSINESS_MONTHLY || null,
+    priceIdYearly: process.env.NEXT_PUBLIC_STRIPE_PRICE_BUSINESS_YEARLY || null,
+  },
   {
     key: 'enterprise',
     tier: 'ENTERPRISE',
