@@ -6,6 +6,7 @@ export const TIER_LIMITS: Record<string, { daily: number; monthly: number }> = {
   FREE: { daily: 5, monthly: 50 },
   STARTER: { daily: 20, monthly: 200 },
   PROFESSIONAL: { daily: 999999, monthly: 999999 },
+  BUSINESS: { daily: 100, monthly: 3000 },
   ENTERPRISE: { daily: 999999, monthly: 999999 },
 };
 
