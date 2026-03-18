@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { AttendanceProvider } from '@/contexts/AttendanceContext';
@@ -60,7 +63,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex">
+      <body className={`min-h-screen flex ${inter.className}`}>
         <NextIntlClientProvider messages={messages}>
           <AuthProvider>
             <AttendanceProvider>

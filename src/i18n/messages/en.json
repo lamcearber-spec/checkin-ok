@@ -91,7 +91,8 @@
       "Priority support"
     ],
     "cta": "Get started",
-    "risk": "Avoid €6,000 fines per unregistered worker"
+    "risk": "Avoid €6,000 fines per unregistered worker",
+    "homeCta": "View All Plans"
   },
   "pricingPage": {
     "title": "Plans & Pricing",

@@ -91,7 +91,8 @@
       "Support prioritaire"
     ],
     "cta": "Commencer",
-    "risk": "Évitez les amendes de 6 000 € par travailleur non enregistré"
+    "risk": "Évitez les amendes de 6 000 € par travailleur non enregistré",
+    "homeCta": "Voir Tous les Plans"
   },
   "pricingPage": {
     "title": "Plans & Tarifs",
