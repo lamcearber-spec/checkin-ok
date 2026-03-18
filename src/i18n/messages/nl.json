@@ -330,7 +330,9 @@
     "registerError": "Registratie mislukt. Probeer het opnieuw.",
     "emailRequired": "E-mailadres is verplicht",
     "passwordRequired": "Wachtwoord is verplicht",
-    "passwordMin": "Wachtwoord moet minimaal 8 tekens bevatten"
+    "passwordMin": "Wachtwoord moet minimaal 8 tekens bevatten",
+    "agbAccept": "Ik accepteer de",
+    "agbLink": "Algemene voorwaarden"
   },
   "dashboard": {
     "title": "Dashboard",
