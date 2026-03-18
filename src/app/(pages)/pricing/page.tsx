@@ -10,10 +10,9 @@ import { useAuth } from '@/components/AuthProvider';
 const featureCounts: Record<string, number> = {
   freeAnonymous: 2,
   freeRegistered: 3,
-  starter: 4,
-  professional: 5,
-  business: 5,
-  enterprise: 5,
+  starter: 3,
+  professional: 3,
+  enterprise: 2,
 };
 
 const tiers = [
@@ -65,18 +64,7 @@ const tiers = [
     priceIdMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_PROFESSIONAL_MONTHLY || null,
     priceIdYearly: process.env.NEXT_PUBLIC_STRIPE_PRICE_PROFESSIONAL_YEARLY || null,
   },
-  {
-    key: 'business',
-    tier: 'BUSINESS',
-    price: 99,
-    yearlyPrice: 990,
-    limit: '3,000',
-    limitType: 'month',
-    featured: false,
-    green: false,
-    priceIdMonthly: process.env.NEXT_PUBLIC_STRIPE_PRICE_BUSINESS_MONTHLY || null,
-    priceIdYearly: process.env.NEXT_PUBLIC_STRIPE_PRICE_BUSINESS_YEARLY || null,
-  },
+
   {
     key: 'enterprise',
     tier: 'ENTERPRISE',
