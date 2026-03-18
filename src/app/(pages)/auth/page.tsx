@@ -21,6 +21,7 @@ export default function AuthPage() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const [loading, setLoading] = useState(false);
+  const [agbAccepted, setAgbAccepted] = useState(false);
 
   useEffect(() => { if (user) router.push('/'); }, [user, router]);
 
@@ -83,7 +84,7 @@ export default function AuthPage() {
               <div><label className="block text-sm text-gray-400 mb-1.5">Email</label><div className="relative"><Mail size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" /><input type="email" value={email} onChange={e => setEmail(e.target.value)} required className={inputClass} placeholder="you@example.com" /></div></div>
               <div><label className="block text-sm text-gray-400 mb-1.5">Password</label><div className="relative"><Lock size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" /><input type={showPassword ? 'text' : 'password'} value={password} onChange={e => setPassword(e.target.value)} required className={inputClass + " pr-10"} placeholder="••••••••" /><button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300">{showPassword ? <EyeOff size={18} /> : <Eye size={18} />}</button></div></div>
               <button type="button" onClick={() => { setTab('forgot'); setError(''); setSuccess(''); }} className="text-sm text-green-500 hover:underline">Forgot password?</button>
-              <button type="submit" disabled={loading} className="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-lg font-medium transition-colors disabled:opacity-50">{loading ? 'Signing in...' : 'Sign In'}</button>
+              <button type="submit" disabled={loading || !agbAccepted} className="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-lg font-medium transition-colors disabled:opacity-50">{loading ? 'Signing in...' : 'Sign In'}</button>
             </form>
           )}
           {tab === 'register' && (
@@ -107,7 +108,19 @@ export default function AuthPage() {
             <form onSubmit={handleResetPassword} className="space-y-4">
               <h2 className="text-xl font-bold text-white mb-2">Set New Password</h2>
               <div><div className="relative"><Lock size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" /><input type={showPassword ? 'text' : 'password'} value={newPassword} onChange={e => setNewPassword(e.target.value)} required className={inputClass} placeholder="Min. 8 characters" /><button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-300">{showPassword ? <EyeOff size={18} /> : <Eye size={18} />}</button></div></div>
-              <button type="submit" disabled={loading} className="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-lg font-medium transition-colors disabled:opacity-50">{loading ? 'Updating...' : 'Update Password'}</button>
+                          <label className="flex items-start gap-2 text-sm text-slate-text/70 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={agbAccepted}
+                onChange={(e) => setAgbAccepted(e.target.checked)}
+                className="mt-0.5 h-4 w-4 rounded border-border text-corp-green focus:ring-corp-green"
+              />
+              <span>
+                {t('agbAccept')}{' '}
+                <Link href="/terms" className="text-corp-green hover:underline">{t('agbLink')}</Link>
+              </span>
+            </label>
+            <button type="submit" disabled={loading} className="w-full bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-lg font-medium transition-colors disabled:opacity-50">{loading ? 'Updating...' : 'Update Password'}</button>
             </form>
           )}
         </div>
