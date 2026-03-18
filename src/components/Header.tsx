@@ -28,15 +28,16 @@ export function Header() {
     { label: t('pricing'), href: '/pricing' },
     { label: t('contact'), href: '/contact' },
     { label: t('blog'), href: '/blog' },
+    { label: t('register'), href: '/auth?tab=register' },
   ];
 
   return (
     <header ref={menuRef} className="bg-white border-b border-border sticky top-0 z-30">
       <div className="h-14 flex items-center justify-between px-4 lg:px-6">
-        <div className="flex items-center gap-2 lg:hidden">
+        <Link href="/" className="flex items-center gap-2 lg:hidden hover:opacity-80 transition-opacity">
           <ClipboardCheck className="h-5 w-5 text-corp-green" />
           <span className="font-bold text-navy text-sm">Checkin OK</span>
-        </div>
+        </Link>
         <div className="hidden lg:block" />
         <div className="flex items-center gap-3">
           <LanguageToggle />
