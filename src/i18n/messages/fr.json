@@ -11,7 +11,7 @@
     "login": "Connexion",
     "logout": "Déconnexion",
     "history": "Historique",
-    "register": "S\"inscrire",
+    "register": "S'inscrire",
     "blog": "Blog"
   },
   "hero": {
@@ -330,7 +330,9 @@
     "registerError": "L\"inscription a échoué. Veuillez réessayer.",
     "emailRequired": "L\"adresse e-mail est requise",
     "passwordRequired": "Le mot de passe est requis",
-    "passwordMin": "Le mot de passe doit contenir au moins 8 caractères"
+    "passwordMin": "Le mot de passe doit contenir au moins 8 caractères",
+    "agbAccept": "J'accepte les",
+    "agbLink": "Conditions générales d'utilisation"
   },
   "dashboard": {
     "title": "Tableau de bord",
