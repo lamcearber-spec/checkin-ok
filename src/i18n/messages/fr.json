@@ -136,7 +136,12 @@
     "subscriptionActivated": "Abonnement activé avec succès !",
     "checkoutCanceled": "Le paiement a été annulé.",
     "manage": "Gérer",
-    "risk": "Évitez les amendes de 6 000 € par travailleur non enregistré"
+    "risk": "Évitez les amendes de 6 000 € par travailleur non enregistré",
+    "business": "Business",
+    "businessDesc": "Pour les grandes entreprises",
+    "feature_business_1": "3 000 déclarations/mois",
+    "feature_business_2": "Tout inclus dans Professional",
+    "feature_business_3": "Support email prioritaire"
   },
   "trust": {
     "gdpr": "Conforme au RGPD",
