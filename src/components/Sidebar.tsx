@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { LayoutDashboard, FileCheck, CreditCard, Settings, ChevronLeft, ChevronRight, ClipboardCheck, LogIn, LogOut, History } from 'lucide-react';
+import { LayoutDashboard, FileCheck, CreditCard, Settings, ChevronLeft, ChevronRight, ClipboardCheck, LogIn, LogOut, History, UserPlus } from 'lucide-react';
 import Link from 'next/link';
 import { useAuth } from '@/components/AuthProvider';
 
@@ -21,6 +21,7 @@ export function Sidebar() {
   const unauthenticatedItems = [
     { icon: LayoutDashboard, label: t('dashboard'), href: '/', active: true },
     { icon: CreditCard, label: t('pricing'), href: '/pricing', active: false },
+    { icon: UserPlus, label: t('register'), href: '/auth?tab=register', active: false },
     { icon: LogIn, label: t('login'), href: '/auth', active: false },
   ];
 
@@ -33,10 +34,10 @@ export function Sidebar() {
       }`}
     >
       {/* Logo */}
-      <div className="flex items-center gap-2 px-4 h-14 border-b border-border">
+      <Link href="/" className="flex items-center gap-2 px-4 h-14 border-b border-border hover:bg-slate-bg transition-colors">
         <ClipboardCheck className="h-6 w-6 text-corp-green flex-shrink-0" />
         {!collapsed && <span className="font-bold text-navy text-sm tracking-tight">Checkin OK</span>}
-      </div>
+      </Link>
 
       {/* Nav */}
       <nav className="flex-1 py-3 px-2 space-y-0.5">
