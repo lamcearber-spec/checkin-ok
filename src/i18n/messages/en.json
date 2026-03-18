@@ -136,7 +136,12 @@
     "subscriptionActivated": "Subscription activated successfully!",
     "checkoutCanceled": "Checkout was canceled.",
     "manage": "Manage",
-    "risk": "Avoid €6,000 fines per unregistered worker"
+    "risk": "Avoid €6,000 fines per unregistered worker",
+    "business": "Business",
+    "businessDesc": "For large businesses",
+    "feature_business_1": "3,000 declarations/month",
+    "feature_business_2": "Everything in Professional",
+    "feature_business_3": "Priority email support"
   },
   "trust": {
     "gdpr": "GDPR Compliant",
