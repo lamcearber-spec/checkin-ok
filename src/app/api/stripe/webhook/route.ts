@@ -53,11 +53,15 @@ export async function POST(request: NextRequest) {
   return NextResponse.json({ received: true });
 }
 
-function determineTier(priceId: string | undefined): 'FREE' | 'STARTER' | 'PROFESSIONAL' {
+function determineTier(priceId: string | undefined): 'FREE' | 'STARTER' | 'PROFESSIONAL' | 'BUSINESS' | 'ENTERPRISE' {
   if (!priceId) return 'FREE';
   const starterPrices = [process.env.STRIPE_PRICE_STARTER_MONTHLY, process.env.STRIPE_PRICE_STARTER_YEARLY];
   const proPrices = [process.env.STRIPE_PRICE_PROFESSIONAL_MONTHLY, process.env.STRIPE_PRICE_PROFESSIONAL_YEARLY];
   if (starterPrices.includes(priceId)) return 'STARTER';
   if (proPrices.includes(priceId)) return 'PROFESSIONAL';
+  const businessPrices = [process.env.STRIPE_PRICE_BUSINESS_MONTHLY, process.env.STRIPE_PRICE_BUSINESS_YEARLY];
+  if (businessPrices.includes(priceId)) return 'BUSINESS';
+  const enterprisePrices = [process.env.STRIPE_PRICE_ENTERPRISE_MONTHLY, process.env.STRIPE_PRICE_ENTERPRISE_YEARLY];
+  if (enterprisePrices.includes(priceId)) return 'ENTERPRISE';
   return 'FREE';
 }
