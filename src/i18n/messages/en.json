@@ -330,7 +330,9 @@
     "registerError": "Registration failed. Please try again.",
     "emailRequired": "Email is required",
     "passwordRequired": "Password is required",
-    "passwordMin": "Password must be at least 8 characters"
+    "passwordMin": "Password must be at least 8 characters",
+    "agbAccept": "I accept the",
+    "agbLink": "Terms & Conditions"
   },
   "dashboard": {
     "title": "Dashboard",
