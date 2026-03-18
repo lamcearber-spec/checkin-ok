@@ -59,6 +59,7 @@ enum Tier {
   FREE
   STARTER
   PROFESSIONAL
+  BUSINESS
 }
 
 enum DeclarationStatus {
