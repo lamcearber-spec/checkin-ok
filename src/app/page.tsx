@@ -2,7 +2,6 @@ import { useTranslations } from 'next-intl';
 import { KpiCards } from '@/components/KpiCards';
 import { UploadZone } from '@/components/UploadZone';
 import { ResolutionMatrix } from '@/components/ResolutionMatrix';
-import { DeclarationTable } from '@/components/DeclarationTable';
 import { FAQ } from '@/components/FAQ';
 import Link from 'next/link';
 import { Shield, Sparkles, FileCode, Lock, ClipboardCheck, ArrowRight, Award, Server } from 'lucide-react';
@@ -80,12 +79,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Valid Declarations Table */}
-      <section className="px-4 sm:px-6 lg:px-8 bg-white pb-16">
-        <div className="max-w-6xl mx-auto">
-          <DeclarationTable />
-        </div>
-      </section>
 
       {/* Features */}
       <section id="features" className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-white">
