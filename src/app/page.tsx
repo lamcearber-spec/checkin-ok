@@ -178,15 +178,14 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="faq" className="pt-10 sm:pt-14 pb-6 sm:pb-8 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
           <FAQ />
         </div>
       </section>
 
-
       {/* Bottom CTA */}
-      <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+      <section className="pt-6 sm:pt-8 pb-10 sm:pb-14 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto rounded-2xl p-8 md:p-16 text-center" style={{ background: 'linear-gradient(135deg, #4F6BF6, #3D5BD9)' }}>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">{t('bottomCta.title')}</h2>
           <p className="text-base sm:text-lg text-white/80 mb-8 max-w-lg mx-auto">{t('bottomCta.subtitle')}</p>
