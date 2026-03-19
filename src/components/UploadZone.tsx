@@ -59,12 +59,12 @@ export function UploadZone() {
   return (
     <div
       {...getRootProps()}
-      className={`border-2 border-dashed rounded-lg p-12 text-center cursor-pointer transition-all duration-200 ${
-        status === 'processing' ? 'border-corp-green bg-corp-green-light/30 cursor-wait' :
-        status === 'success' ? 'border-success bg-success-light' :
-        status === 'error' ? 'border-error bg-error-light' :
-        isDragActive ? 'border-corp-green bg-corp-green-light/30 scale-[1.005]' :
-        'border-border-dark hover:border-corp-green/50 hover:bg-slate-bg'
+      className={`border-2 border-dashed rounded-2xl p-6 sm:p-12 text-center cursor-pointer transition-all duration-200 group ${
+        status === 'processing' ? 'border-[#4F6BF6] bg-[#4F6BF6]/5 cursor-wait' :
+        status === 'success' ? 'border-[#10b981] bg-[#10b981]/5' :
+        status === 'error' ? 'border-red-400 bg-red-50' :
+        isDragActive ? 'border-[#4F6BF6] bg-[#4F6BF6]/5 scale-[1.02]' :
+        'border-[#e5e7eb] hover:border-[#4F6BF6]/50'
       }`}
       aria-label={t('dropzone')}
     >
@@ -72,26 +72,36 @@ export function UploadZone() {
       <div className="flex flex-col items-center gap-3">
         {status === 'processing' ? (
           <>
-            <Loader2 className="h-12 w-12 text-corp-green animate-spin" />
-            <p className="text-sm text-navy font-medium">{t('processing')}</p>
+            <div className="w-16 h-16 bg-[#4F6BF6]/20 rounded-2xl flex items-center justify-center">
+              <Loader2 className="h-8 w-8 text-[#4F6BF6] animate-spin" />
+            </div>
+            <p className="text-[#6b7280] text-lg">{t('processing')}</p>
           </>
         ) : status === 'success' ? (
           <>
-            <CheckCircle className="h-12 w-12 text-success" />
-            <p className="text-sm text-navy font-medium">{t('success')}</p>
+            <div className="w-16 h-16 bg-[#10b981]/20 rounded-2xl flex items-center justify-center">
+              <CheckCircle className="h-8 w-8 text-[#10b981]" />
+            </div>
+            <p className="text-[#6b7280] text-lg">{t('success')}</p>
           </>
         ) : status === 'error' ? (
           <>
-            <AlertCircle className="h-12 w-12 text-error" />
-            <p className="text-sm text-navy font-medium">{t('error')}</p>
-            <p className="text-xs text-error/80">{errorMsg}</p>
+            <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center">
+              <AlertCircle className="h-8 w-8 text-red-500" />
+            </div>
+            <p className="text-[#6b7280] text-lg">{t('error')}</p>
+            <p className="text-sm text-red-500">{errorMsg}</p>
           </>
         ) : (
           <>
-            {isDragActive ? <FileSpreadsheet className="h-12 w-12 text-corp-green" /> : <Upload className="h-12 w-12 text-slate-text/30" />}
-            <p className="text-sm text-navy font-medium">{t('dropzone')}</p>
-            <p className="text-xs text-slate-text/50">{t('dropzoneAlt')}</p>
-            <p className="text-xs text-slate-text/40 mt-1">{t('formats')}</p>
+            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-colors ${
+              isDragActive ? 'bg-[#4F6BF6]/20' : 'bg-[#4F6BF6]/10 group-hover:bg-[#4F6BF6]/20'
+            }`}>
+              {isDragActive ? <FileSpreadsheet className="h-8 w-8 text-[#4F6BF6]" /> : <Upload className="h-8 w-8 text-[#4F6BF6]" />}
+            </div>
+            <p className="text-[#6b7280] text-lg">{t('dropzone')}</p>
+            <p className="text-sm text-[#6b7280]/70">{t('dropzoneAlt')}</p>
+            <p className="text-sm text-[#6b7280]/50 mt-1">{t('formats')}</p>
           </>
         )}
       </div>

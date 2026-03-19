@@ -8,31 +8,31 @@ export function Testimonials() {
   const items = t.raw('items') as { name: string; location: string; role: string; text: string; rating: number }[];
 
   return (
-    <section className="bg-white border border-border rounded-lg p-6 md:p-8">
-      <h2 className="text-lg font-bold text-navy mb-6">{t('title')}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div>
+      <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-12 text-center">{t('title')}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {items.map((item) => (
-          <div key={item.name} className="border border-border rounded-lg p-5">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-full bg-corp-green-light flex items-center justify-center">
-                <span className="text-sm font-bold text-corp-green">
+          <div key={item.name} className="bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-[#4F6BF6]/30 hover:shadow-sm transition-all">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 rounded-full bg-[#4F6BF6]/10 flex items-center justify-center">
+                <span className="text-sm font-bold text-[#4F6BF6]">
                   {item.name.split(' ').map((n) => n[0]).join('')}
                 </span>
               </div>
               <div>
-                <p className="text-sm font-semibold text-navy">{item.name}</p>
-                <p className="text-xs text-slate-text/50">{item.role} — {item.location}</p>
+                <p className="text-base font-semibold text-[#1a1a1a]">{item.name}</p>
+                <p className="text-sm text-[#6b7280]">{item.role} — {item.location}</p>
               </div>
             </div>
-            <div className="flex gap-0.5 mb-3">
+            <div className="flex gap-0.5 mb-4">
               {Array.from({ length: item.rating }).map((_, i) => (
-                <Star key={i} className="h-3.5 w-3.5 text-yellow-400 fill-yellow-400" />
+                <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
               ))}
             </div>
-            <p className="text-xs text-slate-text/70 leading-relaxed">&ldquo;{item.text}&rdquo;</p>
+            <p className="text-[#6b7280] text-sm leading-relaxed">&ldquo;{item.text}&rdquo;</p>
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

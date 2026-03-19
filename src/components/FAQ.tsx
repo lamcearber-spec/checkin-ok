@@ -10,28 +10,28 @@ export function FAQ() {
   const items = t.raw('items') as { question: string; answer: string }[];
 
   return (
-    <section className="bg-white border border-border rounded-lg p-6 md:p-8">
-      <h2 className="text-lg font-bold text-navy mb-6">{t('title')}</h2>
-      <div className="divide-y divide-border">
+    <div>
+      <h2 className="text-3xl sm:text-4xl font-bold text-[#1a1a1a] mb-4 text-center">{t('title')}</h2>
+      <div className="mt-8 sm:mt-12 divide-y divide-[#e5e7eb]">
         {items.map((item, index) => (
           <div key={index}>
             <button
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex items-center justify-between py-4 text-left"
+              className="w-full flex items-center justify-between py-5 text-left"
             >
-              <span className="text-sm font-medium text-navy pr-4">{item.question}</span>
+              <span className="text-base font-medium text-[#1a1a1a] pr-4">{item.question}</span>
               <ChevronDown
-                className={`h-4 w-4 text-slate-text/50 flex-shrink-0 transition-transform ${
+                className={`h-5 w-5 text-[#6b7280] flex-shrink-0 transition-transform ${
                   openIndex === index ? 'rotate-180' : ''
                 }`}
               />
             </button>
             {openIndex === index && (
-              <p className="text-xs text-slate-text/70 leading-relaxed pb-4">{item.answer}</p>
+              <p className="text-[#6b7280] text-sm leading-relaxed pb-5">{item.answer}</p>
             )}
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

@@ -9,22 +9,20 @@ export function KpiCards() {
   const { kpi } = useAttendance();
 
   const cards = [
-    { label: t('totalScans'), value: kpi.totalScans, icon: ScanLine, color: 'text-corp-green', bg: 'bg-corp-green-light' },
-    { label: t('aiCorrections'), value: kpi.aiCorrections, icon: Sparkles, color: 'text-warning', bg: 'bg-warning-light' },
-    { label: t('apiFaults'), value: kpi.apiFaults, icon: AlertTriangle, color: 'text-error', bg: 'bg-error-light' },
+    { label: t('totalScans'), value: kpi.totalScans, icon: ScanLine, iconColor: 'text-[#4F6BF6]', iconBg: 'bg-[#4F6BF6]/10' },
+    { label: t('aiCorrections'), value: kpi.aiCorrections, icon: Sparkles, iconColor: 'text-[#f59e0b]', iconBg: 'bg-[#f59e0b]/10' },
+    { label: t('apiFaults'), value: kpi.apiFaults, icon: AlertTriangle, iconColor: 'text-red-500', iconBg: 'bg-red-50' },
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
       {cards.map((card) => (
-        <div key={card.label} className="bg-white border border-border rounded-lg p-4 flex items-center gap-4">
-          <div className={`${card.bg} p-2.5 rounded-lg`}>
-            <card.icon className={`h-5 w-5 ${card.color}`} />
+        <div key={card.label} className="bg-white border border-[#e5e7eb] rounded-2xl p-6 text-center hover:border-[#4F6BF6]/30 hover:shadow-sm transition-all">
+          <div className={`w-14 h-14 ${card.iconBg} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+            <card.icon className={`h-7 w-7 ${card.iconColor}`} />
           </div>
-          <div>
-            <p className="text-2xl font-bold text-navy">{card.value}</p>
-            <p className="text-xs text-slate-text/60 font-medium">{card.label}</p>
-          </div>
+          <p className="text-3xl font-bold text-[#1a1a1a]">{card.value}</p>
+          <p className="text-sm text-[#6b7280] font-medium mt-1">{card.label}</p>
         </div>
       ))}
     </div>
