@@ -190,7 +190,7 @@ export default function PricingPage() {
           return (
             <div
               key={tier.key}
-              className={`relative rounded-2xl p-6 ${
+              className={`relative rounded-2xl p-6 flex flex-col ${
                 tier.featured
                   ? 'bg-corp-green text-white ring-2 ring-corp-green shadow-xl scale-105'
                   : tier.green
@@ -232,7 +232,7 @@ export default function PricingPage() {
                 )}
               </div>
 
-              <div className={`space-y-2 mb-6 text-sm ${tier.featured ? 'text-white/80' : 'text-slate-text/70'}`}>
+              <div className={`space-y-2 mb-6 text-sm flex-1 ${tier.featured ? 'text-white/80' : 'text-slate-text/70'}`}>
                 <div className="flex items-center gap-2">
                   <Check className="h-4 w-4 flex-shrink-0" />
                   {tier.limitType === 'custom' ? (
@@ -254,22 +254,26 @@ export default function PricingPage() {
               {current ? (
                 <button
                   onClick={handlePortal}
-                  className="block w-full text-center py-2.5 rounded-lg text-sm font-semibold bg-gray-100 text-navy hover:bg-gray-200 transition-colors"
+                  className={`mt-auto block w-full text-center py-2.5 rounded-lg text-sm font-semibold transition-colors ${
+                    tier.featured
+                      ? 'bg-white text-corp-green hover:bg-white/90'
+                      : 'bg-corp-green text-white hover:bg-corp-green/90'
+                  }`}
                 >
-                  {t('manage')}
+                  {t('getStarted')}
                 </button>
               ) : tier.price === -1 ? (
                 <a
                   href="mailto:info@checkin-ok.be"
-                  className="block w-full text-center py-2.5 rounded-lg text-sm font-semibold bg-gray-100 text-navy hover:bg-gray-200 transition-colors"
+                  className="mt-auto block w-full text-center py-2.5 rounded-lg text-sm font-semibold bg-corp-green text-white hover:bg-corp-green/90 transition-colors"
                 >
-                  {t('contact')}
+                  {t('getStarted')}
                 </a>
               ) : priceId ? (
                 <button
                   onClick={() => handleCheckout(priceId)}
                   disabled={loading === priceId}
-                  className={`block w-full text-center py-2.5 rounded-lg text-sm font-semibold transition-colors disabled:opacity-50 ${
+                  className={`mt-auto block w-full text-center py-2.5 rounded-lg text-sm font-semibold transition-colors disabled:opacity-50 ${
                     tier.featured
                       ? 'bg-white text-corp-green hover:bg-white/90'
                       : 'bg-corp-green text-white hover:bg-corp-green/90'
@@ -279,9 +283,9 @@ export default function PricingPage() {
                 </button>
               ) : (
                 <Link href={tier.price === 0 && tier.tier === 'FREE' ? '/auth' : '/#upload'}
-                  className={`block w-full text-center py-2.5 rounded-lg text-sm font-semibold transition-colors ${
-                    tier.green
-                      ? 'bg-[#4F6BF6] text-white hover:bg-[#3D5BD9]'
+                  className={`mt-auto block w-full text-center py-2.5 rounded-lg text-sm font-semibold transition-colors ${
+                    tier.featured
+                      ? 'bg-white text-corp-green hover:bg-white/90'
                       : 'bg-corp-green text-white hover:bg-corp-green/90'
                   }`}
                 >
