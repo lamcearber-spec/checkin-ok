@@ -19,7 +19,7 @@ export default function DashboardPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-gray-900">{t('title')}</h1>
-          <p className="text-gray-600 mt-1">{t('welcomeBack')}{user?.name ? `, ${user.name}` : ''}.</p>
+          <p className="text-gray-600 mt-1">{t('welcome')}{user?.name ? `, ${user.name}` : ''}.</p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Plan Card */}
@@ -28,7 +28,7 @@ export default function DashboardPage() {
               <div className="p-2 bg-[#eef1fe] rounded-lg">
                 <BarChart3 className="text-[#4F6BF6]" size={20} />
               </div>
-              <h3 className="text-sm font-medium text-gray-500">{t('plan')}</h3>
+              <h3 className="text-sm font-medium text-gray-500">{t('currentPlan')}</h3>
             </div>
             <p className="text-2xl font-bold text-gray-900">{tierLabel[user?.tier || 'FREE'] || user?.tier}</p>
           </div>
