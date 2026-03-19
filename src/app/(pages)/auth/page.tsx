@@ -97,7 +97,7 @@ export default function AuthPage() {
               <div><label className="block text-sm text-gray-700 font-medium mb-1.5">Email</label><div className="relative"><Mail size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" /><input type="email" value={email} onChange={e => setEmail(e.target.value)} required className={inputClass} placeholder="you@example.com" /></div></div>
               <div><label className="block text-sm text-gray-700 font-medium mb-1.5">Password</label><div className="relative"><Lock size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" /><input type={showPassword ? 'text' : 'password'} value={password} onChange={e => setPassword(e.target.value)} required className={inputClass + " pr-10"} placeholder="••••••••" /><button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">{showPassword ? <EyeOff size={18} /> : <Eye size={18} />}</button></div></div>
               <button type="button" onClick={() => { setTab('forgot'); setError(''); setSuccess(''); }} className="text-sm text-[#4F6BF6] hover:underline">Forgot password?</button>
-              <button type="submit" disabled={loading || !agbAccepted} className="w-full bg-[#4F6BF6] hover:bg-[#3D5BD9] text-white py-2.5 rounded-lg font-medium transition-colors disabled:opacity-50">{loading ? 'Signing in...' : 'Sign In'}</button>
+              <button type="submit" disabled={loading} className="w-full bg-[#4F6BF6] hover:bg-[#3D5BD9] text-white py-2.5 rounded-lg font-medium transition-colors disabled:opacity-50">{loading ? 'Signing in...' : 'Sign In'}</button>
             </form>
           )}
           {tab === 'register' && (
