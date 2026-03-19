@@ -73,8 +73,8 @@
     "aiDesc": "Azure GPT-4o corrigeert typefouten, extraheert tijdstempels uit natuurlijke taal en scheidt samengevoegde velden",
     "xml": "RSZ XML-generatie",
     "xmlDesc": "XSD v1.13-conforme payloads voor Checkinatwork (dagelijkse aanwezigheid) en CIAO (real-time tijdstempels met rustpauzes)",
-    "privacy": "Geen gegevensopslag",
-    "privacyDesc": "Alle persoonsgegevens verwerkt in vluchtig geheugen. Geen database-opslag van namen, INSZ, BIS of Limosa. AVG/GBA-conform."
+    "privacy": "AVG-conform",
+    "privacyDesc": "Geüploade bestanden worden in het geheugen verwerkt en niet opgeslagen. Gegenereerde XML en metadata worden na 90 dagen automatisch verwijderd."
   },
   "pricing": {
     "title": "Eenvoudige, vaste prijzen",
@@ -87,7 +87,7 @@
       "INSZ/BIS/Limosa validatie",
       "AI-gegevenscorrectie",
       "Checkinatwork + CIAO XML",
-      "Geen gegevensopslag",
+      "90 dagen gegevensretentie",
       "Prioritaire ondersteuning"
     ],
     "cta": "Aan de slag",
@@ -174,7 +174,7 @@
     "privacyDataTitle": "Verwerkte gegevens",
     "privacyDataText": "Wij verwerken aanwezigheidsbestanden (CSV/Excel) met werknemers-ID's (INSZ/BIS/Limosa). Bestanden worden uitsluitend in vluchtig geheugen verwerkt. Alle persoonsgegevens worden onmiddellijk na RSZ-transmissie gewist.",
     "privacyRetentionTitle": "Gegevensbewaring",
-    "privacyRetentionText": "Geen bewaring van persoonsgegevens. Wij bewaren alleen geaggregeerde gebruiksstatistieken voor facturering.",
+    "privacyRetentionText": "Geüploade bestanden worden in het geheugen verwerkt en niet op schijf opgeslagen. Gegenereerde XML en declaratiemetadata worden maximaal 90 dagen bewaard en daarna automatisch verwijderd.",
     "privacyCookiesTitle": "Cookies",
     "privacyCookiesText": "Alleen technische cookies (taalvoorkeur, sessie). Geen tracking-cookies.",
     "privacyRightsTitle": "Uw rechten",
@@ -225,7 +225,7 @@
       },
       {
         "question": "Is mijn data veilig?",
-        "answer": "Absoluut. Alle persoonsgegevens worden uitsluitend in vluchtig geheugen verwerkt. Er is geen database-opslag van namen, INSZ, BIS of Limosa-nummers. Wij zijn volledig AVG- en GBA-conform."
+        "answer": "Ja. Geüploade bestanden worden in het geheugen verwerkt en niet op schijf opgeslagen. Gegenereerde XML en metadata worden maximaal 90 dagen bewaard en daarna automatisch verwijderd. Wij zijn volledig AVG-conform."
       },
       {
         "question": "Moet ik een account aanmaken?",
@@ -284,7 +284,7 @@
   },
   "metadata": {
     "homeTitle": "Checkin OK — Belgische RSZ-aanwezigheidsconformiteit",
-    "homeDescription": "Geautomatiseerde Checkinatwork & CIAO-aangiften. Upload CSV/Excel, valideer INSZ/BIS/Limosa, genereer RSZ-conforme XML. Geen gegevensopslag.",
+    "homeDescription": "Geautomatiseerde Checkinatwork & CIAO-aangiften. Upload CSV/Excel, valideer INSZ/BIS/Limosa, genereer RSZ-conforme XML. AVG-conform.",
     "pricingTitle": "Tarieven & Abonnementen — Checkin OK",
     "pricingDescription": "Kies uw Checkin OK-abonnement. Van gratis anoniem gebruik tot professionele RSZ-conformiteit met 1000 aangiften per maand.",
     "contactTitle": "Contact — Checkin OK",
@@ -292,7 +292,7 @@
     "impressumTitle": "Impressum — Checkin OK",
     "impressumDescription": "Juridische informatie over Radom UG (haftungsbeschränkt), het bedrijf achter Checkin OK.",
     "privacyTitle": "Privacybeleid — Checkin OK",
-    "privacyDescription": "Hoe Checkin OK uw gegevens verwerkt. Geen opslag van persoonsgegevens, AVG- en GBA-conforme verwerking.",
+    "privacyDescription": "Hoe Checkin OK uw gegevens verwerkt. Retentiebeleid van 90 dagen, AVG-conforme verwerking.",
     "termsTitle": "Algemene Voorwaarden — Checkin OK",
     "termsDescription": "Voorwaarden voor het gebruik van het Checkin OK RSZ-aanwezigheidsplatform.",
     "blogTitle": "Blog",

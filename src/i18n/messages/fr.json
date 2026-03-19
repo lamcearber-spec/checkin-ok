@@ -73,8 +73,8 @@
     "aiDesc": "Azure GPT-4o corrige les erreurs typographiques, extrait les horodatages et sépare les champs concaténés",
     "xml": "Génération XML ONSS",
     "xmlDesc": "Payloads conformes XSD v1.13 pour Checkinatwork (présence journalière) et CIAO (horodatages en temps réel)",
-    "privacy": "Zéro rétention de données",
-    "privacyDesc": "Toutes les données personnelles traitées en mémoire volatile uniquement. Aucun stockage de NISS, BIS ou Limosa. Conforme GBA/RGPD."
+    "privacy": "Conforme au RGPD",
+    "privacyDesc": "Les fichiers téléchargés sont traités en mémoire et non stockés. Les XML générés et les métadonnées sont automatiquement supprimés après 90 jours."
   },
   "pricing": {
     "title": "Tarification simple et forfaitaire",
@@ -87,7 +87,7 @@
       "Validation NISS/BIS/Limosa",
       "Correction IA des données",
       "XML Checkinatwork + CIAO",
-      "Zéro rétention de données",
+      "Rétention de données 90 jours",
       "Support prioritaire"
     ],
     "cta": "Commencer",
@@ -174,7 +174,7 @@
     "privacyDataTitle": "Données traitées",
     "privacyDataText": "Nous traitons les fichiers de présence (CSV/Excel) contenant des identifiants de travailleurs (NISS/BIS/Limosa). Les fichiers sont traités en mémoire volatile uniquement et ne sont jamais écrits sur disque. Toutes les données personnelles sont purgées immédiatement après transmission à l'ONSS.",
     "privacyRetentionTitle": "Conservation des données",
-    "privacyRetentionText": "Zéro rétention pour les données personnelles. Nous ne stockons que des statistiques agrégées (compteurs succès/échec) pour la facturation.",
+    "privacyRetentionText": "Les fichiers téléchargés sont traités en mémoire et non stockés sur disque. Les XML générés et les métadonnées de déclaration sont conservés jusqu'à 90 jours puis automatiquement supprimés.",
     "privacyCookiesTitle": "Cookies",
     "privacyCookiesText": "Nous utilisons uniquement des cookies techniques essentiels (préférence linguistique, session). Aucun cookie de suivi n'est utilisé.",
     "privacyRightsTitle": "Vos droits",
@@ -225,7 +225,7 @@
       },
       {
         "question": "Mes données sont-elles en sécurité ?",
-        "answer": "Absolument. Toutes les données personnelles sont traitées exclusivement en mémoire volatile. Aucun stockage en base de données des noms, NISS, BIS ou numéros Limosa. Nous sommes entièrement conformes au RGPD et au GBA."
+        "answer": "Oui. Les fichiers téléchargés sont traités en mémoire et non stockés sur disque. Les XML générés et les métadonnées sont conservés jusqu'à 90 jours puis automatiquement supprimés. Nous sommes entièrement conformes au RGPD."
       },
       {
         "question": "Dois-je créer un compte ?",
@@ -284,7 +284,7 @@
   },
   "metadata": {
     "homeTitle": "Checkin OK — Conformité ONSS belge",
-    "homeDescription": "Déclarations automatisées Checkinatwork & CIAO. Uploadez CSV/Excel, validez NISS/BIS/Limosa, générez du XML conforme ONSS. Zéro rétention.",
+    "homeDescription": "Déclarations automatisées Checkinatwork & CIAO. Uploadez CSV/Excel, validez NISS/BIS/Limosa, générez du XML conforme ONSS. Conforme au RGPD.",
     "pricingTitle": "Tarifs & Formules — Checkin OK",
     "pricingDescription": "Choisissez votre formule Checkin OK. De l'utilisation anonyme gratuite à la conformité ONSS professionnelle avec 1000 déclarations par mois.",
     "contactTitle": "Contact — Checkin OK",
@@ -292,7 +292,7 @@
     "impressumTitle": "Mentions légales — Checkin OK",
     "impressumDescription": "Informations légales sur Radom UG (haftungsbeschränkt), la société derrière Checkin OK.",
     "privacyTitle": "Politique de confidentialité — Checkin OK",
-    "privacyDescription": "Comment Checkin OK traite vos données. Zéro rétention de données personnelles, traitement conforme RGPD et GBA.",
+    "privacyDescription": "Comment Checkin OK traite vos données. Politique de rétention de 90 jours, traitement conforme au RGPD.",
     "termsTitle": "Conditions générales — Checkin OK",
     "termsDescription": "Conditions d'utilisation de la plateforme de conformité ONSS Checkin OK.",
     "blogTitle": "Blog",
