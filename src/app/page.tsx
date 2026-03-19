@@ -4,7 +4,6 @@ import { UploadZone } from '@/components/UploadZone';
 import { ResolutionMatrix } from '@/components/ResolutionMatrix';
 import { DeclarationTable } from '@/components/DeclarationTable';
 import { FAQ } from '@/components/FAQ';
-import { Testimonials } from '@/components/Testimonials';
 import Link from 'next/link';
 import { Shield, Sparkles, FileCode, Lock, ClipboardCheck, ArrowRight, Award, MapPin } from 'lucide-react';
 import type { Metadata } from 'next';
@@ -185,12 +184,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50/50">
-        <div className="max-w-6xl mx-auto">
-          <Testimonials />
-        </div>
-      </section>
 
       {/* Bottom CTA */}
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
