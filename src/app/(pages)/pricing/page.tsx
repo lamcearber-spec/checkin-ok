@@ -177,7 +177,7 @@ export default function PricingPage() {
             }`}
           >
             {t('yearly')}
-            <span className="ml-1 text-xs text-green-600 font-semibold">({t('yearlyDiscount')})</span>
+            <span className="ml-1 text-xs text-[#4F6BF6] font-semibold">({t('yearlyDiscount')})</span>
           </button>
         </div>
       </div>
@@ -194,12 +194,12 @@ export default function PricingPage() {
                 tier.featured
                   ? 'bg-corp-green text-white ring-2 ring-corp-green shadow-xl scale-105'
                   : tier.green
-                  ? 'bg-green-50 border border-green-200'
+                  ? 'bg-[#eef1fe] border border-[#c7d2fe]'
                   : 'bg-white border border-border shadow-sm'
               }`}
             >
               {current && (
-                <span className="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                <span className="absolute top-3 right-3 bg-[#4F6BF6] text-white text-xs font-bold px-2 py-1 rounded-full">
                   {t('currentPlan')}
                 </span>
               )}
@@ -217,7 +217,7 @@ export default function PricingPage() {
                     {t('custom')}
                   </span>
                 ) : tier.price === 0 ? (
-                  <span className={`text-3xl font-bold ${tier.green ? 'text-green-700' : 'text-navy'}`}>
+                  <span className={`text-3xl font-bold ${tier.green ? 'text-[#4F6BF6]' : 'text-navy'}`}>
                     {t('free')}
                   </span>
                 ) : (
@@ -281,7 +281,7 @@ export default function PricingPage() {
                 <Link href={tier.price === 0 && tier.tier === 'FREE' ? '/auth' : '/#upload'}
                   className={`block w-full text-center py-2.5 rounded-lg text-sm font-semibold transition-colors ${
                     tier.green
-                      ? 'bg-green-600 text-white hover:bg-green-700'
+                      ? 'bg-[#4F6BF6] text-white hover:bg-[#3D5BD9]'
                       : 'bg-corp-green text-white hover:bg-corp-green/90'
                   }`}
                 >

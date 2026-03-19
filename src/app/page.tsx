@@ -142,12 +142,12 @@ export default function HomePage() {
       <Testimonials />
 
       {/* Bottom CTA */}
-      <section className="rounded-lg p-8 md:p-12 text-center" style={{ background: 'linear-gradient(135deg, #059669, #047857)' }}>
+      <section className="rounded-lg p-8 md:p-12 text-center" style={{ background: 'linear-gradient(135deg, #4F6BF6, #3D5BD9)' }}>
         <h2 className="text-xl md:text-2xl font-bold text-white mb-3">{t('bottomCta.title')}</h2>
         <p className="text-sm text-white/80 mb-6 max-w-lg mx-auto">{t('bottomCta.subtitle')}</p>
         <a
           href="/#upload"
-          className="inline-flex items-center gap-2 bg-white text-corp-green py-3 px-6 rounded text-sm font-semibold hover:bg-white/90 transition-colors"
+          className="inline-flex items-center gap-2 bg-white text-[#4F6BF6] py-3 px-6 rounded text-sm font-semibold hover:bg-white/90 transition-colors"
         >
           {t('bottomCta.cta')}
           <ArrowRight className="h-4 w-4" />

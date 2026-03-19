@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
 import { AttendanceProvider } from '@/contexts/AttendanceContext';
 import { AuthProvider } from '@/components/AuthProvider';
-import { Sidebar } from '@/components/Sidebar';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { CookieConsent } from '@/components/CookieConsent';
@@ -63,16 +62,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`min-h-screen flex ${inter.className}`}>
+      <body className={`min-h-screen flex flex-col ${inter.variable} font-sans`}>
         <NextIntlClientProvider messages={messages}>
           <AuthProvider>
             <AttendanceProvider>
-              <Sidebar />
-              <div className="flex-1 flex flex-col min-h-screen">
-                <Header />
-                <main className="flex-1">{children}</main>
-                <Footer />
-              </div>
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
               <CookieConsent />
             </AttendanceProvider>
           </AuthProvider>

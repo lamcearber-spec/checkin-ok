@@ -5,14 +5,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: '#1a1f2e',
-        'slate-bg': '#f8f9fa',
+        navy: '#1a1a1a',
+        'slate-bg': '#f9fafb',
         'slate-text': '#334155',
-        'corp-green': '#2d7a4f',
-        'corp-green-dark': '#236b41',
-        'corp-green-light': '#e8f5ee',
-        border: '#e2e8f0',
-        'border-dark': '#cbd5e1',
+        'corp-green': '#4F6BF6',
+        'corp-green-dark': '#3D5BD9',
+        'corp-green-light': '#eef1fe',
+        border: '#e5e7eb',
+        'border-dark': '#d1d5db',
         error: '#dc2626',
         'error-light': '#fef2f2',
         warning: '#f59e0b',

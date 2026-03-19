@@ -19,45 +19,47 @@ export default function HistoryPage() {
   useEffect(() => { fetchHistory(1); }, []);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-white mb-2">Declaration History</h1>
-      <p className="text-gray-400 mb-8">{pagination.total} total declarations</p>
-      {loading ? <div className="text-gray-400">Loading...</div> : declarations.length === 0 ? (
-        <div className="bg-[#112240] rounded-xl p-12 border border-white/10 text-center">
-          <FileText size={48} className="text-gray-600 mx-auto mb-4" />
-          <p className="text-gray-400">No declarations yet. Upload an attendance file to get started.</p>
-        </div>
-      ) : (
-        <>
-          <div className="bg-[#112240] rounded-xl border border-white/10 overflow-hidden">
-            <table className="w-full">
-              <thead><tr className="border-b border-white/10">
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">{t('file')}</th>
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">{t('format')}</th>
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">Records</th>
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">{t('status')}</th>
-                <th className="text-left text-gray-400 text-sm font-medium px-6 py-3">{t('date')}</th>
-              </tr></thead>
-              <tbody>{declarations.map(d => (
-                <tr key={d.id} className="border-b border-white/5 hover:bg-white/5">
-                  <td className="px-6 py-4 text-white text-sm">{d.fileName}</td>
-                  <td className="px-6 py-4"><span className="text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded">{d.format}</span></td>
-                  <td className="px-6 py-4 text-gray-300 text-sm">{d.recordCount}</td>
-                  <td className="px-6 py-4"><span className={`text-xs px-2 py-1 rounded ${d.status === 'SUCCESS' ? 'bg-green-500/10 text-green-400' : 'bg-red-500/10 text-red-400'}`}>{d.status}</span></td>
-                  <td className="px-6 py-4 text-gray-400 text-sm">{new Date(d.createdAt).toLocaleDateString()}</td>
-                </tr>
-              ))}</tbody>
-            </table>
+    <div className="min-h-[calc(100vh-8rem)] bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 className="text-2xl font-bold text-gray-900 mb-1">Declaration History</h1>
+        <p className="text-gray-500 mb-8">{pagination.total} total declarations</p>
+        {loading ? <div className="text-gray-400">Loading...</div> : declarations.length === 0 ? (
+          <div className="bg-white rounded-xl p-12 border border-gray-200 shadow-sm text-center">
+            <FileText size={48} className="text-gray-300 mx-auto mb-4" />
+            <p className="text-gray-500">No declarations yet. Upload an attendance file to get started.</p>
           </div>
-          {pagination.pages > 1 && (
-            <div className="flex justify-center items-center gap-4 mt-6">
-              <button onClick={() => fetchHistory(pagination.page - 1)} disabled={pagination.page <= 1} className="p-2 text-gray-400 hover:text-white disabled:opacity-30"><ChevronLeft size={20} /></button>
-              <span className="text-gray-400 text-sm">Page {pagination.page} of {pagination.pages}</span>
-              <button onClick={() => fetchHistory(pagination.page + 1)} disabled={pagination.page >= pagination.pages} className="p-2 text-gray-400 hover:text-white disabled:opacity-30"><ChevronRight size={20} /></button>
+        ) : (
+          <>
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+              <table className="w-full">
+                <thead><tr className="border-b border-gray-200 bg-gray-50">
+                  <th className="text-left text-gray-500 text-sm font-medium px-6 py-3">{t('file')}</th>
+                  <th className="text-left text-gray-500 text-sm font-medium px-6 py-3">{t('format')}</th>
+                  <th className="text-left text-gray-500 text-sm font-medium px-6 py-3">Records</th>
+                  <th className="text-left text-gray-500 text-sm font-medium px-6 py-3">{t('status')}</th>
+                  <th className="text-left text-gray-500 text-sm font-medium px-6 py-3">{t('date')}</th>
+                </tr></thead>
+                <tbody>{declarations.map(d => (
+                  <tr key={d.id} className="border-b border-gray-100 hover:bg-gray-50">
+                    <td className="px-6 py-4 text-gray-900 text-sm">{d.fileName}</td>
+                    <td className="px-6 py-4"><span className="text-xs bg-[#eef1fe] text-[#4F6BF6] px-2 py-1 rounded font-medium">{d.format}</span></td>
+                    <td className="px-6 py-4 text-gray-600 text-sm">{d.recordCount}</td>
+                    <td className="px-6 py-4"><span className={`text-xs px-2 py-1 rounded font-medium ${d.status === 'SUCCESS' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>{d.status}</span></td>
+                    <td className="px-6 py-4 text-gray-500 text-sm">{new Date(d.createdAt).toLocaleDateString()}</td>
+                  </tr>
+                ))}</tbody>
+              </table>
             </div>
-          )}
-        </>
-      )}
+            {pagination.pages > 1 && (
+              <div className="flex justify-center items-center gap-4 mt-6">
+                <button onClick={() => fetchHistory(pagination.page - 1)} disabled={pagination.page <= 1} className="p-2 text-gray-400 hover:text-gray-700 disabled:opacity-30"><ChevronLeft size={20} /></button>
+                <span className="text-gray-500 text-sm">Page {pagination.page} of {pagination.pages}</span>
+                <button onClick={() => fetchHistory(pagination.page + 1)} disabled={pagination.page >= pagination.pages} className="p-2 text-gray-400 hover:text-gray-700 disabled:opacity-30"><ChevronRight size={20} /></button>
+              </div>
+            )}
+          </>
+        )}
+      </div>
     </div>
   );
 }
