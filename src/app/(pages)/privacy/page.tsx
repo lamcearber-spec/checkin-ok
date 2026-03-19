@@ -16,7 +16,7 @@ export default function PrivacyPage() {
           <div className="prose prose-sm max-w-none text-[#374151] leading-relaxed space-y-8">
             <section>
               <h2 className="text-lg font-semibold text-[#1a1a1a] mb-3">1. Privacy at a Glance</h2>
-              <p>The following information provides a simple overview of what happens to your personal data when you visit our website and use our services. Personal data is any data with which you could be personally identified.</p>
+              <p>The following information provides a simple overview of what happens to your personal data when you visit our website and use our services. Personal data is any data with which you could be personally identified. This policy is governed by the General Data Protection Regulation (GDPR, Regulation (EU) 2016/679) and the Belgian Data Protection Act (Kaderwet of 30 July 2018).</p>
             </section>
 
             <section>
@@ -57,7 +57,7 @@ export default function PrivacyPage() {
               <p>When you upload attendance files (CSV, Excel, PDF), the data is processed in memory to generate NSSO-compliant XML declarations. For anonymous users, no uploaded data is retained after processing. For registered users, we store declaration metadata (file name, record count, status, date) but do not permanently store the original uploaded files.</p>
 
               <h3 className="text-base font-medium text-[#1a1a1a] mt-4 mb-2">Storage Duration</h3>
-              <p>Account data is stored as long as your account exists. Declaration history is stored for the duration of your account. You may delete your account and all associated data at any time via the Settings page.</p>
+              <p>Uploaded files are processed in memory and not stored on disk. Generated XML declarations and metadata are automatically deleted after 90 days. Account data is stored for the duration of your account. You may delete your account and all associated data at any time via the Settings page.</p>
             </section>
 
             <section>
@@ -73,7 +73,8 @@ export default function PrivacyPage() {
                 <li><strong>Right to withdraw consent</strong> — You can withdraw any consent you have given at any time.</li>
                 <li><strong>Right to complain</strong> — You have the right to lodge a complaint with a supervisory authority.</li>
               </ul>
-              <p className="mt-3">The competent supervisory authority is: Hessischer Beauftragter für Datenschutz und Informationsfreiheit, Postfach 3163, 65021 Wiesbaden, Germany.</p>
+              <p className="mt-3">As our services are primarily offered in Belgium, you may lodge a complaint with the Belgian Data Protection Authority: Gegevensbeschermingsautoriteit (GBA) / Autorité de protection des données (APD), Drukpersstraat / Rue de la Presse 35, 1000 Brussels, Belgium. Website: <a href="https://www.dataprotectionauthority.be" className="text-[#4F6BF6] hover:underline" target="_blank" rel="noopener noreferrer">dataprotectionauthority.be</a></p>
+              <p className="mt-2">The supervisory authority responsible for our company is: Hessischer Beauftragter für Datenschutz und Informationsfreiheit, Postfach 3163, 65021 Wiesbaden, Germany.</p>
             </section>
 
             <section>

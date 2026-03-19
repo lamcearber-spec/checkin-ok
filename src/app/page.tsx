@@ -73,7 +73,7 @@ export default function HomePage() {
       </section>
 
       {/* Resolution Matrix (AI corrections) */}
-      <section className="px-4 sm:px-6 lg:px-8 bg-white pb-16 pt-16">
+      <section className="px-4 sm:px-6 lg:px-8 bg-white pb-6 pt-6">
         <div className="max-w-6xl mx-auto">
           <ResolutionMatrix />
         </div>
