@@ -61,7 +61,7 @@ export default function HomePage() {
             {[
               { label: t('trust.gdpr'), icon: Shield, color: 'text-[#4F6BF6]' },
               { label: t('trust.euServers'), icon: Server, color: 'text-[#10b981]' },
-              { label: t('trust.zero'), icon: Lock, color: 'text-[#f59e0b]' },
+              { label: t('trust.secure'), icon: Lock, color: 'text-[#f59e0b]' },
               { label: t('trust.free'), icon: Award, color: 'text-[#6b7280]' },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2 text-[#6b7280]">

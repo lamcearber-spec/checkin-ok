@@ -146,7 +146,7 @@
   "trust": {
     "gdpr": "GDPR Compliant",
     "euServers": "EU Servers",
-    "zero": "Zero Retention",
+    "secure": "Encrypted & Secure",
     "free": "Start for free"
   },
   "footer": {
