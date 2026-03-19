@@ -264,7 +264,7 @@ export default function PricingPage() {
                 </button>
               ) : tier.price === -1 ? (
                 <a
-                  href="mailto:info@checkin-ok.be"
+                  href="mailto:support@checkin-ok.be"
                   className="mt-auto block w-full text-center py-2.5 rounded-lg text-sm font-semibold bg-corp-green text-white hover:bg-corp-green/90 transition-colors"
                 >
                   {t('getStarted')}

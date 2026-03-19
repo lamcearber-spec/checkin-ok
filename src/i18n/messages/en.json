@@ -198,7 +198,7 @@
     "impressumAddressTitle": "Address",
     "impressumAddressText": "Telemannstr. 2, 60323 Frankfurt am Main, Germany",
     "impressumContactTitle": "Contact",
-    "impressumContactText": "Email: info@checkin-ok.be\nPhone: +49 176 99742900",
+    "impressumContactText": "Email: support@checkin-ok.be\nPhone: +49 176 99742900",
     "impressumRegisterTitle": "Registration",
     "impressumRegisterText": "Registered at Amtsgericht Frankfurt am Main, HRB 130877",
     "impressumVatTitle": "VAT Number",
@@ -272,7 +272,7 @@
     "title": "Contact",
     "subtitle": "Have questions? Feel free to reach out to us.",
     "emailLabel": "Email",
-    "email": "info@checkin-ok.be",
+    "email": "support@checkin-ok.be",
     "addressLabel": "Address",
     "address": "Radom UG (haftungsbeschränkt)\nTelemannstr. 2\n60323 Frankfurt am Main\nGermany",
     "cta": "Send us an email"

@@ -7,5 +7,5 @@ const transporter = nodemailer.createTransport({
 });
 export async function sendEmail(to: string, subject: string, html: string) {
   if (!process.env.SMTP_HOST) { console.warn('[email] SMTP not configured — skipping'); return; }
-  await transporter.sendMail({ from: process.env.SMTP_FROM || 'info@checkin-ok.be', to, subject, html });
+  await transporter.sendMail({ from: process.env.SMTP_FROM || 'support@checkin-ok.be', to, subject, html });
 }
