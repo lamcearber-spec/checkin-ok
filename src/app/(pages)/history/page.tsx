@@ -1,9 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { FileText, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FileText, ChevronLeft, ChevronRight, Download } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-interface Declaration { id: string; fileName: string; format: string; recordCount: number; status: string; createdAt: string; }
+interface Declaration { id: string; fileName: string; format: string; recordCount: number; status: string; createdAt: string; hasXml: boolean; }
 interface Pagination { page: number; limit: number; total: number; pages: number; }
 
 export default function HistoryPage() {
@@ -17,6 +17,10 @@ export default function HistoryPage() {
     setLoading(false);
   };
   useEffect(() => { fetchHistory(1); }, []);
+
+  const handleDownload = (id: string) => {
+    window.open(`/api/declarations/${id}/download`, '_blank');
+  };
 
   return (
     <div className="min-h-[calc(100vh-8rem)] bg-gray-50">
@@ -38,6 +42,7 @@ export default function HistoryPage() {
                   <th className="text-left text-gray-500 text-sm font-medium px-6 py-3">Records</th>
                   <th className="text-left text-gray-500 text-sm font-medium px-6 py-3">{t('status')}</th>
                   <th className="text-left text-gray-500 text-sm font-medium px-6 py-3">{t('date')}</th>
+                  <th className="text-right text-gray-500 text-sm font-medium px-6 py-3"></th>
                 </tr></thead>
                 <tbody>{declarations.map(d => (
                   <tr key={d.id} className="border-b border-gray-100 hover:bg-gray-50">
@@ -46,6 +51,19 @@ export default function HistoryPage() {
                     <td className="px-6 py-4 text-gray-600 text-sm">{d.recordCount}</td>
                     <td className="px-6 py-4"><span className={`text-xs px-2 py-1 rounded font-medium ${d.status === 'SUCCESS' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>{d.status}</span></td>
                     <td className="px-6 py-4 text-gray-500 text-sm">{new Date(d.createdAt).toLocaleDateString()}</td>
+                    <td className="px-6 py-4 text-right">
+                      {d.hasXml ? (
+                        <button
+                          onClick={() => handleDownload(d.id)}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-[#4F6BF6] bg-[#eef1fe] hover:bg-[#dde3fd] rounded-lg transition-colors"
+                        >
+                          <Download size={14} />
+                          Download
+                        </button>
+                      ) : (
+                        <span className="text-xs text-gray-400">—</span>
+                      )}
+                    </td>
                   </tr>
                 ))}</tbody>
               </table>

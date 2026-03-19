@@ -4,6 +4,7 @@ import { attendanceRecordSchema } from "@/schema/attendanceSchema";
 import { z } from "zod";
 import { getAuthUser } from "@/lib/auth";
 import { checkUsageLimit } from "@/lib/usage";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,6 +43,20 @@ export async function POST(request: NextRequest) {
         { error: "All records failed XSD validation", validationErrors: errors },
         { status: 422 }
       );
+    }
+
+    // Save XML to the user's most recent declaration
+    if (user && xml) {
+      const latestDeclaration = await prisma.declaration.findFirst({
+        where: { userId: user.id },
+        orderBy: { createdAt: 'desc' },
+      });
+      if (latestDeclaration) {
+        await prisma.declaration.update({
+          where: { id: latestDeclaration.id },
+          data: { xmlData: xml },
+        });
+      }
     }
 
     // Return XML as downloadable file

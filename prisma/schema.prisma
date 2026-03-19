@@ -36,6 +36,7 @@ model Declaration {
   format        String   @default("CSV")
   recordCount   Int      @default(0)
   status        DeclarationStatus @default(SUCCESS)
+  xmlData       String?
   createdAt     DateTime @default(now())
 
   @@index([userId, createdAt])
