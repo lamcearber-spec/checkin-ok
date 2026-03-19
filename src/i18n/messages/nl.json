@@ -196,7 +196,7 @@
     "impressumCompanyTitle": "Bedrijf",
     "impressumCompanyText": "Radom UG (haftungsbeschränkt)",
     "impressumAddressTitle": "Adres",
-    "impressumAddressText": "Taunusanlage 8, 60329 Frankfurt am Main, Duitsland",
+    "impressumAddressText": "Telemannstr. 2, 60323 Frankfurt am Main, Duitsland",
     "impressumContactTitle": "Contact",
     "impressumContactText": "Email: info@checkin-ok.be\nTelefoon: +49 176 99742900",
     "impressumRegisterTitle": "Registratie",
@@ -274,7 +274,7 @@
     "emailLabel": "E-mail",
     "email": "info@checkin-ok.be",
     "addressLabel": "Adres",
-    "address": "Radom UG (haftungsbeschränkt)\nTaunusanlage 8\n60329 Frankfurt am Main\nDuitsland",
+    "address": "Radom UG (haftungsbeschränkt)\nTelemannstr. 2\n60323 Frankfurt am Main\nDuitsland",
     "cta": "Stuur ons een e-mail"
   },
   "notFound": {

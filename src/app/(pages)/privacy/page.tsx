@@ -22,9 +22,10 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-lg font-semibold text-[#1a1a1a] mb-3">2. Responsible Party</h2>
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 text-sm">
-                <p className="font-medium">RADOM UG (haftungsbeschränkt)</p>
-                <p>Taunusanlage 8</p>
-                <p>60329 Frankfurt am Main, Germany</p>
+                <p className="font-medium">Radom UG (haftungsbeschr&auml;nkt)</p>
+                <p>Gesch&auml;ftsf&uuml;hrer: Arber Lamce</p>
+                <p>Telemannstr. 2</p>
+                <p>60323 Frankfurt am Main, Germany</p>
                 <p className="mt-2">Email: <a href="mailto:support@checkin-ok.be" className="text-[#4F6BF6] hover:underline">support@checkin-ok.be</a></p>
               </div>
               <p className="mt-3">Due to the size of our company, no data protection officer has been appointed. For data protection inquiries, please contact us at the email address above.</p>
@@ -54,10 +55,10 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-lg font-semibold text-[#1a1a1a] mb-3">5. Data Processing for Our Service</h2>
               <h3 className="text-base font-medium text-[#1a1a1a] mb-2">Uploaded Documents</h3>
-              <p>When you upload attendance files (CSV, Excel, PDF), the data is processed in memory to generate NSSO-compliant XML declarations. For anonymous users, no uploaded data is retained after processing. For registered users, we store declaration metadata (file name, record count, status, date) but do not permanently store the original uploaded files.</p>
+              <p>When you upload attendance files (CSV, Excel, PDF), the data is processed temporarily to generate NSSO-compliant XML declarations. When image-based extraction is required, temporary files are created during processing and automatically deleted immediately afterwards. For anonymous users, no uploaded data is retained after processing. For registered users, we store declaration metadata (file name, record count, status, date) but do not permanently store the original uploaded files.</p>
 
               <h3 className="text-base font-medium text-[#1a1a1a] mt-4 mb-2">Storage Duration</h3>
-              <p>Uploaded files are processed in memory and not stored on disk. Generated XML declarations and metadata are automatically deleted after 90 days. Account data is stored for the duration of your account. You may delete your account and all associated data at any time via the Settings page.</p>
+              <p>Uploaded files are processed temporarily and deleted immediately after conversion completes. No uploaded files are permanently stored. Generated XML declarations and metadata are automatically deleted after 90 days. Account data is stored for the duration of your account. Upon account deletion, your data is removed immediately and irrevocably, along with all associated declarations and subscriptions. You may delete your account at any time via the Settings page.</p>
             </section>
 
             <section>
@@ -79,7 +80,7 @@ export default function PrivacyPage() {
 
             <section>
               <h2 className="text-lg font-semibold text-[#1a1a1a] mb-3">7. Data Security</h2>
-              <p>We use SSL/TLS encryption for all data transmissions. Passwords are hashed with bcrypt. Access to user data is restricted to authorized personnel only. Our infrastructure is hosted in European data centers.</p>
+              <p>We use SSL/TLS encryption for all data transmissions. Passwords are hashed with bcrypt. Access to user data is restricted to authorized personnel only. Our infrastructure is hosted on servers in Germany (European Union). Uploaded files are processed temporarily and deleted immediately after conversion.</p>
             </section>
 
             <section>

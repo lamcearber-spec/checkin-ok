@@ -16,7 +16,7 @@ export default function TermsPage() {
           <div className="prose prose-sm max-w-none text-[#374151] leading-relaxed space-y-8">
             <section>
               <h2 className="text-lg font-semibold text-[#1a1a1a] mb-3">§ 1 Scope</h2>
-              <p>(1) These General Terms and Conditions (GTC) apply to all contracts concluded between RADOM UG (haftungsbeschränkt), Taunusanlage 8, 60329 Frankfurt am Main, Germany (hereinafter &quot;Provider&quot;) and users of the Checkin OK platform at checkin-ok.be (hereinafter &quot;Service&quot;).</p>
+              <p>(1) These General Terms and Conditions (GTC) apply to all contracts concluded between RADOM UG (haftungsbeschränkt), Telemannstr. 2, 60323 Frankfurt am Main, Germany (hereinafter &quot;Provider&quot;) and users of the Checkin OK platform at checkin-ok.be (hereinafter &quot;Service&quot;).</p>
               <p>(2) Deviating terms and conditions of the user are not recognized unless the Provider expressly agrees to their validity in writing.</p>
             </section>
 
@@ -98,7 +98,7 @@ export default function TermsPage() {
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
                 <p className="font-medium mb-2">Withdrawal Instructions</p>
                 <p>You have the right to withdraw from this contract within fourteen (14) days without giving any reason. The withdrawal period will expire after 14 days from the day of the conclusion of the contract.</p>
-                <p className="mt-2">To exercise the right of withdrawal, you must inform us (RADOM UG, Taunusanlage 8, 60329 Frankfurt am Main, Germany, email: support@checkin-ok.be) of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post or email).</p>
+                <p className="mt-2">To exercise the right of withdrawal, you must inform us (RADOM UG, Telemannstr. 2, 60323 Frankfurt am Main, Germany, email: support@checkin-ok.be) of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post or email).</p>
                 <p className="mt-2">If you requested that the service begins during the withdrawal period, you shall pay us an amount proportional to the services provided up to the time you communicated your withdrawal.</p>
               </div>
             </section>

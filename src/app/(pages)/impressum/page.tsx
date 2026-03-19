@@ -18,8 +18,8 @@ export default function ImpressumPage() {
               <h2 className="text-lg font-semibold text-[#1a1a1a] mb-3">Information according to § 5 TMG</h2>
               <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 text-sm">
                 <p className="font-medium">RADOM UG (haftungsbeschränkt)</p>
-                <p>Taunusanlage 8</p>
-                <p>60329 Frankfurt am Main</p>
+                <p>Telemannstr. 2</p>
+                <p>60323 Frankfurt am Main</p>
                 <p>Germany</p>
               </div>
             </section>
@@ -49,7 +49,7 @@ export default function ImpressumPage() {
             <section>
               <h2 className="text-lg font-semibold text-[#1a1a1a] mb-3">Responsible for Content (§ 55 Abs. 2 RStV)</h2>
               <p>Arber Lamce</p>
-              <p>Taunusanlage 8, 60329 Frankfurt am Main, Germany</p>
+              <p>Telemannstr. 2, 60323 Frankfurt am Main, Germany</p>
             </section>
 
             <section>
