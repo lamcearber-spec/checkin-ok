@@ -5,7 +5,7 @@ import { ResolutionMatrix } from '@/components/ResolutionMatrix';
 import { DeclarationTable } from '@/components/DeclarationTable';
 import { FAQ } from '@/components/FAQ';
 import Link from 'next/link';
-import { Shield, Sparkles, FileCode, Lock, ClipboardCheck, ArrowRight, Award, MapPin } from 'lucide-react';
+import { Shield, Sparkles, FileCode, Lock, ClipboardCheck, ArrowRight, Award, Server } from 'lucide-react';
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
@@ -60,9 +60,9 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
             {[
               { label: t('trust.gdpr'), icon: Shield, color: 'text-[#4F6BF6]' },
-              { label: t('trust.gba'), icon: Award, color: 'text-[#10b981]' },
+              { label: t('trust.euServers'), icon: Server, color: 'text-[#10b981]' },
               { label: t('trust.zero'), icon: Lock, color: 'text-[#f59e0b]' },
-              { label: t('trust.nsso'), icon: MapPin, color: 'text-[#6b7280]' },
+              { label: t('trust.free'), icon: Award, color: 'text-[#6b7280]' },
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-2 text-[#6b7280]">
                 <badge.icon className={`w-5 h-5 ${badge.color}`} />

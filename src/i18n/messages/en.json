@@ -145,9 +145,9 @@
   },
   "trust": {
     "gdpr": "GDPR Compliant",
-    "gba": "GBA Compliant",
+    "euServers": "EU Servers",
     "zero": "Zero Retention",
-    "nsso": "NSSO Certified"
+    "free": "Start for free"
   },
   "footer": {
     "description": "Checkin OK automates Belgian NSSO attendance declarations for Checkinatwork and CIAO compliance.",

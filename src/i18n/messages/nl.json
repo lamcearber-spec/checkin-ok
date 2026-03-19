@@ -145,9 +145,9 @@
   },
   "trust": {
     "gdpr": "AVG-conform",
-    "gba": "GBA-conform",
+    "euServers": "EU-servers",
     "zero": "Geen opslag",
-    "nsso": "RSZ-gecertificeerd"
+    "free": "Gratis starten"
   },
   "footer": {
     "description": "Checkin OK automatiseert Belgische RSZ-aanwezigheidsaangiften voor Checkinatwork- en CIAO-conformiteit.",

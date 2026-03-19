@@ -145,9 +145,9 @@
   },
   "trust": {
     "gdpr": "Conforme au RGPD",
-    "gba": "Conforme GBA",
+    "euServers": "Serveurs UE",
     "zero": "Zéro rétention",
-    "nsso": "Certifié ONSS"
+    "free": "Commencez gratuitement"
   },
   "footer": {
     "description": "Checkin OK automatise les déclarations de présence ONSS pour la conformité Checkinatwork et CIAO.",
