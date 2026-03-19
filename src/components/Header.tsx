@@ -44,6 +44,14 @@ export function Header() {
 
           {/* Desktop actions */}
           <div className="flex items-center gap-2 sm:gap-3">
+            {user && (
+              <Link
+                href="/dashboard"
+                className="hidden sm:flex items-center px-3 py-2 text-sm font-medium rounded-lg border border-[#4F6BF6] bg-[#4F6BF6] hover:bg-[#3D5BD9] text-white transition-colors"
+              >
+                {t('dashboard')}
+              </Link>
+            )}
             <Link
               href="/pricing"
               className="hidden sm:flex items-center px-3 py-2 text-sm font-medium rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-gray-700 transition-colors"
